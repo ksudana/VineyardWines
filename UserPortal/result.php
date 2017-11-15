@@ -17,9 +17,7 @@ if(empty($name)){
 	}
 
 	if(mysql_num_rows($result) > 0){
-		int i = 0;
-		while(($row = mysql_fetch_assoc($result)) && (i < 50)){
-			i++;
+		while($row = mysql_fetch_assoc($result)){
 		echo '<h4> Variety					: '.$row['variety'];
 		echo '<br> Designation						: '.$row['designation'];
 		echo '</h4>';
