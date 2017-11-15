@@ -46,20 +46,17 @@
 	</nav>
 
 <form action="result.php" method="POST">
-<center><h3>Discover New Tastes</h3></center>
+<titlec><center><h3>Discover New Tastes</h3></center></titlec>
 <center><table>
 <tr>
-	
+
 	<td><input type="text" name="name" size="100"></td>
 	<td><input type="submit" name="search"></td>
 </tr>
 </table></center>
 </form>
 <footer alignclass="py-1 bg-dark">
-	<div class="container">
-		<p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-	</div>
-	<!-- /.container -->
+
 </footer>
 
 <!-- Bootstrap core JavaScript -->
