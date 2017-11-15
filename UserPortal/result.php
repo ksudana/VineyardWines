@@ -34,6 +34,9 @@
     		color: white;
     	}
     	tr:nth-child(even) {background-color: #f2f2f2}
+    	h2{
+    		background-color: #f0f3f5;
+    	}
     </style>
   </head>
 
