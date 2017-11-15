@@ -20,6 +20,20 @@
     <link href="css/elements.css" rel="stylesheet">
 
     <script src="js/my_js.js"></script>
+    <style>
+    	table{
+    		border-collapse: collapse;
+    		width: 100%;
+    		color: #588c7e;
+    		font-family: monospace;
+    		font-size: 25px;
+    		text-align: left;
+    	}
+    	th{
+    		background-color: #588c7e;
+    		color: white;
+    	}
+    	tr:nth-child(even) {background-color: #f2f2f2}
   </head>
 
   <body>
