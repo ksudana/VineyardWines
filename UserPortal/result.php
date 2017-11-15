@@ -1,4 +1,7 @@
 <?php
+	include_once 'nav.php';
+?>
+<?php
 $conn = mysql_connect("localhost", "root", "password");
 mysql_select_db("VineyardWinesDB", $conn);
 
@@ -16,7 +19,7 @@ if(empty($name)){
 	}
 
 	if(mysql_num_rows($result) > 0){
-		while($row = mysql_fetch_assoc($result)){
+		while($row = mysql_fetch_assoc($result) < 50){
 		echo '<h4> Variety					: '.$row['variety'];
 		echo '<br> Designation						: '.$row['designation'];
 		echo '</h4>';
