@@ -24,7 +24,6 @@
   </head>
 
   <body>
-  	
     <!-- Navigation -->
     
 
@@ -39,14 +38,12 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
-<table>
+  	<table>
   		<tr>
   			<th>Variety</th>
   			<th>Designation</th>
   		</tr>
-<?php
+  		<?php
 $conn = mysql_connect("localhost", "root", "password");
 mysql_select_db("VineyardWinesDB", $conn);
 
@@ -78,5 +75,8 @@ mysql_close($conn);
 }
 }
 ?>
-</table>
+  	</table>
+  </body>
+
+
 </html>
