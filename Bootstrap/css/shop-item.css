@@ -13,3 +13,259 @@ body {
     padding-top: 56px;
   }
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: #f0f3f5;
+    margin-top:40px;
+}
+/*==============================*/
+/*====== siderbar user profile =====*/
+/*==============================*/
+.nav>li>a.userdd {
+    padding: 5px 15px
+}
+.userprofile {
+    width: 100%;
+	float: left;
+	clear: both;
+	margin: 40px auto
+}
+.userprofile .userpic {
+	height: 100px;
+	width: 100px;
+	clear: both;
+	margin: 0 auto;
+	display: block;
+	border-radius: 100%;
+	box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	position: relative;
+}
+.userprofile .userpic .userpicimg {
+	height: auto;
+	width: 100%;
+	border-radius: 100%;
+}
+.username {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 20px;
+	color: #000000;
+	margin-top: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.username+p {
+	color: #607d8b;
+	font-size: 13px;
+	line-height: 15px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.settingbtn {
+	height: 30px;
+	width: 30px;
+	border-radius: 30px;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0;
+	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+}
+.userprofile.small {
+	width: auto;
+	clear: both;
+	margin: 0px auto;
+}
+.userprofile.small .userpic {
+	height: 40px;
+	width: 40px;
+	margin: 0 10px 0 0;
+	display: block;
+	border-radius: 100%;
+	box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	position: relative;
+	float: left;
+}
+.userprofile.small .textcontainer {
+	float: left;
+	max-width: 100px;
+	padding: 0
+}
+.userprofile.small .userpic .userpicimg {
+	min-height: 100%;
+	width: 100%;
+	border-radius: 100%;
+}
+.userprofile.small .username {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21px;
+	color: #000000;
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+.userprofile.small .username+p {
+	color: #607d8b;
+	font-size: 13px;
+	float: left;
+	width: 100%;
+	margin: 0;
+}
+/*==============================*/
+/*====== Social Profile css =====*/
+/*==============================*/
+.countlist h3 {
+	margin: 0;
+	font-weight: 400;
+	line-height: 28px;
+}
+.countlist {
+	text-transform: uppercase
+}
+.countlist li {
+	padding: 15px 30px 15px 0;
+	font-size: 14px;
+	text-align: left;
+}
+.countlist li small {
+	font-size: 12px;
+	margin: 0
+}
+.followbtn {
+	float: right;
+	margin: 22px;
+}
+.userprofile.social {
+	background: url(http://caputmundiwines.com/wp-content/uploads/2014/07/home-page-slider-impero-wine-collection-featured2222.jpg) no-repeat top center;
+	background-size: 100%;
+	padding: 50px 0;
+	margin: 0
+}
+.userprofile.social .username {
+	color: #9400d3;
+
+}
+.userprofile.social .username+p {
+	color: #6495ed;
+	opacity: 0.8
+}
+
+
+.panel {
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.05);
+    transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    margin-bottom: 35px;
+    border-radius: 0px;
+    position: relative;
+    border: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+.notice-success {
+    border-color: #80D651;
+}
+.notice-success>strong {
+    color: #80D651;
+}
+.notice-info {
+    border-color: #45ABCD;
+}
+.notice-info>strong {
+    color: #45ABCD;
+}
+.notice-warning {
+    border-color: #FEAF20;
+}
+.notice-warning>strong {
+    color: #FEAF20;
+}
+.notice-danger {
+    border-color: #d73814;
+}
+.notice-danger>strong {
+    color: #d73814;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Bungee+Inline");
+body {
+  font-family: 'Bungee Inline', sans-serif;
+}
+#demo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+#demo span {
+  font-size: 10vw;
+  font-weight: 400;
+}
+.color-1 {
+  color: #ff6347;
+}
+.color-2 {
+  color: #bada55;
+}
+.color-3 {
+  color: #ff1493;
+}
+.color-4 {
+  color: #09a;
+}
+
+titlec{
+font-family: 'Spectral SC', serif;
+}
