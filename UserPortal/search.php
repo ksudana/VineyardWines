@@ -1,6 +1,6 @@
 <?php
 //Step1
- $db = mysqli_connect('localhost','root','root','VineyardWinesDB')
+ $db = mysqli_connect('localhost','root','password','VineyardWinesDB')
  or die('Error connecting to MySQL server.');
 ?>
 
