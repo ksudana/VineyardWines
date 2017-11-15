@@ -15,7 +15,7 @@
   else {
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $query = "SELECT uid FROM Users WHERE username='$username' AND password='$password'";
+    $query = "SELECT * FROM Users WHERE username='$username' AND password='$password'";
     $result = $con->query($query);
     $row = $result->fetch_assoc();
     if(!$row) {
