@@ -32,6 +32,10 @@
   		<tr>
   			<th>Variety</th>
   			<th>Designation</th>
+  			<th>Price</th>
+  			<th>Province</th>
+  			<th>Winery</th>
+  			<th>Country</th>
   		</tr>
   		<?php
 		$conn = mysql_connect("localhost", "root", "password");
@@ -52,7 +56,7 @@
 			if(mysql_num_rows($result) > 0){
 				$i = 0;
 				while($row = mysql_fetch_assoc($result) and $i < 50){
-				echo "<tr><td>". $row['variety'] ."</td><td>". $row['designation'] ."</td></tr>";
+				echo "<tr><td>". $row['variety'] ."</td><td>". $row['designation'] .$row['price'] ."</td><td>". $row['province'] ."</td><td>". $row['winery'] ."</td><td>". $row['country'] ."</td></tr>";
 				$i = $i + 1;
 
 			}
