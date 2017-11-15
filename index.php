@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['uid'])) {
-        echo "Logged in!";
+        header('location: UserPortal/dashboard.php');
     }
 ?>
 

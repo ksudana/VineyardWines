@@ -23,7 +23,7 @@
     mysqli_close($db);
   ?>
 
-  <form action="index.html">
+  <form action="index.php">
     <input type="submit" value="Back">
   </form>
 </html>

@@ -17,7 +17,8 @@
     $password = $_POST["password"];
     $query = "SELECT uid FROM Users WHERE username='$username' AND password='$password'";
     $result = $con->query($query);
-    if(!$row = $result->fetch_assoc()) {
+    $row = $result->fetch_assoc();
+    if(!$row) {
       echo "Invalid Username/Password!";
     }
     else {
