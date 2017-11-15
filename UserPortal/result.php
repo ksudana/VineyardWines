@@ -65,6 +65,7 @@
 				$i = $i + 1;
 
 			}
+			echo "</table>";
 		}else{
 		echo'<h2> Search Result</h2>';
 		print ($make);
