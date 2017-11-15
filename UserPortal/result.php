@@ -26,7 +26,7 @@
     		width: 100%;
     		color: #588c7e;
     		font-family: monospace;
-    		font-size: 25px;
+    		font-size: 20px;
     		text-align: left;
     	}
     	th{
@@ -47,9 +47,9 @@
   		<tr>
   			<th>Variety</th>
   			<th>Designation</th>
-  			<th>Price</th>
-  			<th>Province</th>
   			<th>Winery</th>
+  			<th>Province</th>
+  			<th>Price</th>
   			<th>Country</th>
   		</tr>
   		<?php
@@ -71,7 +71,7 @@
 			if(mysql_num_rows($result) > 0){
 				$i = 0;
 				while($row = mysql_fetch_assoc($result) and $i < 50){
-				echo "<tr><td>". $row['variety'] ."</td><td>". $row['designation']. "</td><td>" .$row['price'] ."</td><td>". $row['province'] ."</td><td>". $row['winery'] ."</td><td>". $row['country'] ."</td></tr>";
+				echo "<tr><td>". $row['variety'] ."</td><td>". $row['designation']. "</td><td>" .$row['winery'] ."</td><td>". $row['province'] ."</td><td>" .$row['price'] ."</td><td>". $row['country'] ."</td></tr>";
 				$i = $i + 1;
 
 			}
