@@ -16,7 +16,7 @@
     $age = $_POST["age"];
     $country = $_POST["country"];
     $sex = $_POST["sex"];
-    $query = "INSERT INTO Users (name, username, password, age, country, sex) VALUES ('$name', '$username', '$password', '$age', '$country', '$sex')";
+    $query = "INSERT INTO Users (name, username, password, age, country, sex) VALUES ('Karthik', 'ksudana', 'pass', 20, 'US', 'Male')";
     $result = mysqli_query($con, $query);
     echo "Created Account!";
   }
