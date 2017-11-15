@@ -49,9 +49,19 @@
 <titlec><center><h3>Discover New Tastes</h3></center></titlec>
 <center><table>
 <tr>
+	<div class="wrap">
+	   <div class="search">
+	      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+	      <button type="submit" class="searchButton">
+	        <i class="fa fa-search"></i>
+	     </button>
+	   </div>
+	</div>
+</tr>
 
+<tr>
 	<td><input type="text" name="name" size="100"></td>
-	<td><input type="submit" value="search" name="submit"></td>
+	<td><titlec><input type="submit" value="Search" name="submit"></titlec></td>
 </tr>
 </table></center>
 </form>
