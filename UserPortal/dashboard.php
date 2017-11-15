@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include_once 'nav.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,36 +24,7 @@
 
   </head>
 
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Fuck
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Akhil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sarikonda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+<body>
     <!-- Page Content -->
     <div class="container">
     <div class="row">
@@ -61,7 +36,7 @@
         <div class="panel panel-default">
           <div class="userprofile social ">
             <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="userpicimg"> </div>
-            <h3 class="username">VINEET VORA</h3>
+            <h3 class="username"><?php $_SESSION['username']; ?></h3>
             <p>San Ramon, California</p>
 
           </div>
@@ -96,10 +71,8 @@
       </div>
     </div>
 </div>
-</div>
 
-    </div>
-</div>
+<div>
     <!-- /.container -->
 
     <!-- Footer -->
