@@ -13,7 +13,7 @@
   else {
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $query = "SELECT name FROM users WHERE username='$username' AND password='$password'";
+    $query = "SELECT name FROM Users WHERE username='$username' AND password='$password'";
     $result = $con->query($query);
     if($result->num_rows == 0) {
       echo "Invalid Username/Password!";
