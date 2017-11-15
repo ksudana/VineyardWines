@@ -17,7 +17,7 @@ if(empty($name)){
 	}
 
 	if(mysql_num_rows($result) > 0){
-		$row = mysql_fetch_assoc($result)
+		$row = mysql_fetch_assoc($result);
 		echo '<h4> Variety					: '.$row['variety'];
 		echo '<br> Designation						: '.$row['designation'];
 		echo '</h4>';
