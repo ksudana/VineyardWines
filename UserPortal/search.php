@@ -51,7 +51,7 @@
 <tr>
 
 	<td><input type="text" name="name" size="100"></td>
-	<td><input type="submit" name="submit"></td>
+	<td><input type="submit" value="search" name="submit"></td>
 </tr>
 </table></center>
 </form>
