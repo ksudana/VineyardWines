@@ -15,12 +15,14 @@ if(empty($name)){
 	if(!$result) {
 		print("Bad Query");
 	}
-
+	$i = 0;
 	if(mysql_num_rows($result) > 0){
-		while($row = mysql_fetch_assoc($result)){
+		while($row = mysql_fetch_assoc($result) && $i < 50){
 		echo '<h4> Variety					: '.$row['variety'];
 		echo '<br> Designation						: '.$row['designation'];
 		echo '</h4>';
+		$i += 1;
+
 	}
 }else{
 echo'<h2> Search Result</h2>';
