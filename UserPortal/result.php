@@ -17,11 +17,13 @@ if(empty($name)){
 	}
 
 	if(mysql_num_rows($result) > 0){
-		$row = mysql_fetch_assoc($result);
+		$i = 0;
+		while($row = mysql_fetch_assoc($result) && $i < 50){
+			$i += 1;
 		echo '<h4> Variety					: '.$row['variety'];
 		echo '<br> Designation						: '.$row['designation'];
 		echo '</h4>';
-
+	}
 }else{
 echo'<h2> Search Result</h2>';
 print ($make);
