@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['uid'])) {
-        echo "$_SESSION['username'] logged in!";
+        echo $_SESSION['username'];
     }
 ?>
 
