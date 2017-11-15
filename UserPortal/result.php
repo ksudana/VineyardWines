@@ -21,7 +21,7 @@ if(empty($name)){
 		echo '<h4> Variety					: '.$row['variety'];
 		echo '<br> Designation						: '.$row['designation'];
 		echo '</h4>';
-		$i += 1;
+		$i = $i + 1;
 
 	}
 }else{
