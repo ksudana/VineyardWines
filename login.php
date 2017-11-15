@@ -21,12 +21,13 @@
     else {
       $_SESSION['uid'] = $row['uid'];
       $_SESSION['username'] = $row['username'];
-      $header('location: UserPortal/dashboard.php');
+      echo "Successful login!";
+      header('location: UserPortal/dashboard.php');
     }
   }
   ?>
   <body>
-    <form action="index.html">
+    <form action="index.php">
       <input type="submit" value="Back">
     </form>
   </body>

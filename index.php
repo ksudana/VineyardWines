@@ -30,7 +30,7 @@
     <img src="Images/logo.png" style="display:block; margin-left:auto; margin-right:auto"/>
     <br>
     <div class="container">
-      <form class="form-signin" action="login.php" method='post'>
+      <form class="form-signin" action="login.php" method="post">
         <label for="inputEmail" class="sr-only">Username</label>
         <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>

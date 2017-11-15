@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>VineyardWines</title>
+    <title>VineyardWines</title>    
 
     <!-- Bootstrap core CSS -->
     <link href="../Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
