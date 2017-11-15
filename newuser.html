@@ -26,9 +26,17 @@
     </nav>
 <div align="center">
     <br>
-    <form class="form-horizontal" action='' method="POST">
+    <form class="form-horizontal" action="new_account.php" method="post">
         <fieldset>
         <h1>Create Account</h1>
+        <div class="control-group">
+          <!-- Age-->
+          <label class="control-label" for="name">Name</label>
+          <div class="controls">
+            <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+          </div>
+        </div>    
+            
         <div class="control-group">
           <!-- Username -->
           <label class="control-label"  for="username">Username</label>
@@ -47,25 +55,25 @@
             
         <div class="control-group">
           <!-- Age-->
-          <label class="control-label" for="password">Age</label>
+          <label class="control-label" for="age">Age</label>
           <div class="controls">
-            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+            <input type="number" id="age" name="age" placeholder="" class="input-xlarge">
           </div>
         </div>
             
         <div class="control-group">
           <!--Country-->
-          <label class="control-label" for="password">Country</label>
+          <label class="control-label" for="country">Country</label>
           <div class="controls">
-            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+            <input type="text" id="country" name="country" placeholder="" class="input-xlarge">
           </div>
         </div>
             
         <div class="control-group">
           <!--Sex-->
-          <label class="control-label" for="password">Sex</label>
+          <label class="control-label" for="sex">Sex</label>
           <div class="controls">
-            <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+            <input type="text" id="sex" name="sex" placeholder="" class="input-xlarge">
           </div>
         </div>  
         <br>
