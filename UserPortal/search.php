@@ -1,3 +1,6 @@
+<?php
+	include_once 'nav.php';
+?>
 <html>
 <title> Discover</title>
 <head>
@@ -18,46 +21,10 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-		<div class="container">
-			<a class="navbar-brand" href="#">Start Bootstrap</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Fuck
-							<span class="sr-only">(current)</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Akhil</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Sarikonda</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="../index.html">Logout</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
 
 <form action="result.php" method="POST">
 <titlec><center><h3>Discover New Tastes</h3></center></titlec>
 <center><table>
-<tr>
-	<div class="wrap">
-	   <div class="search">
-	      <input type="text" class="searchTerm" placeholder="What are you looking for?">
-	      <button type="submit" class="searchButton">
-	        <i class="fa fa-search"></i>
-	     </button>
-	   </div>
-	</div>
-</tr>
 
 <tr>
 	<td><input type="text" name="name" size="100"></td>
