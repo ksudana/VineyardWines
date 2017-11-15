@@ -17,15 +17,10 @@
 	    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
 </head>
 
-<body>
-
-
-
 <?php
 include_once 'nav.php';
 $conn = mysql_connect("localhost", "root", "password");
 mysql_select_db("VineyardWinesDB", $conn);
-
 
 if($_REQUEST['submit']){
 $name = $_POST['name'];
@@ -57,6 +52,5 @@ mysql_close($conn);
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
 
 </html>
