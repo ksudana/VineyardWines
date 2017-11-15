@@ -44,18 +44,17 @@
 			</div>
 		</div>
 	</nav>
-<div style="width:800px margin:0 auto">
+
 <form action="result.php" method="POST">
 <titlec><center><h3>Discover New Tastes</h3></center></titlec>
 <center><table>
 <tr>
 
 	<td><input type="text" name="name" size="100"></td>
-	<td><input type="submit" name="search"></td>
+	<td><input type="submit" name="submit"></td>
 </tr>
 </table></center>
 </form>
-</div>
 <footer alignclass="py-1 bg-dark">
 
 </footer>
