@@ -23,10 +23,6 @@
   </head>
 
   <body>
-    <?php if (isset($_SESSION['username'])): ?>
-        <p>Hello, <?php echo $_SESSION['username']; ?></p>
-    <?php endif ?>
-
     <!-- Page Content -->
     <div class="container">
     
@@ -51,15 +47,6 @@
 
     </div>
     <!-- /.container -->
-      
-    <?php
-        if(isset($_SESSION['uid']) {
-            header('UserPortal/dashboard.php');
-        }
-        else {
-            echo "Please login";
-        }
-    ?>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
