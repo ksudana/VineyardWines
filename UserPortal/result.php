@@ -23,7 +23,7 @@
     <style>
     	table{
     		border-collapse: collapse;
-    		width: 80%;
+    		width: 100%;
     		color: #588c7e;
     		font-family: monospace;
     		font-size: 20px;
