@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</nav>
-
+<div style="width:800px margin:0 auto">
 <form action="result.php" method="POST">
 <titlec><center><h3>Discover New Tastes</h3></center></titlec>
 <center><table>
@@ -55,6 +55,7 @@
 </tr>
 </table></center>
 </form>
+</div>
 <footer alignclass="py-1 bg-dark">
 
 </footer>
