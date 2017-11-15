@@ -47,9 +47,9 @@
   		<tr>
   			<th>Variety</th>
   			<th>Designation</th>
-  			<th>Price</th>
-  			<th>Province</th>
   			<th>Winery</th>
+  			<th>Province</th>
+  			<th>Price</th>
   			<th>Country</th>
   		</tr>
   		<?php
