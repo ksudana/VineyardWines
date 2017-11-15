@@ -1,5 +1,7 @@
 <html>
   <?php
+  session_start();
+    
   $hn = "localhost";
   $un = "root";
   $pw = "password";
