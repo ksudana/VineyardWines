@@ -16,8 +16,10 @@
     $age = $_POST["age"];
     $country = $_POST["country"];
     $sex = $_POST["sex"];
-    $query = "INSERT INTO Users(name, username, password, age, country, sex) VALUES ('$name', '$username', '$password', '$age', '$country', '$sex')";
+    $query = "INSERT INTO Users (name, username, password, age, country, sex) VALUES ('$name', '$username', '$password', '$age', '$country', '$sex')";
     $result = $con->query($query);
+    echo $result;
+    echo $name;
     echo "Created Account!";
   }
   ?>
