@@ -36,7 +36,7 @@
         <div class="panel panel-default">
           <div class="userprofile social ">
             <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="userpicimg"> </div>
-            <h3 class="username"><?php $_SESSION['username']; ?></h3>
+            <h3 class="username"><?php echo $_SESSION['username']; ?></h3>
             <p>San Ramon, California</p>
 
           </div>
