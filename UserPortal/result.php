@@ -24,15 +24,6 @@
 
   <body>
     <!-- Navigation -->
-    
-
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-      </div>
-      <!-- /.container -->
-    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -76,6 +67,12 @@
 		}
 		?>
   	</table>
+  	    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+      </div>
+      <!-- /.container -->
+    </footer>
   </body>
 
 
