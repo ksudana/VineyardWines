@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shop Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../Bootstrap/css/shop-item.css" rel="stylesheet">
+    <link href="css/elements.css" rel="stylesheet">
+
+    <script src="js/my_js.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+
+        <div class="col-md-5">
+
+          <div class="card mt-4">
+            <div class="card-body">
+              <h3 class="card-title">Product Name</h3>
+              <h4>$24.99</h4>
+              <p class="card-text">
+                <div class = "designation">
+                Designation: ASIOJDOIDJ <br/> <br/>
+                </div>
+                <div class = "Critic Rating">
+                Critic Rating: N/A <br/> <br/>
+                </div>
+                <div class = "Price">
+                Price: $$ <br/> <br/>
+                </div>
+                <div class = "Province">
+                Province: California <br/> <br/>
+                </div>
+                <div class = "Region1">
+                Region 1: Idk <br/> <br/>
+                </div>
+                <div class = "Region2">
+                Region 2: Idk2 <br/> <br/>
+              </div>
+              <div class = "Winery">
+                Winery: Some Winery <br/> <br/>
+                Description: This tremendous 100% varietal wine hails from Oakville and was aged over three years in oak. Juicy red-cherry fruit and a compelling hint of caramel greet the palate, framed by elegant, fine tannins and a subtle minty tone in the background. Balanced and rewarding from start to finish, it has years ahead of it to develop further nuance. Enjoy 2022Š—–2030. <br/> <br/>
+                Country: US <br/> <br/>
+              </div>
+              </p>
+              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+              4.0 stars
+            </div> 
+          </div>
+          <!-- /.card -->
+            </div>
+            <div class="col-md-7">
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+              Product Reviews
+            </div>
+            <div class="card-body">
+              <button id="popup" onclick="div_show()">Add a Review</button>
+              <hr>
+
+              <p>
+                <div class = "Reviewer_Name">
+                Name: Akhil Sarikonda <br/>
+              </div>
+              <div class = "Review_Rating">
+                Rating: 5 <br/>
+              </div>
+                <div class = "Comments">
+                Comments: I liked the wine because I am very fruity. <br/>
+              </div>
+              <div class = "Recommend">
+                Would you recommend? Yes <br/>
+              </div>
+              </p>
+              <small class="text-muted">Posted by Akhil Sarikonda on 3/1/17</small>
+              <hr>
+              <p> <div class = "Reviewer_Name">
+                Name: Akhil Sarikonda <br/>
+              </div>
+              <div class = "Review_Rating">
+                Rating: 5 <br/>
+              </div>
+                <div class = "Comments">
+                Comments: I liked the wine because I am very fruity. <br/>
+              </div>
+              <div class = "Recommend">
+                Would you recommend? Yes <br/>
+              </div>
+              </p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              <p> <div class = "Reviewer_Name">
+                Name: Akhil Sarikonda <br/>
+              </div>
+              <div class = "Review_Rating">
+                Rating: 5 <br/>
+              </div>
+                <div class = "Comments">
+                Comments: I liked the wine because I am very fruity. <br/>
+              </div>
+              <div class = "Recommend">
+                Would you recommend? Yes <br/>
+              </div>
+              </p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              <div id="abc">
+              <!-- Popup Div Starts Here -->
+              <div id="popupContact">
+              <!-- Contact Us Form -->
+              <form action="#" id="form" method="post" name="form">
+              <img id="close" src="images/3.png" onclick ="div_hide()">
+              <h2>Add Your Review</h2>
+              <hr>
+              <input id="name" name="name" placeholder="Name" type="text">
+              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
+              <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
+              <textarea id="msg" name="message" placeholder="Review"></textarea>
+              <a href="javascript:%20check_empty()" id="submit">Send</a>
+              </form>
+              </div>
+              <!-- Popup Div Ends Here -->
+              </div>
+              <!-- Display Popup Button -->
+            </div>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

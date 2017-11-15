@@ -16,14 +16,11 @@
     $age = $_POST["age"];
     $country = $_POST["country"];
     $sex = $_POST["sex"];
-    $query = "INSERT INTO Users (name, username, password, age, country, sex) VALUES ('$name', '$username', '$password', '$age', '$country', '$sex')";
-    $result = $con->query($query);
-    $query1 = "SELECT * FROM Wines WHERE wid=1"
-    $result1 = $con->query($query);
-    echo $result1;
-    echo $name;
+    $query = "INSERT INTO Users (name, username, password, age, country, sex) VALUES ('$name', '$username', '$password', $age, '$country', '$sex')";
+    $result = mysqli_query($con, $query);
     echo "Created Account!";
   }
+    mysqli_close($db);
   ?>
 
   <form action="index.html">
