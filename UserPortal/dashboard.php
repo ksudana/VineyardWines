@@ -37,7 +37,7 @@
       <div class="col-md-12 text-center ">
         <div class="panel panel-default">
           <div class="userprofile social ">
-            <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="userpicimg"> </div>
+            <div class="userpic"> <img src="https://static.change.org/profile-img/default-user-profile.svg" alt="" class="userpicimg"> </div>
             <div class="border border-success" style="background-color:#F0F3F5; width:30%; margin:auto; padding-top:10px; margin-top:25px">
                 <h5><?php echo $_SESSION['name']; ?></h5>
                 <h5>@<?php echo $_SESSION['username']; ?></h5>
