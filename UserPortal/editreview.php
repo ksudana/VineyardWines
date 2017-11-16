@@ -9,10 +9,10 @@
     echo "Connection failed!";
   }
   else {
-    $rid = $_POST["rid"];
-    $title = $_POST["name"];
-    $rating = $_POST["rating"];
-    $recommend = $_POST["Recommend"];
+    $rid = $_GET["rid"];
+    $title = $_GET["name"];
+    $rating = $_GET["rating"];
+    $recommend = $_GET["Recommend"];
     $recommend = ($recommend == "Yes") ? 1 : 0;
     $review = $_POST["message"];
     $query = "UPDATE Reviews SET title='$title',content='$review',rating='$rating',recommend='$recommend'
