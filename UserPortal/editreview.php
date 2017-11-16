@@ -62,7 +62,7 @@
               <p class="card-text">
                 <table>
                 <tr><td><strong> Review Title:</strong></td><td><input type="text" size="50" value="<?php print($title)?>"></td></tr>
-                <tr><td><strong> Review Comments:</strong></td><td><input type="text" style="height:100px;" value="<?php print($content)?>"></td></tr>
+                <tr><td><strong> Review Comments:</strong></td><td><textarea value="<?php print($content)?>"> </textarea></td></tr>
                 <tr><td><strong> Review Ratings:</strong></td><td><input type="text" size="10" value="<?php print($rating)?>"></td></tr>
                 <tr><td><strong> Review Recommendation:</strong></td><td><input type="text" size="10" value="<?php print($recommend)?>"></td></tr>
               </table>
