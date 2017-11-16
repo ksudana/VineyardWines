@@ -138,6 +138,8 @@
           <!-- EDIT REVIEW -->
           <button id="popup" onclick="div_show(<?php print($rid); ?>)">Edit Your Review</button>
 
+          <p> EDIT REVIEW LINK </p>
+
           <!-- DELETE REVIEW -->
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
             <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
