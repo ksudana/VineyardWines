@@ -162,6 +162,7 @@
         <img id="close" src="images/3.png" onclick ="div_hide()">
         <h2>Edit Your Review</h2>
         <hr>
+        <?php print($rid_to_edit) ?>
         <input id="rid" name="rid" type="hidden" value="<?php print($rid_to_edit) ?>">
         <input id="name" name="name" placeholder="Title" type="text">
         <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
