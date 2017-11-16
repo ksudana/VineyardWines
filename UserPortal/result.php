@@ -72,10 +72,13 @@
 				print("Bad Query");
 			}
 			if(mysql_num_rows($result) > 0){
-				$wid = $row['wid'];
+
 				$i = 0;
 				while($row = mysql_fetch_assoc($result) and $i < 50){
-				echo "<tr><td><a href="Review_Temp.php?wid=' . $wid . '">". $row['variety'] ."</a></td><td>". $row['designation']. "</td><td>" .$row['winery'] ."</td><td>". $row['province'] ."</td><td>" .$row['price'] ."</td><td>". $row['country'] ."</td></tr>";
+				$id = $row['wid'];
+				$firstName = $row['variety'];
+
+				echo ('<a href="user_account.php?id=' . $id . '">' . $firstName . '</a>');
 				$i = $i + 1;
 
 			}
