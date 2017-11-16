@@ -124,7 +124,7 @@
         if(mysql_num_rows($result) > 0){
           $i = 0;
           while($row = mysql_fetch_assoc($result) and $i < 50){
-          echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
+          echo "<table><tr><td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
           echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
           echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
           echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
@@ -137,8 +137,8 @@
 
           <!-- EDIT REVIEW -->
           <button id="popup" onclick="div_show(<?php print($rid); ?>)">Edit Your Review</button>
-
-          <p> EDIT REVIEW LINK </p>
+          echo "<table><tr><td><titlec><h3><a href= 'editreview.php?rid=" .$rid ."'> EDIT REVIEW </a></h3></titlec></td>,</tr></table>";
+          echo "<tr><td><a href= 'Review_Temp.php?wid=" . $id . "'>" . $wineName ."</a></td></tr>";
 
           <!-- DELETE REVIEW -->
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
