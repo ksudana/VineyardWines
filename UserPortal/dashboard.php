@@ -54,14 +54,14 @@
           <titlec><h4>About You</h4></titlec>
         </div>
     <div class="notice notice-success">
-        <strong>Age</strong><?php echo $_SESSION['age']; ?>
+        <strong>Age: </strong> <?php echo $_SESSION['age']; ?>
     </div>
 
     <div class="notice notice-warning">
-        <strong>Sex</strong><?php echo $_SESSION['sex']; ?>
+        <strong>Sex: </strong> <?php echo $_SESSION['sex']; ?>
     </div>
     <div class="notice notice-info">
-        <strong>Country</strong><?php echo $_SESSION['country']; ?>
+        <strong>Country: </strong><?php echo $_SESSION['country']; ?>
     </div>
 
 </div>
