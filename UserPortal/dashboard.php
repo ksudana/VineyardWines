@@ -1,6 +1,37 @@
 <?php
     session_start();
     include_once 'nav.php';
+  
+    $con = mysqli_connect($hn, $un, $pw, $db);
+    if(!$con) {
+       echo "Connection failed!";
+    }
+
+    $uid = $_SESSION['uid'];
+    $query = "SELECT * FROM Users WHERE uid='$uid'";
+    $result = $con->query($query);
+    $row = $result->fetch_assoc();
+    if(!$row) {
+      echo "Invalid User!";
+    }
+
+    $username = $row['username'];
+    $name = $row['name'];
+    $age = $row['age'];
+    $sex = $row['sex'];
+    $country = $row['country'];
+
+    mysql_free_result($result);
+    $aggquery = "SELECT COUNT(*) AS num_reviews FROM Reviews WHERE uid='$uid'";
+    $result = $con->query($aggquery);
+    if(!$row) {
+      echo "Invalid User!";
+    }
+
+    $numreviews = $row['num_reviews'];
+    mysql_free_result($result);
+    mysqli_close($db);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,8 +70,8 @@
           <div class="userprofile social ">
             <div class="userpic"> <img src="https://static.change.org/profile-img/default-user-profile.svg" alt="" class="userpicimg"> </div>
             <div class="border border-success" style="background-color:#F0F3F5; width:30%; margin:auto; padding-top:10px; margin-top:25px">
-                <h5><?php echo $_SESSION['name']; ?></h5>
-                <h5>@<?php echo $_SESSION['username']; ?></h5>
+                <h5><?php print($name); ?></h5>
+                <h5>@<?php print($username); ?></h5>
             </div>
           </div>
 
@@ -56,14 +87,18 @@
           <titlec><h4>About You</h4></titlec>
         </div>
     <div class="notice notice-success">
-        <strong>Age: </strong> <?php echo $_SESSION['age']; ?>
+        <strong>Age: </strong> <?php print($age); ?>
     </div>
 
     <div class="notice notice-warning">
-        <strong>Sex: </strong> <?php echo $_SESSION['sex']; ?>
+        <strong>Sex: </strong> <?php print($sex); ?>
     </div>
     <div class="notice notice-info">
-        <strong>Country: </strong><?php echo $_SESSION['country']; ?>
+        <strong>Country: </strong><?php print($country); ?>
+    </div>
+            
+    <div class="notice notice-danger">
+        <strong>Reviews: </strong><?php print($numreviews); ?>
     </div>
 
 </div>
@@ -75,10 +110,9 @@
         Your Wine Reviews
       </div>
       <div class="card-body">
-        <?php
-      $conn = mysql_connect("localhost", "root", "password");
-      mysql_select_db("VineyardWinesDB", $conn);
-        $uid = $_SESSION['uid'];
+      <?php
+        $conn = mysql_connect("localhost", "root", "password");
+        mysql_select_db("VineyardWinesDB", $conn);
         $sele = "SELECT * FROM Reviews WHERE uid='$uid'";
         $result = mysql_query($sele);
         if(!$result) {
@@ -118,7 +152,7 @@
         <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
         <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
         <textarea id="msg" name="message" placeholder="Review"></textarea>
-        <a href="javascript:%20check_empty()" id="submit">Send</a>
+        <a href="javascript:%20check_empty()" id="submit">Save</a>
         </form>
         </div>
         <!-- Popup Div Ends Here -->
