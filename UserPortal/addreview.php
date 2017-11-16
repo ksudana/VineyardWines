@@ -23,12 +23,13 @@
     $review = $_POST["message"];
     $query = "INSERT INTO Reviews (uid, wid, title, content, date, rating, recommend) VALUES ('$uid', '$wid', '$title', '$review', '$mysqldate', $rating', '$recommend')";
     $result = mysqli_query($con, $query);
-    echo "Created Account!";
+    if(!$result) {
+        echo "Bad Query!";
+    }
+    else {
+        echo "Created Review!";
+    }
   }
     mysqli_close($db);
   ?>
-
-  <form action="index.php">
-    <input type="submit" value="Back">
-  </form>
 </html>
