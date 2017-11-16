@@ -46,7 +46,7 @@
         </div>
       </div>
       <!-- /.col-md-12 -->
-      <div class="col-md-2 pull-right">
+      <div class="col-md-4 pull-right">
 
 
         <div class="container">
@@ -67,9 +67,7 @@
 </div>
 
       </div>
-      <div class="col-md-5  pull-left posttimeline">
-      </div>
-      <div class="col-md-7">
+      <div class="col-md-8  pull-left posttimeline">
     <div class="card card-outline-secondary my-4">
       <div class="card-header">
         Product Reviews
@@ -122,7 +120,7 @@
         <!-- Display Popup Button -->
       </div>
     </div>
-      </div>
+
     </div>
 </div>
 
