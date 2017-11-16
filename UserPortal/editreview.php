@@ -58,9 +58,10 @@
 
           <div class="card mt-4">
             <div class="card-body">
+              <h1> Edit Review </h1>
               <p class="card-text">
                 <strong> Review Title:</strong>
-                <input type="text" value="testing">;
+                <input type="text" value="<?php print($title)?>">;
                 <?php
                 echo "<table><tr><td><titlec><h3> Review Title: ". $title ."</h3></titlec></td></tr>";
                 echo "<tr><td><titlec> Review Comments: ". $content ."</titlec><br></td></tr>";
