@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once 'nav.php';
 ?>
 <!DOCTYPE html>
@@ -151,17 +152,21 @@
               <div id="abc">
               <!-- Popup Div Starts Here -->
               <div id="popupContact">
-              <!-- Contact Us Form -->
-              <form action="#" id="form" method="post" name="form">
-              <img id="close" src="images/3.png" onclick ="div_hide()">
-              <h2>Add Your Review</h2>
-              <hr>
-              <input id="name" name="name" placeholder="Name" type="text">
-              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
-              <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
-              <textarea id="msg" name="message" placeholder="Review"></textarea>
-              <a href="javascript:%20check_empty()" id="submit">Send</a>
-              </form>
+              <!-- Add Review Form -->
+              <?php 
+                  $wid = $_GET["wid"];
+                  echo '      <form id="form" method="post" name="form" action="addreview.php">
+                              <img id="close" src="images/3.png" onclick ="div_hide()">
+                              <h2>Add Your Review</h2>
+                              <hr>
+                              <input id="wid" type="hidden" name="wid" value='$wid'>
+                              <input id="name" name="name" placeholder="Name" type="text">
+                              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
+                              <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
+                              <textarea id="msg" name="message" placeholder="Review"></textarea>
+                                  <a href="javascript:%20check_empty()" id="submit">Send</a>
+                              </form>';
+              ?>
               </div>
               <!-- Popup Div Ends Here -->
               </div>
@@ -186,8 +191,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="../Bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
 
