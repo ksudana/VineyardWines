@@ -136,12 +136,12 @@
           ?>
 
           <!-- EDIT REVIEW -->
-
+          <button id="popup" onclick="div_show(<?php print($rid); ?>)">Edit Your Review</button>
           <div id="abc">
           <!-- Popup Div Starts Here -->
           <div id="popupContact">
           <!-- Add Review Form -->
-          <form action="editreview.php" id="form" method="post" name="form">
+          <form action="addreview.php" id="form" method="post" name="form">
               <img id="close" src="images/3.png" onclick ="div_hide()">
               <h2>Edit YOUR Review</h2>
               <hr>
