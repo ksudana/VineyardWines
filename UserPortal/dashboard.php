@@ -1,38 +1,8 @@
 <?php
     session_start();
     include_once 'nav.php';
-  
-    $con = mysqli_connect($hn, $un, $pw, $db);
-    if(!$con) {
-       echo "Connection failed!";
-    }
-
-    $uid = $_SESSION['uid'];
-    $query = "SELECT * FROM Users WHERE uid='$uid'";
-    $result = $con->query($query);
-    $row = $result->fetch_assoc();
-    if(!$row) {
-      echo "Invalid User!";
-    }
-
-    $username = $row['username'];
-    $name = $row['name'];
-    $age = $row['age'];
-    $sex = $row['sex'];
-    $country = $row['country'];
-
-    mysql_free_result($result);
-    $aggquery = "SELECT COUNT(*) AS num_reviews FROM Reviews WHERE uid='$uid'";
-    $result = $con->query($aggquery);
-    if(!$row) {
-      echo "Invalid User!";
-    }
-
-    $numreviews = $row['num_reviews'];
-    mysql_free_result($result);
-    mysqli_close($db);
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,6 +29,37 @@
 
 <body>
     <!-- Page Content -->
+    <?php
+        $con = mysqli_connect($hn, $un, $pw, $db);
+        if(!$con) {
+           echo "Connection failed!";
+        }
+
+        $uid = $_SESSION['uid'];
+        $query = "SELECT * FROM Users WHERE uid='$uid'";
+        $result = $con->query($query);
+        $row = $result->fetch_assoc();
+        if(!$row) {
+          echo "Invalid User!";
+        }
+
+        $username = $row['username'];
+        $name = $row['name'];
+        $age = $row['age'];
+        $sex = $row['sex'];
+        $country = $row['country'];
+
+        mysql_free_result($result);
+        $aggquery = "SELECT COUNT(*) AS num_reviews FROM Reviews WHERE uid='$uid'";
+        $result = $con->query($aggquery);
+        if(!$row) {
+          echo "Invalid User!";
+        }
+
+        $numreviews = $row['num_reviews'];
+        mysql_free_result($result);
+        mysqli_close($db);
+    ?>
     <div class="container">
     <div class="row">
 
@@ -110,9 +111,9 @@
         Your Wine Reviews
       </div>
       <div class="card-body">
-      <?php
-        $conn = mysql_connect("localhost", "root", "password");
-        mysql_select_db("VineyardWinesDB", $conn);
+        <?php
+      $conn = mysql_connect("localhost", "root", "password");
+      mysql_select_db("VineyardWinesDB", $conn);
         $sele = "SELECT * FROM Reviews WHERE uid='$uid'";
         $result = mysql_query($sele);
         if(!$result) {
