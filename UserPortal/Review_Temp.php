@@ -78,7 +78,25 @@
             <div class="card-body">
               <button id="popup" onclick="div_show()">Add a Review</button>
               <hr>
+              <?php
+            $conn = mysql_connect("localhost", "root", "password");
+            mysql_select_db("VineyardWinesDB", $conn);
 
+              $sele = "SELECT * FROM Reviews WHERE wid = Wines.wid";
+              $result = mysql_query($sele);
+              if(!$result) {
+                print("Bad Query");
+              }
+              if(mysql_num_rows($result) > 0){
+                $i = 0;
+                while($row = mysql_fetch_assoc($result) and $i < 50){
+                echo "<tr><td>". $row['uid'] ."</td><td>". $row['wid']. "</td></tr>";
+                $i = $i + 1;
+                }
+              }
+            mysql_free_result($result);
+            mysql_close($conn);
+            ?>
               <p>
                 <div class = "Reviewer_Name">
                 Name: Akhil Sarikonda <br/>
