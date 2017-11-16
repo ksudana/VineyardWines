@@ -1,11 +1,6 @@
 <?php
     session_start();
     include_once 'nav.php';
-    $conn = mysql_connect("localhost", "root", "password");
-    mysql_select_db("VineyardWinesDB", $conn);
-
-    $uid = $_SESSION('uid');
-    $wid = $_GET('wid');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +27,34 @@
 
     <!-- Navigation -->
 
-
     <!-- Page Content -->
+    <?php
+       $conn = mysql_connect("localhost", "root", "password");
+       mysql_select_db("VineyardWinesDB", $conn);
+       $uid = $_SESSION['uid'];
+       $wid = $_GET["wid"];
+       $query = "SELECT * FROM Wines WHERE wid='$wid'";
+       $result = mysql_query($query);
+       if(!$result) {
+           print("Bad Query.");
+       }
+      
+       $row = mysql_fetch_assoc($result);
+       $name = $row['variety'];
+       $designation = $row['designation'];
+       $price = $row['price'];
+       $critic_rating = $row['points'];
+       $province = $row['province'];
+       $region1 = $row['region1'];
+       $region2 = $row['region2'];
+       $description = $row['description'];
+       $country = $row['country'];
+       $winery = $row['winery'];
+      
+       mysql_free_result($result);
+       mysql_close($conn); 
+    ?>
+    
     <div class="container">
 
       <div class="row">
@@ -85,7 +106,11 @@
               <button id="popup" onclick="div_show()">Add a Review</button>
               <hr>
               <?php
-              $sele = "SELECT * FROM Reviews WHERE wid = '$wid'";
+              $conn = mysql_connect("localhost", "root", "password");
+              mysql_select_db("VineyardWinesDB", $conn);
+  
+              $wid = $_GET('wid');
+              $sele = "SELECT * FROM Reviews WHERE wid='$wid'";
               $result = mysql_query($sele);
               if(!$result) {
                 print("Bad Query");
@@ -102,25 +127,26 @@
                     $i = $i + 1;
                 }
                 else {
-                    echo "<h4>No Reviews.</h4>";s
+                    echo "<h4>No Reviews.</h4>";
                 }
               }
             mysql_free_result($result);
+            mysql_close($conn); 
             ?>
 
               <div id="abc">
               <!-- Popup Div Starts Here -->
               <div id="popupContact">
-              <!-- Contact Us Form -->
-              <form action="#" id="form" method="post" name="form">
+              <!-- Add Review Form -->
+              <form action="addreview.php" id="form" method="post" name="form">
               <img id="close" src="images/3.png" onclick ="div_hide()">
               <h2>Add Your Review</h2>
               <hr>
               <input id="name" name="name" placeholder="Name" type="text">
-              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
+              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
               <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
               <textarea id="msg" name="message" placeholder="Review"></textarea>
-              <a href="javascript:%20check_empty()" id="submit">Send</a>
+              <a href="javascript:%20check_empty()" id="submit">Create</a>
               </form>
               </div>
               <!-- Popup Div Ends Here -->
@@ -146,11 +172,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="../Bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="../Bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 
 </html>
-
-<?php  mysql_close($conn); ?>
