@@ -31,7 +31,6 @@
         echo "Couldn't update review, might be a bad query!";
     }
     else {
-        echo "<h1>Updated Review!</h1>";
         header("location: dashboard.php");
     }
   }
