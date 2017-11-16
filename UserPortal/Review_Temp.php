@@ -131,7 +131,6 @@
               <img id="close" src="images/3.png" onclick ="div_hide()">
               <h2>Add Your Review</h2>
               <hr>
-              <?php echo "<input id="wid" type="hidden" name="wid" value="wid">" ?>
               <input id="name" name="name" placeholder="Name" type="text">
               <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
               <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
