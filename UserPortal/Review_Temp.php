@@ -86,8 +86,6 @@
                 Country: <?php print($country); ?> <br/> <br/>
               </div>
               </p>
-              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-              4.0 stars
             </div>
           </div>
           <!-- /.card -->
