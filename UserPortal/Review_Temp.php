@@ -109,7 +109,7 @@
               $conn = mysql_connect("localhost", "root", "password");
               mysql_select_db("VineyardWinesDB", $conn);
   
-              $wid = $_GET('wid');
+              $wid = $_GET["wid"];
               $sele = "SELECT * FROM Reviews WHERE wid='$wid'";
               $result = mysql_query($sele);
               if(!$result) {
