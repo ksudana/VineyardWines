@@ -99,7 +99,7 @@
     <div class="notice notice-info">
         <strong>Country: </strong><?php print($country); ?>
     </div>
-            
+
     <div class="notice notice-danger">
         <strong>Reviews: </strong><?php print($numreviews); ?>
     </div>
@@ -128,23 +128,23 @@
           echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
           echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
           echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
-
+          echo "<tr><td><titlec><h6> review id". $row['rid'] ."</h6></titlec></td></tr>";
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table>";
           $rid = $row['rid'];
           $content = $row['content'];
           $i = $i + 1;
           ?>
-          
+
           <!-- EDIT REVIEW -->
           <button id="popup" onclick="div_show(<?php print($rid); ?>)">Edit Your Review</button>
-          
+
           <!-- DELETE REVIEW -->
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
             <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
             <input id="content" name="content" type="hidden" value="<?php print($content)?>">
             <button type="button" onclick=form.submit()>Delete Your Review</button>
           </form>
-          
+
           <hr>
           <?php
 
@@ -162,9 +162,9 @@
         <img id="close" src="images/3.png" onclick ="div_hide()">
         <h2>Edit Your Review</h2>
         <hr>
-        <?php 
+        <?php
             $rid_to_edit = $_SESSION['rid_to_edit'];
-            print($rid_to_edit); 
+            print($rid_to_edit);
         ?>
         <input id="rid" name="rid" type="hidden" value="<?php print($rid_to_edit) ?>">
         <input id="name" name="name" placeholder="Title" type="text">
