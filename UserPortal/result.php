@@ -76,9 +76,8 @@
 				$i = 0;
 				while($row = mysql_fetch_assoc($result) and $i < 50){
 				$id = $row['wid'];
-				$firstName = $row['variety'];
-
-				echo "<tr><td><a href= 'Review_Temp.php?id=" . $id . "''>" . $firstName . "</a></td></tr>";
+				$wineName = $row['variety'];
+				echo "<tr><td><a href= 'Review_Temp.php?id=" . $id . "''>" . $wineName . "</a></td><td>". $row['designation']. "</td><td>" .$row['winery'] ."</td><td>". $row['province'] ."</td><td>" .$row['price'] ."</td><td>". $row['country'] ."</td></tr>";
 				$i = $i + 1;
 
 			}
