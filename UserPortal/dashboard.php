@@ -131,11 +131,13 @@
 
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table>";
           $wid = $row['wid'];
+          $content = $row['content'];
           $i = $i + 1;
           ?>
           <button id="popup" onclick="div_show()">Edit Your Review</button>
           <form action="deletereview.php" id="form" method="post" name="delete_form">
             <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
+            <input id="wid" name="wid" type="hidden" value="<?php print($content)?>">
             <button type="button" onclick=form.submit()>Delete Your Review</button>
           </form>
           <hr>
