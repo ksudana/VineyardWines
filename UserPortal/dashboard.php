@@ -134,12 +134,17 @@
           $content = $row['content'];
           $i = $i + 1;
           ?>
-          <button id="popup" onclick="div_show()">Edit Your Review</button>
-          <form style="padding:0px; border:none" action="deletereview.php" id="form" method="post" name="delete_form">
+          
+          <!-- EDIT REVIEW -->
+          <button id="popup" onclick="div_show(<?php print($wid); ?>)">Edit Your Review</button>
+          
+          <!-- DELETE REVIEW -->
+          <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
             <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
             <input id="content" name="content" type="hidden" value="<?php print($content)?>">
             <button type="button" onclick=form.submit()>Delete Your Review</button>
           </form>
+          
           <hr>
           <?php
 
@@ -152,16 +157,17 @@
         <div id="abc">
         <!-- Popup Div Starts Here -->
         <div id="popupContact">
-        <!-- Contact Us Form -->
-        <form action="#" id="form" method="post" name="form">
+        <!-- Edit Review Form -->
+        <form action="editreview.php" id="edit_form" method="post" name="edit_form">
         <img id="close" src="images/3.png" onclick ="div_hide()">
         <h2>Edit Your Review</h2>
         <hr>
+        <input id="wid" name="wid" type="hidden" value="<?php print($wid_to_edit) ?>">
         <input id="name" name="name" placeholder="Title" type="text">
         <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
         <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
         <textarea id="msg" name="message" placeholder="Review"></textarea>
-        <a href="javascript:%20check_empty()" id="submit">Save</a>
+        <a onclick="form.submit()">Save</a>
         </form>
         </div>
         <!-- Popup Div Ends Here -->
