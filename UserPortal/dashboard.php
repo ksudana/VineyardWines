@@ -133,7 +133,7 @@
           $rid = $row['rid'];
           $content = $row['content'];
           $i = $i + 1;
-          echo "<button><a href= 'editreview.php?rid=" . $rid . "'> EDIT REVIEW </a></button>";
+          echo "<a href= 'editreview.php?rid=" . $rid . "'><button> EDIT REVIEW </button></a>";
           ?>
 
           <!-- EDIT REVIEW -->
