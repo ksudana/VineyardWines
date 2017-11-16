@@ -94,9 +94,9 @@
                 echo "<table><tr><td><titlec> Wine ID:   ". $row['wid'] ."</titlec></td></tr>";
                 echo "<table><tr><td><titlec> Title:     ". $row['title'] ."</titlec></td></tr>";
                 echo "<table><tr><td><titlec> Comments:  ". $row['content'] ."</titlec></td></tr>";
-                echo "<table><tr><td><titlec> User ID:   ". $row['date'] ."</titlec></td></tr>";
                 echo "<table><tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                echo "<table><tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec></td></tr></table><hr>";
+                echo "<table><tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec></td></tr><br><br>";
+                echo "<table><tr><td><titlec> Posted on". $row['date'] ."</titlec></td></tr></table><hr>";
                 $i = $i + 1;
                 }
               }
