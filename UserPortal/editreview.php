@@ -60,10 +60,10 @@
             <div class="card-body">
               <p class="card-text">
                 <?php
-                echo "<table><tr><td><titlec><h3> Review Title:      ". $title ."</h3></titlec></td></tr>";
-                echo "<tr><td><titlec> Review Comments:              ". $content ."</titlec><br></td></tr>";
-                echo "<tr><td><titlec><h6> Review Ratings            ". $rating ."</h6></titlec></td></tr>";
-                echo "<tr><td><titlec> <p>Review Recommendation      ". $recommend ."</p></titlec></td></tr></table>";
+                echo "<table><tr><td><titlec><h3> Review Title: ". $title ."</h3></titlec></td></tr>";
+                echo "<tr><td><titlec> Review Comments: ". $content ."</titlec><br></td></tr>";
+                echo "<tr><td><titlec><h6> Review Ratings: ". $rating ."</h6></titlec></td></tr>";
+                echo "<tr><td><titlec> <p>Review Recommendation: ". $recommend ."</p></titlec></td></tr></table>";
                 ?>
               </p>
             </div>
