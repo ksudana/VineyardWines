@@ -1,5 +1,11 @@
 <?php
+    session_start();
     include_once 'nav.php';
+    $conn = mysql_connect("localhost", "root", "password");
+    mysql_select_db("VineyardWinesDB", $conn);
+
+    $uid = $_SESSION('uid');
+    $wid = $_GET('wid');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Shop Item - Start Bootstrap Template</title>
+    <title>Vineyard Wines</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -79,28 +85,27 @@
               <button id="popup" onclick="div_show()">Add a Review</button>
               <hr>
               <?php
-            $conn = mysql_connect("localhost", "root", "password");
-            mysql_select_db("VineyardWinesDB", $conn);
-
-              $sele = "SELECT * FROM Reviews ";
+              $sele = "SELECT * FROM Reviews WHERE wid = '$wid'";
               $result = mysql_query($sele);
               if(!$result) {
                 print("Bad Query");
               }
-              if(mysql_num_rows($result) > 0){
+              if(mysql_num_rows($result) > 0) {
                 $i = 0;
-                while($row = mysql_fetch_assoc($result) and $i < 50){
-                echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
-                echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
-                echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
+                while($row = mysql_fetch_assoc($result) and $i < 50) {
+                    echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
+                    echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
+                    echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
+                    echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
 
-                echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
-                $i = $i + 1;
+                    echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
+                    $i = $i + 1;
+                }
+                else {
+                    echo "<h4>No Reviews.</h4>";
                 }
               }
             mysql_free_result($result);
-            mysql_close($conn);
             ?>
 
               <div id="abc">
@@ -147,3 +152,5 @@
   </body>
 
 </html>
+
+<?php  mysql_close($conn); />
