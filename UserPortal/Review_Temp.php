@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include_once 'nav.php';
 ?>
 <!DOCTYPE html>
@@ -11,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Vineyard Wines</title>
+    <title>Shop Item - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +26,8 @@
 
     <!-- Navigation -->
 
-    <!-- Page Content -->  
+
+    <!-- Page Content -->
     <div class="container">
 
       <div class="row">
@@ -79,46 +79,41 @@
               <button id="popup" onclick="div_show()">Add a Review</button>
               <hr>
               <?php
-              $conn = mysql_connect("localhost", "root", "password");
-              mysql_select_db("VineyardWinesDB", $conn);
-  
-              $sele = "SELECT * FROM Reviews";
+            $conn = mysql_connect("localhost", "root", "password");
+            mysql_select_db("VineyardWinesDB", $conn);
+              $sele = "SELECT * FROM Reviews ";
               $result = mysql_query($sele);
               if(!$result) {
                 print("Bad Query");
               }
-              if(mysql_num_rows($result) > 0) {
+              if(mysql_num_rows($result) > 0){
                 $i = 0;
-                while($row = mysql_fetch_assoc($result) and $i < 50) {
-                    echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
-                    echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                    echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
-                    echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
-
-                    echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
-                    $i = $i + 1;
-                }
-                else {
-                    echo "<h4>No Reviews.</h4>";
+                while($row = mysql_fetch_assoc($result) and $i < 50){
+                echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
+                echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
+                echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
+                echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
+                echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
+                $i = $i + 1;
                 }
               }
             mysql_free_result($result);
-            mysql_close($conn); 
+            mysql_close($conn);
             ?>
 
               <div id="abc">
               <!-- Popup Div Starts Here -->
               <div id="popupContact">
-              <!-- Add Review Form -->
-              <form action="addreview.php" id="form" method="post" name="form">
+              <!-- Contact Us Form -->
+              <form action="#" id="form" method="post" name="form">
               <img id="close" src="images/3.png" onclick ="div_hide()">
               <h2>Add Your Review</h2>
               <hr>
               <input id="name" name="name" placeholder="Name" type="text">
-              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
+              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
               <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
               <textarea id="msg" name="message" placeholder="Review"></textarea>
-              <a href="javascript:%20check_empty()" id="submit">Create</a>
+              <a href="javascript:%20check_empty()" id="submit">Send</a>
               </form>
               </div>
               <!-- Popup Div Ends Here -->
@@ -144,8 +139,9 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../Bootstrap/vendor/jquery/jquery.min.js"></script>
-    <script src="../Bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   </body>
 
 </html>
