@@ -136,7 +136,7 @@
           ?>
 
           <!-- EDIT REVIEW -->
-          <button id="popup" onclick="div_show(<?php echo $result; ?>)">Edit Your Review</button>
+          <button id="popup" onclick="div_show(<?php print($rid); ?>)">Edit Your Review</button>
 
           <!-- DELETE REVIEW -->
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
