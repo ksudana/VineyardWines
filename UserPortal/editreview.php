@@ -61,10 +61,10 @@
               <form action="editsubmit.php" id="form" method="post" name="form">
                   <h2>Edit Your Review</h2>
                   <hr>
-                  <input id="title" name="title" type="text" value="<?php print($title)?>">
-                  <input id="comments" name="comments" type="text" value="<?php print($content)?>">
-                  <input id="rating" name="rating" type="text" value="<?php print($rating)?>">
-                  <input id="recommend" name="recommend" type="text" value="<?php print($recommend)?>">
+                  <strong> Review Title:</strong><input id="title" name="title" type="text" value="<?php print($title)?>">
+                  <strong> Review Comments:</strong><input id="comments" name="comments" type="text" value="<?php print($content)?>">
+                  <strong> Review Ratings:</strong><input id="rating" name="rating" type="text" value="<?php print($rating)?>">
+                  <strong> Review Recommendation:</strong><input id="recommend" name="recommend" type="text" value="<?php print($recommend)?>">
                   <a id="submit" onclick="form.submit()">Create Review</a>
               </form>
 
