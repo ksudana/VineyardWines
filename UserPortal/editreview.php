@@ -54,7 +54,7 @@
       <div class="row">
 
 
-        <div class="col-md-5">
+        <div class="col-lg-7">
 
           <div class="card mt-4">
             <div class="card-body">
