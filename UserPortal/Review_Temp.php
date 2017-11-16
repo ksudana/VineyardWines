@@ -91,8 +91,8 @@
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
                 echo "<table><tr><td><titlec> User ID:   ". $row['uid'] ."</titlec></td></tr>";
-                echo "<tr<td><titlec><h1> Title:     ". $row['title'] ."</h1></titlec></td></tr>";
-                echo "<tr><td><titlec><h3> Comments:  ". $row['content'] ."</h3</titlec></td></tr>";
+                echo "<tr<td><titlec><h3> ". $row['title'] ."</h1></titlec></td></tr>";
+                echo "<tr><td><titlec><h5>  ". $row['content'] ."</h3</titlec></td></tr>";
                 echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
                 echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br><br></td></tr>";
                 echo "<tr><td><titlec> Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
