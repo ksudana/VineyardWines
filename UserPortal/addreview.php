@@ -28,7 +28,7 @@
     }
     else {
         echo "Created Review!";
-        header('location: http://fa17-cs411-01.cs.illinois.edu/VineyardWines/UserPortal/Review_Temp.php?wid='$wid'');
+        header('location: Review_Temp.php?wid='$wid'');
     }
   }
     mysqli_close($db);
