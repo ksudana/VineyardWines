@@ -18,7 +18,7 @@
     $recommend = $_POST["recommend"];
     $recommend = ($recommend == "Yes") ? 1 : 0;
     $content = $_POST["content"];
-    $query = "UPDATE Reviews SET title = '$title', date = '$mysqldate', rating = '$rating', content = '$content', recommend = '$recommend' WHERE rid ='$rid'";
+    $query = "UPDATE Reviews SET title = '$title', date = '$mysqldate', rating = '$rating', content = '$content', recommend = '$recommend' WHERE rid ='$rid', uid ='$uid'";
     $result = mysqli_query($con, $query);
     if(!$result) {
       print($uid);
