@@ -62,10 +62,9 @@
                   <h2>Edit Your Review</h2>
                   <hr>
                   <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
-                  <input id="uid" name="uid" type="hidden" value="<?php print($uid)?>">
                   <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
                   <strong> Review Title:</strong><input id="title" name="title" type="text" value="<?php print($title)?>">
-                  <strong> Review Comments:</strong><input id="comments" name="comments" type="text" value="<?php print($content)?>">
+                  <strong> Review Comments:</strong><input id="cntent" name="content" type="text" value="<?php print($content)?>">
                   <strong> Review Ratings:</strong><input id="rating" name="rating" type="text" value="<?php print($rating)?>">
                   <strong> Review Recommendation:</strong><input id="recommend" name="recommend" type="text" value="<?php print($recommend)?>">
                   <a id="submit" onclick="form.submit()">Submit Revision</a>
