@@ -27,8 +27,8 @@
   <body>
 
     <?php
-       $conn = mysql_connect($hn, $un, $pw);
-       mysql_select_db($db, $conn);
+       $conn = mysql_connect("localhost", "root", "password");
+       mysql_select_db("VineyardWinesDB", $conn);
        $uid = $_SESSION['uid'];
        $wid = $_GET["wid"];
        $query = "SELECT * FROM Wines WHERE wid='$wid'";

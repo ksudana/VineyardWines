@@ -14,7 +14,7 @@
     $title = $_POST["name"];
     $mysqldate = date( 'Y-m-d H:i:s');
     $rating = $_POST["rating"];
-    $recommend = $_POST["Reccomend"];
+    $recommend = $_POST["Recommend"];
     $recommend = ($recommend == "Yes") ? 1 : 0;
     $review = $_POST["message"];
     $query = "INSERT INTO Reviews (uid, wid, title, content, date, rating, recommend) VALUES ('$uid', '$wid', '$title', '$review', '$mysqldate', $rating, $recommend)";
