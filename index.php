@@ -29,7 +29,7 @@
     <!-- Page Content -->
     <div class="container">
     
-    <br><br><br><br>
+    <br><br>
     <img src="Images/logo.png" style="display:block; margin-left:auto; margin-right:auto"/>
     <br>
     <div class="container">
