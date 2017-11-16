@@ -31,7 +31,7 @@
         echo "Couldn't update review, might be a bad query!";
     }
     else {
-        echo "Updated Review!";
+        echo "<h1>Updated Review!</h1>";
         header("location: editreview.php?rid=$rid");
     }
   }
