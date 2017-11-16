@@ -131,7 +131,7 @@
                   <h2>Add Your Review</h2>
                   <hr>
                   <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
-                  <input id="name" name="name" placeholder="Name" type="text">
+                  <input id="name" name="name" placeholder="Title" type="text">
                   <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
                   <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
                   <textarea id="msg" name="message" placeholder="Review"></textarea>
