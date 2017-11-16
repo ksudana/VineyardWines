@@ -80,25 +80,7 @@
               <button id="popup" onclick="div_show()">Add a Review</button>
               <hr>
 /*TESTING___________________________________________________below*/
-              <?php
-        		$conn = mysql_connect("localhost", "root", "password");
-        		mysql_select_db("VineyardWinesDB", $conn);
 
-        			$sele = "SELECT * FROM Reviews WHERE wid = Wines.wid";
-        			$result = mysql_query($sele);
-        			if(!$result) {
-        				print("Bad Query");
-        			}
-        			if(mysql_num_rows($result) > 0){
-        				$i = 0;
-        				while($row = mysql_fetch_assoc($result) and $i < 50){
-        				echo "<tr><td>". $row['uid'] ."</td><td>". $row['wid']. "</td><td>" .$row['title'] ."</td><td>". $row['content'] ."</td><td>". $row['date'] ."</td><td>". $row['rating'] ."</td><td>". $row['recommend'] ."</td></tr>";
-        				$i = $i + 1;
-        			  }
-        		  }
-        		mysql_free_result($result);
-        		mysql_close($conn);
-        		?>
 /*TESTING___________________________________________________above*/
 
 
@@ -153,7 +135,7 @@
               <!-- Popup Div Starts Here -->
               <div id="popupContact">
               <!-- Add Review Form -->
-              <?php 
+              <?php
                   $wid = $_GET["wid"];
                   echo '      <form id="form" method="post" name="form" action="addreview.php">
                               <img id="close" src="images/3.png" onclick ="div_hide()">
