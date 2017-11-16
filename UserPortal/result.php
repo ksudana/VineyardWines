@@ -78,7 +78,7 @@
 				$id = $row['wid'];
 				$firstName = $row['variety'];
 
-				echo ('<a href="Review_Temp.php?id=' . $id . '">' . $firstName . '</a>');
+				echo "<tr><td>"('<a href="Review_Temp.php?id=' . $id . '">' . $firstName . '</a>')"</td></tr>";
 				$i = $i + 1;
 
 			}
