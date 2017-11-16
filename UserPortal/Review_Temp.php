@@ -132,8 +132,8 @@
               <hr>
               <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
               <input id="name" name="name" placeholder="Name" type="text">
-              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
-              <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="number">
+              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
+              <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
               <textarea id="msg" name="message" placeholder="Review"></textarea>
               <a href="javascript:%20check_empty()" id="submit">Send</a>
               </form>
