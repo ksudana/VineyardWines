@@ -91,9 +91,9 @@
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
                 echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
-                echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec></td></tr>";
-                echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec><br><br></td></tr>";
+                echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td>";
+                echo "<td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
+                echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec><br></td></tr>";
 
                 echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
                 $i = $i + 1;
