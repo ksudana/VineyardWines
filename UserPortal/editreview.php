@@ -61,6 +61,9 @@
               <form action="editsubmit.php" id="form" method="post" name="form">
                   <h2>Edit Your Review</h2>
                   <hr>
+                  <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
+                  <input id="uid" name="uid" type="hidden" value="<?php print($uid)?>">
+                  <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
                   <strong> Review Title:</strong><input id="title" name="title" type="text" value="<?php print($title)?>">
                   <strong> Review Comments:</strong><input id="comments" name="comments" type="text" value="<?php print($content)?>">
                   <strong> Review Ratings:</strong><input id="rating" name="rating" type="text" value="<?php print($rating)?>">
