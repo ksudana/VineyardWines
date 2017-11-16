@@ -16,7 +16,7 @@
     $uid = $_SESSION['uid'];
     $wid = $_POST["wid"];
     $title = $_POST["name"];
-    $mysqldate = date( 'Y-m-d H:i:s', $phpdate);
+    $mysqldate = date( 'Y-m-d H:i:s');
     $rating = $_POST["rating"];
     $recommend = $_POST["Reccomend"];
     $recommend = ($recommend == "Yes") ? 1 : 0;
@@ -28,6 +28,7 @@
     }
     else {
         echo "Created Review!";
+        header('location: http://fa17-cs411-01.cs.illinois.edu/VineyardWines/UserPortal/Review_Temp.php?wid='$wid'');
     }
   }
     mysqli_close($db);
