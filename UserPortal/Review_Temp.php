@@ -1,6 +1,7 @@
 <?php
     session_start();
     include_once 'nav.php';
+    include_once '../db_info.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +27,8 @@
   <body>
 
     <?php
-       $conn = mysql_connect("localhost", "root", "password");
-       mysql_select_db("VineyardWinesDB", $conn);
+       $conn = mysql_connect($hn, $un, $pw);
+       mysql_select_db($db, $conn);
        $uid = $_SESSION['uid'];
        $wid = $_GET["wid"];
        $query = "SELECT * FROM Wines WHERE wid='$wid'";
