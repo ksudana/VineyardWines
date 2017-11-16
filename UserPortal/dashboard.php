@@ -36,9 +36,8 @@
         <div class="panel panel-default">
           <div class="userprofile social ">
             <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="userpicimg"> </div>
-            <h3 class="username"><?php echo $_SESSION['username']; ?></h3>
-            <p>San Ramon, California</p>
-
+            <h3 class="username" style="background-color:white; color:green"><?php echo $_SESSION['username']; ?></h3>
+            <h5><?php echo $_SESSION['name']; ?></h5>
           </div>
 
           <div class="clearfix"></div>
@@ -53,14 +52,14 @@
           <titlec><h4>About You</h4></titlec>
         </div>
     <div class="notice notice-success">
-        <strong>Age</strong> 69
+        <strong>Age</strong><?php echo $_SESSION['age']; ?>
     </div>
 
     <div class="notice notice-warning">
-        <strong>Sex</strong> Gay
+        <strong>Sex</strong><?php echo $_SESSION['sex']; ?>
     </div>
     <div class="notice notice-info">
-        <strong>Country</strong> Iraq
+        <strong>Country</strong><?php echo $_SESSION['country']; ?>
     </div>
 
 </div>

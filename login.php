@@ -24,6 +24,11 @@
     else {
       $_SESSION['uid'] = $row['uid'];
       $_SESSION['username'] = $row['username'];
+      $_SESSION['name'] = $row['name'];
+      $_SESSION['age'] = $row['age'];
+      $_SESSION['sex'] = $row['sex'];
+      $_SESSION['country'] = $row['country'];
+
       echo "Successful login!";
       header('location: UserPortal/dashboard.php');
     }
