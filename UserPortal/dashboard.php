@@ -72,7 +72,7 @@
       <div class="col-md-8  pull-left posttimeline">
     <div class="card card-outline-secondary my-4">
       <div class="card-header">
-        Product Reviews
+        Your Wine Reviews
       </div>
       <div class="card-body">
         <?php
