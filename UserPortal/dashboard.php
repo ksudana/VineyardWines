@@ -36,8 +36,10 @@
         <div class="panel panel-default">
           <div class="userprofile social ">
             <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="userpicimg"> </div>
-            <h3 class="username" style="background-color:white; color:green"><?php echo $_SESSION['username']; ?></h3>
-            <h5><?php echo $_SESSION['name']; ?></h5>
+            <div class="border border-success">
+                <h3 class="username">@<?php echo $_SESSION['username']; ?></h3>
+                <h5><?php echo $_SESSION['name']; ?></h5>
+            </div>
           </div>
 
           <div class="clearfix"></div>
@@ -76,10 +78,7 @@
 
     <!-- Footer -->
     <footer class="py-1 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-      </div>
-      <!-- /.container -->
+      <br><br>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
