@@ -102,7 +102,7 @@
                     $i = $i + 1;
                 }
                 else {
-                    echo "<h4>No Reviews.</h4>";
+                    echo "<h4>No Reviews.</h4>";s
                 }
               }
             mysql_free_result($result);
@@ -153,4 +153,4 @@
 
 </html>
 
-<?php  mysql_close($conn); />
+<?php  mysql_close($conn); ?>
