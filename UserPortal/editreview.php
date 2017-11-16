@@ -61,7 +61,6 @@
               <p class="card-text">
                 <strong> Review Title:</strong>
                 <?php
-                echo "<input type="text" value='" . $title . "'>";
                 echo "<table><tr><td><titlec><h3> Review Title: ". $title ."</h3></titlec></td></tr>";
                 echo "<tr><td><titlec> Review Comments: ". $content ."</titlec><br></td></tr>";
                 echo "<tr><td><titlec><h6> Review Ratings: ". $rating ."</h6></titlec></td></tr>";
