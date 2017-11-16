@@ -106,7 +106,6 @@
         <!-- Popup Div Starts Here -->
         <div id="popupContact">
         <!-- Contact Us Form -->
-        <form action="#" id="form" method="post" name="form">
         <img id="close" src="images/3.png" onclick ="div_hide()">
         <h2>Add Your Review</h2>
         <hr>
