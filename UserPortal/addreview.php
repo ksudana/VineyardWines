@@ -14,7 +14,7 @@
   }
   else {
     $uid = $_SESSION['uid'];
-    $wid = $_GET["wid"];
+    $wid = $_POST["wid"];
     $title = $_POST["name"];
     $mysqldate = date( 'Y-m-d H:i:s', $phpdate );
     $rating = $_POST["rating"];

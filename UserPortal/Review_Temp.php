@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once 'nav.php';
 ?>
 <!DOCTYPE html>
@@ -129,9 +130,10 @@
               <img id="close" src="images/3.png" onclick ="div_hide()">
               <h2>Add Your Review</h2>
               <hr>
+              <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
               <input id="name" name="name" placeholder="Name" type="text">
               <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
-              <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
+              <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="number">
               <textarea id="msg" name="message" placeholder="Review"></textarea>
               <a href="javascript:%20check_empty()" id="submit">Send</a>
               </form>
@@ -159,8 +161,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="../Bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
 
