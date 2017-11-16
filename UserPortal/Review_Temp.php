@@ -27,34 +27,7 @@
 
     <!-- Navigation -->
 
-    <!-- Page Content -->
-    <?php
-       $conn = mysql_connect("localhost", "root", "password");
-       mysql_select_db("VineyardWinesDB", $conn);
-       $uid = $_SESSION['uid'];
-       $wid = $_GET["wid"];
-       $query = "SELECT * FROM Wines WHERE wid='$wid'";
-       $result = mysql_query($query);
-       if(!$result) {
-           print("Bad Query.");
-       }
-      
-       $row = mysql_fetch_assoc($result);
-       $name = $row['variety'];
-       $designation = $row['designation'];
-       $price = $row['price'];
-       $critic_rating = $row['points'];
-       $province = $row['province'];
-       $region1 = $row['region1'];
-       $region2 = $row['region2'];
-       $description = $row['description'];
-       $country = $row['country'];
-       $winery = $row['winery'];
-      
-       mysql_free_result($result);
-       mysql_close($conn); 
-    ?>
-    
+    <!-- Page Content -->  
     <div class="container">
 
       <div class="row">
@@ -109,8 +82,7 @@
               $conn = mysql_connect("localhost", "root", "password");
               mysql_select_db("VineyardWinesDB", $conn);
   
-              $wid = $_GET('wid');
-              $sele = "SELECT * FROM Reviews WHERE wid='$wid'";
+              $sele = "SELECT * FROM Reviews";
               $result = mysql_query($sele);
               if(!$result) {
                 print("Bad Query");
