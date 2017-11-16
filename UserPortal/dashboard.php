@@ -30,6 +30,10 @@
 <body>
     <!-- Page Content -->
     <?php
+        $hn = "localhost";
+        $un = "root";
+        $pw = "password";
+        $db = "VineyardWinesDB";
         $con = mysqli_connect($hn, $un, $pw, $db);
         if(!$con) {
            echo "Connection failed!";
