@@ -62,31 +62,28 @@
 
           <div class="card mt-4">
             <div class="card-body">
-              <h3 class="card-title">Product Name</h3>
+              <h3 class="card-title"><?php print($name); ?></h3>
               <h4>$<?php print($price); ?></h4>
               <p class="card-text">
                 <div class = "designation">
-                Designation: ASIOJDOIDJ <br/> <br/>
+                Designation: <?php print($designation); ?> <br/> <br/>
                 </div>
                 <div class = "Critic Rating">
-                Critic Rating: N/A <br/> <br/>
-                </div>
-                <div class = "Price">
-                Price: $$ <br/> <br/>
+                Critic Rating: <?php print($critic_rating); ?> <br/> <br/>
                 </div>
                 <div class = "Province">
-                Province: California <br/> <br/>
+                Province: <?php print($province); ?> <br/> <br/>
                 </div>
                 <div class = "Region1">
-                Region 1: Idk <br/> <br/>
+                Region 1: <?php print($region1); ?> <br/> <br/>
                 </div>
                 <div class = "Region2">
-                Region 2: Idk2 <br/> <br/>
+                Region 2: <?php print($region2); ?> <br/> <br/>
               </div>
               <div class = "Winery">
-                Winery: Some Winery <br/> <br/>
-                Description: This tremendous 100% varietal wine hails from Oakville and was aged over three years in oak. Juicy red-cherry fruit and a compelling hint of caramel greet the palate, framed by elegant, fine tannins and a subtle minty tone in the background. Balanced and rewarding from start to finish, it has years ahead of it to develop further nuance. Enjoy 2022Š—–2030. <br/> <br/>
-                Country: US <br/> <br/>
+                Winery: <?php print($winery); ?> <br/> <br/>
+                Description: <?php print($description); ?> <br/> <br/>
+                Country: <?php print($country); ?> <br/> <br/>
               </div>
               </p>
               <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
