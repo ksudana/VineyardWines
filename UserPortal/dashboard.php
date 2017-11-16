@@ -95,7 +95,11 @@
 
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
           $i = $i + 1;
-          echo"        <button id="popup" onclick="div_show()">Add a Review</button>";
+          ?>
+          <button id="popup" onclick="div_show()">Add a Review</button>
+
+          <?php
+
           }
         }
       mysql_free_result($result);
