@@ -78,8 +78,8 @@
         <?php
       $conn = mysql_connect("localhost", "root", "password");
       mysql_select_db("VineyardWinesDB", $conn);
-
-        $sele = "SELECT * FROM Reviews ";
+        $uid = $_SESSION['uid'];
+        $sele = "SELECT * FROM Reviews WHERE uid='$uid''";
         $result = mysql_query($sele);
         if(!$result) {
           print("Bad Query");
