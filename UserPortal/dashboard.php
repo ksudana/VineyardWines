@@ -75,7 +75,6 @@
         Product Reviews
       </div>
       <div class="card-body">
-        <button id="popup" onclick="div_show()">Add a Review</button>
         <hr>
         <?php
       $conn = mysql_connect("localhost", "root", "password");
@@ -96,8 +95,14 @@
 
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
           $i = $i + 1;
-          ?>
-          <div id="abc">
+          echo"        <button id="popup" onclick="div_show()">Add a Review</button>";
+          }
+        }
+      mysql_free_result($result);
+      mysql_close($conn);
+      ?>
+
+        <div id="abc">
         <!-- Popup Div Starts Here -->
         <div id="popupContact">
         <!-- Contact Us Form -->
@@ -116,14 +121,6 @@
         </div>
         <!-- Display Popup Button -->
       </div>
-      <?php
-          }
-        }
-      mysql_free_result($result);
-      mysql_close($conn);
-      ?>
-
-        
     </div>
 
     </div>
