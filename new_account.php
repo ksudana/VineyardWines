@@ -1,10 +1,6 @@
 <html>
   <?php
-  $hn = "localhost";
-  $un = "root";
-  $pw = "password";
-  $db = "VineyardWinesDB";
-
+  include_once 'db_info.php';
   $con = mysqli_connect($hn, $un, $pw, $db);
   if(!$con) {
     echo "Connection failed!";
