@@ -96,11 +96,11 @@
 
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
           $i = $i + 1;
-          echo{
-          <div id="abc">
-          <!-- Popup Div Starts Here -->
+
+          echo'<div id="abc">
+
           <div id="popupContact">
-          <!-- Contact Us Form -->
+
           <form action="#" id="form" method="post" name="form">
           <img id="close" src="images/3.png" onclick ="div_hide()">
           <h2>Add Your Review</h2>
@@ -112,10 +112,9 @@
           <a href="javascript:%20check_empty()" id="submit">Send</a>
           </form>
           </div>
-          <!-- Popup Div Ends Here -->
-          </div>
+
+          </div>'
           }
-        }
         }
       mysql_free_result($result);
       mysql_close($conn);
