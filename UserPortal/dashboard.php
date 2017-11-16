@@ -136,9 +136,7 @@
           ?>
 
           <!-- EDIT REVIEW -->
-          <button id="popup" onclick="div_show(<?php print($rid); ?>)">Edit Your Review</button>
-          echo "<table><tr><td><titlec><h3><a href= 'editreview.php?rid=" .$rid ."'> EDIT REVIEW </a></h3></titlec></td>,</tr></table>";
-          echo "<tr><td><a href= 'Review_Temp.php?wid=" . $id . "'>" . $wineName ."</a></td></tr>";
+          echo "<a href= 'editreview.php?rid=" . $rid . "'> EDIT REVIEW" "</a>";
 
           <!-- DELETE REVIEW -->
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
