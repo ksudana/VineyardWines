@@ -135,7 +135,7 @@
                   <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
                   <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
                   <textarea id="msg" name="message" placeholder="Review"></textarea>
-                  <a id="submit">Send</a>
+                  <a id="submit" onclick="form.submit()">Send</a>
               </form>
               </div>
               <!-- Popup Div Ends Here -->
