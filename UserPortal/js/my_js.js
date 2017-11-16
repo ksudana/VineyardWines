@@ -9,7 +9,7 @@ alert("Form Submitted Successfully...");
 }
 //Function To Display Popup
 function div_show(rid) {
-    var htmlstring="<?php $rid_to_edit = " + rid + "; ?>";
+    var htmlstring="<?php $_SESSION['rid_to_edit = " + rid + "; ?>";
     alert(htmlstring);
     document.getElementById('abc').style.display = "block";
 }
