@@ -96,29 +96,32 @@
 
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
           $i = $i + 1;
+          echo{
+          <div id="abc">
+          <!-- Popup Div Starts Here -->
+          <div id="popupContact">
+          <!-- Contact Us Form -->
+          <form action="#" id="form" method="post" name="form">
+          <img id="close" src="images/3.png" onclick ="div_hide()">
+          <h2>Add Your Review</h2>
+          <hr>
+          <input id="name" name="name" placeholder="Name" type="text">
+          <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
+          <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
+          <textarea id="msg" name="message" placeholder="Review"></textarea>
+          <a href="javascript:%20check_empty()" id="submit">Send</a>
+          </form>
+          </div>
+          <!-- Popup Div Ends Here -->
+          </div>
           }
+        }
         }
       mysql_free_result($result);
       mysql_close($conn);
       ?>
 
-        <div id="abc">
-        <!-- Popup Div Starts Here -->
-        <div id="popupContact">
-        <!-- Contact Us Form -->
-        <form action="#" id="form" method="post" name="form">
-        <img id="close" src="images/3.png" onclick ="div_hide()">
-        <h2>Add Your Review</h2>
-        <hr>
-        <input id="name" name="name" placeholder="Name" type="text">
-        <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
-        <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
-        <textarea id="msg" name="message" placeholder="Review"></textarea>
-        <a href="javascript:%20check_empty()" id="submit">Send</a>
-        </form>
-        </div>
-        <!-- Popup Div Ends Here -->
-        </div>
+
         <!-- Display Popup Button -->
       </div>
     </div>
