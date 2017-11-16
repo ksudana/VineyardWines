@@ -36,7 +36,7 @@
         <div class="panel panel-default">
           <div class="userprofile social ">
             <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="userpicimg"> </div>
-            <div class="border border-success" style="background-color:#F0F3F5; width:30%; position:absolute; margin:auto">
+            <div class="border border-success" style="background-color:#F0F3F5; width:30%; margin:auto; padding-top:10px; margin-top:25px">
                 <h5><?php echo $_SESSION['name']; ?></h5>
                 <h5>@<?php echo $_SESSION['username']; ?></h5>
             </div>
@@ -82,8 +82,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="../Bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
 
