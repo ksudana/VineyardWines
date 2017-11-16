@@ -114,8 +114,8 @@
       </div>
       <div class="card-body">
         <?php
-      $conn = mysql_connect("localhost", "root", "password");
-      mysql_select_db("VineyardWinesDB", $conn);
+        $conn = mysql_connect("localhost", "root", "password");
+        mysql_select_db("VineyardWinesDB", $conn);
         $sele = "SELECT * FROM Reviews WHERE uid='$uid'";
         $result = mysql_query($sele);
         if(!$result) {
@@ -130,10 +130,14 @@
           echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
 
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table>";
+          $wid = $row['wid'];
           $i = $i + 1;
           ?>
           <button id="popup" onclick="div_show()">Edit Your Review</button>
-          <button type="button" onclick="alert('Your review has been deleted!')">Delete Your Review</button>
+          <form action="deletereview.php" id="form" method="post" name="delete_form">
+            <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
+            <button type="button" onclick=form.submit()>Delete Your Review</button>
+          </form>
           <hr>
           <?php
 
@@ -151,8 +155,8 @@
         <img id="close" src="images/3.png" onclick ="div_hide()">
         <h2>Edit Your Review</h2>
         <hr>
-        <input id="name" name="name" placeholder="Name" type="text">
-        <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
+        <input id="name" name="name" placeholder="Title" type="text">
+        <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
         <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
         <textarea id="msg" name="message" placeholder="Review"></textarea>
         <a href="javascript:%20check_empty()" id="submit">Save</a>
