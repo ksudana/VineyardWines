@@ -128,7 +128,7 @@
           echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
           echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
           echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
-          echo "<tr><td><titlec><h6> review id". $row['rid'] ."</h6></titlec></td></tr>";
+
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table>";
           $rid = $row['rid'];
           $content = $row['content'];
@@ -137,24 +137,7 @@
 
           <!-- EDIT REVIEW -->
           <button id="popup" onclick="div_show(<?php print($rid); ?>)">Edit Your Review</button>
-          <div id="abc">
-          <!-- Popup Div Starts Here -->
-          <div id="popupContact">
-          <!-- Add Review Form -->
-          <form action="addreview.php" id="form" method="post" name="form">
-              <img id="close" src="images/3.png" onclick ="div_hide()">
-              <h2>Edit YOUR Review</h2>
-              <hr>
-              <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
-              <input id="name" name="name" placeholder="Title" type="text">
-              <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
-              <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
-              <textarea id="msg" name="message" placeholder="Review"></textarea>
-              <a id="submit" onclick="form.submit()">Create Review</a>
-          </form>
-          </div>
-          <!-- Popup Div Ends Here -->
-          </div>
+
           <!-- DELETE REVIEW -->
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
             <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
