@@ -90,7 +90,7 @@
               if(mysql_num_rows($result) > 0){
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
-                echo "<tr><td>". $row['uid'] ."</td><td>". $row['wid']. "</td></tr>";
+                echo "<tr>". $row['uid'] ."</tr><tr>". $row['wid']. "</tr>";
                 $i = $i + 1;
                 }
               }
