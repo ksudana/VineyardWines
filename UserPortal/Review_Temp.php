@@ -91,12 +91,12 @@
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
                 echo "<table><tr><td><titlec> User ID:". $row['uid'] ."</titlec></td></tr>";
-                echo "<tr><td>". $row['wid'] ."</td></tr>";
-                echo "<tr><td>". $row['title'] ."</td></tr>";
-                echo "<tr><td>". $row['content'] ."</td></tr>";
-                echo "<tr><td>". $row['date'] ."</td></tr>";
-                echo "<tr><td>". $row['rating'] ."</td></tr>";
-                echo "<tr><td>". $row['recommend'] ."</td></tr></table><hr>";
+                echo "<table><tr><td><titlec> Wine ID:". $row['wid'] ."</titlec></td></tr>";
+                echo "<table><tr><td><titlec> Title:". $row['title'] ."</titlec></td></tr>";
+                echo "<table><tr><td><titlec> Comments:". $row['content'] ."</titlec></td></tr>";
+                echo "<table><tr><td><titlec> User ID:". $row['date'] ."</titlec></td></tr>";
+                echo "<table><tr><td><titlec> Rating:". $row['rating'] ."</titlec></td></tr>";
+                echo "<table><tr><td><titlec> Recommend:". $row['recommend'] ."</titlec></td></tr></table><hr>";
                 $i = $i + 1;
                 }
               }
