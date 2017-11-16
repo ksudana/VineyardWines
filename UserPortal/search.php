@@ -27,7 +27,7 @@
 <center><table>
 
 <tr>
-	<td><input type="text" name="name" size="100"></td>
+	<td><input type="text" name="name" placeholder = "Enter Wine Name" size="100"></td>
 	<td><titlec><input type="submit" value="Search" name="submit"></titlec></td>
 </tr>
 </table></center>
