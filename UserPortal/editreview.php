@@ -65,20 +65,8 @@
                   <strong> Review Comments:</strong><input id="comments" name="comments" type="text" value="<?php print($content)?>">
                   <strong> Review Ratings:</strong><input id="rating" name="rating" type="text" value="<?php print($rating)?>">
                   <strong> Review Recommendation:</strong><input id="recommend" name="recommend" type="text" value="<?php print($recommend)?>">
-                  <a id="submit" onclick="form.submit()">Create Review</a>
+                  <a id="submit" onclick="form.submit()">Submit Revision</a>
               </form>
-
-
-              <h1> Edit Review </h1>
-              <p class="card-text">
-                <table>
-                <tr><td><strong> Review Title:</strong></td><td><input type="text" size="50" value="<?php print($title)?>"></td></tr>
-                <tr><td><strong> Review Comments:</strong></td><td><input type="text" size="500" value="<?php print($content)?>"></td></tr>
-                <tr><td><strong> Review Ratings:</strong></td><td><input type="text" size="10" value="<?php print($rating)?>"></td></tr>
-                <tr><td><strong> Review Recommendation:</strong></td><td><input type="text" size="50" value="<?php print($recommend)?>"></td></tr>
-              </table>
-
-              </p>
             </div>
           </div>
           <!-- /.card -->
