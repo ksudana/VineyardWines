@@ -60,14 +60,13 @@
             <div class="card-body">
               <h1> Edit Review </h1>
               <p class="card-text">
-                <strong> Review Title:</strong>
-                <input type="text" value="<?php print($title)?>">;
-                <?php
-                echo "<table><tr><td><titlec><h3> Review Title: ". $title ."</h3></titlec></td></tr>";
-                echo "<tr><td><titlec> Review Comments: ". $content ."</titlec><br></td></tr>";
-                echo "<tr><td><titlec><h6> Review Ratings: ". $rating ."</h6></titlec></td></tr>";
-                echo "<tr><td><titlec> <p>Review Recommendation: ". $recommend ."</p></titlec></td></tr></table>";
-                ?>
+                <table>
+                <tr><td><strong> Review Title:</strong></td><td><input type="text" value="<?php print($title)?>"></td></tr>
+                <tr><td><strong> Review Comments:</strong></td><td><input type="text" value="<?php print($content)?>"></td></tr>
+                <tr><td><strong> Review Ratings:</strong></td><td><input type="text" value="<?php print($rating)?>"></td></tr>
+                <tr><td><strong> Review Recommendation:</strong></td><td><input type="text" value="<?php print($recommend)?>"></td></tr>
+              </table>
+
               </p>
             </div>
           </div>
