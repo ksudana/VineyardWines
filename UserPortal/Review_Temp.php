@@ -82,7 +82,7 @@
             $conn = mysql_connect("localhost", "root", "password");
             mysql_select_db("VineyardWinesDB", $conn);
 
-              $sele = "SELECT * FROM Reviews WHERE wid = Wines.wid";
+              $sele = "SELECT * FROM Reviews ";
               $result = mysql_query($sele);
               if(!$result) {
                 print("Bad Query");
