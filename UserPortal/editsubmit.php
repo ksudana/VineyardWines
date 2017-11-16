@@ -17,8 +17,8 @@
     $rating = $_POST["rating"];
     $recommend = $_POST["recommend"];
     $recommend = ($recommend == "Yes") ? 1 : 0;
-    $review = $_POST["content"];
-    $query = "UPDATE Reviews (uid, wid, title, content, date, rating, recommend) VALUES ('$uid', '$wid', '$title', '$review', '$mysqldate', $rating, $recommend)";
+    $content = $_POST["content"];
+    $query = "UPDATE Reviews SET title = '$title', date = '$mysqldate', rating = '$rating', content = '$content', recommend = '$recommend' WHERE rid ='$rid'";
     $result = mysqli_query($con, $query);
     if(!$result) {
       print($uid);
@@ -27,7 +27,7 @@
       print($title);
       print($mysqldate);
       print($recommend);
-      print($review);
+      print($content);
         echo "Couldn't update review, might be a bad query!";
     }
     else {
