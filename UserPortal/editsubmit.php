@@ -21,6 +21,13 @@
     $query = "UPDATE Reviews (uid, wid, title, content, date, rating, recommend) VALUES ('$uid', '$wid', '$title', '$review', '$mysqldate', $rating, $recommend)";
     $result = mysqli_query($con, $query);
     if(!$result) {
+      print($uid);
+      print($rid);
+      print($wid);
+      print($title);
+      print($mysqldate);
+      print($recommend);
+      print($review);
         echo "Couldn't update review, might be a bad query!";
     }
     else {
