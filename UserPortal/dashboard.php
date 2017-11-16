@@ -114,8 +114,8 @@
       </div>
       <div class="card-body">
         <?php
-        $conn = mysql_connect("localhost", "root", "password");
-        mysql_select_db("VineyardWinesDB", $conn);
+        $conn = mysql_connect($hn, $un, $pw);
+        mysql_select_db($db, $conn);
         $sele = "SELECT * FROM Reviews WHERE uid='$uid'";
         $result = mysql_query($sele);
         if(!$result) {
@@ -130,17 +130,17 @@
           echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
 
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table>";
-          $wid = $row['wid'];
+          $rid = $row['rid'];
           $content = $row['content'];
           $i = $i + 1;
           ?>
           
           <!-- EDIT REVIEW -->
-          <button id="popup" onclick="div_show(<?php print($wid); ?>)">Edit Your Review</button>
+          <button id="popup" onclick="div_show(<?php print($rid); ?>)">Edit Your Review</button>
           
           <!-- DELETE REVIEW -->
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
-            <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
+            <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
             <input id="content" name="content" type="hidden" value="<?php print($content)?>">
             <button type="button" onclick=form.submit()>Delete Your Review</button>
           </form>
@@ -162,7 +162,7 @@
         <img id="close" src="images/3.png" onclick ="div_hide()">
         <h2>Edit Your Review</h2>
         <hr>
-        <input id="wid" name="wid" type="hidden" value="<?php print($wid_to_edit) ?>">
+        <input id="rid" name="rid" type="hidden" value="<?php print($rid_to_edit) ?>">
         <input id="name" name="name" placeholder="Title" type="text">
         <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
         <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">

@@ -8,8 +8,8 @@ alert("Form Submitted Successfully...");
 }
 }
 //Function To Display Popup
-function div_show(wid) {
-    var htmlstring="<?php $wid_to_edit = " + wid + "; ?>";
+function div_show(rid) {
+    var htmlstring="<?php $wid_to_edit = " + rid + "; ?>";
     alert(htmlstring);
     document.getElementById('abc').style.display = "block";
 }

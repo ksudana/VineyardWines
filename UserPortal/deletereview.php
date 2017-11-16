@@ -9,10 +9,9 @@
     echo "Connection failed!";
   }
   else {
-    $uid = $_SESSION['uid'];
-    $wid = $_POST["wid"];
+    $rid = $_POST["rid"];
     $content = $_POST["content"];
-    $query = "DELETE FROM Reviews WHERE uid='$uid' AND wid='$wid' AND content='$content'";
+    $query = "DELETE FROM Reviews WHERE rid='$rid'";
     $result = mysqli_query($con, $query);
     if(!$result) {
         echo "Bad Query!";
