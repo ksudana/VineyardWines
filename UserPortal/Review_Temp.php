@@ -103,52 +103,7 @@
             mysql_free_result($result);
             mysql_close($conn);
             ?>
-              <p>
-                <div class = "Reviewer_Name">
-                Name: Akhil Sarikonda <br/>
-                </div>
-                <div class = "Review_Rating">
-                Rating: 5 <br/>
-              </div>
-                <div class = "Comments">
-                Comments: I liked the wine because I am very fruity. <br/>
-              </div>
-              <div class = "Recommend">
-                Would you recommend? Yes <br/>
-              </div>
-              </p>
-              <small class="text-muted">Posted by Akhil Sarikonda on 3/1/17</small>
-              <hr>
-              <p> <div class = "Reviewer_Name">
-                Name: Akhil Sarikonda <br/>
-              </div>
-              <div class = "Review_Rating">
-                Rating: 5 <br/>
-              </div>
-                <div class = "Comments">
-                Comments: I liked the wine because I am very fruity. <br/>
-              </div>
-              <div class = "Recommend">
-                Would you recommend? Yes <br/>
-              </div>
-              </p>
-              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-              <hr>
-              <p> <div class = "Reviewer_Name">
-                Name: Akhil Sarikonda <br/>
-              </div>
-              <div class = "Review_Rating">
-                Rating: 5 <br/>
-              </div>
-                <div class = "Comments">
-                Comments: I liked the wine because I am very fruity. <br/>
-              </div>
-              <div class = "Recommend">
-                Would you recommend? Yes <br/>
-              </div>
-              </p>
-              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-              <hr>
+
               <div id="abc">
               <!-- Popup Div Starts Here -->
               <div id="popupContact">
