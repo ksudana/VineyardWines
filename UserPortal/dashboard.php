@@ -133,11 +133,10 @@
           $rid = $row['rid'];
           $content = $row['content'];
           $i = $i + 1;
-          echo "<a href= 'editreview.php?rid=" . $rid . "'> EDIT REVIEW" "</a>";
           ?>
 
           <!-- EDIT REVIEW -->
-
+          echo "<a href= 'editreview.php?rid=" . $rid . "'> EDIT REVIEW" "</a>";
 
           <!-- DELETE REVIEW -->
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
