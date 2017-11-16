@@ -60,6 +60,7 @@
             <div class="card-body">
               <p class="card-text">
                 <strong> Review Title:</strong>
+                <input type="text" value="testing">;
                 <?php
                 echo "<table><tr><td><titlec><h3> Review Title: ". $title ."</h3></titlec></td></tr>";
                 echo "<tr><td><titlec> Review Comments: ". $content ."</titlec><br></td></tr>";
