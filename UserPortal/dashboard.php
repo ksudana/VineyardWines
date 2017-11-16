@@ -96,7 +96,8 @@
           echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table>";
           $i = $i + 1;
           ?>
-          <button id="popup" onclick="div_show()">Add a Review</button>
+          <button id="popup" onclick="div_show()">Edit Your Review</button>
+          <button type="button" onclick="alert('Your review has been deleted!')">Delete Your Review</button>
           <hr>
           <?php
 
@@ -112,7 +113,7 @@
         <!-- Contact Us Form -->
         <form action="#" id="form" method="post" name="form">
         <img id="close" src="images/3.png" onclick ="div_hide()">
-        <h2>Add Your Review</h2>
+        <h2>Edit Your Review</h2>
         <hr>
         <input id="name" name="name" placeholder="Name" type="text">
         <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
