@@ -21,7 +21,7 @@
     $recommend = $_POST["Reccomend"];
     $recommend = ($recommend == "Yes") ? 1 : 0;
     $review = $_POST["message"];
-    $query = "INSERT INTO Reviews (uid, wid, title, content, date, rating, recommend) VALUES ('$uid', '$wid', '$title', '$review', '$mysqldate', $rating', '$recommend')";
+    $query = "INSERT INTO Reviews (uid, wid, title, content, date, rating, recommend) VALUES ('$uid', '$wid', '$title', '$review', '$mysqldate', $rating, $recommend)";
     $result = mysqli_query($con, $query);
     if(!$result) {
         echo "Bad Query!";
