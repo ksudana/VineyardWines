@@ -63,7 +63,7 @@
           <div class="card mt-4">
             <div class="card-body">
               <h3 class="card-title">Product Name</h3>
-              <h4>$<?php print("'$price''"); ?></h4>
+              <h4>$<?php print($price); ?></h4>
               <p class="card-text">
                 <div class = "designation">
                 Designation: ASIOJDOIDJ <br/> <br/>
