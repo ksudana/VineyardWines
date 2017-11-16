@@ -46,7 +46,7 @@
         </div>
       </div>
       <!-- /.col-md-12 -->
-      <div class="col-md-5 pull-right">
+      <div class="col-md-2 pull-right">
 
 
         <div class="container">
