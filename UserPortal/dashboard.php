@@ -52,6 +52,7 @@
         mysql_free_result($result);
         $aggquery = "SELECT COUNT(*) AS num_reviews FROM Reviews WHERE uid='$uid'";
         $result = $con->query($aggquery);
+        $row = $result->fetch_assoc();
         if(!$row) {
           echo "Invalid User!";
         }
