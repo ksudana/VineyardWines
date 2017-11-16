@@ -59,11 +59,13 @@
           <div class="card mt-4">
             <div class="card-body">
               <p class="card-text">
-                <?php print($wid); ?>
-                <?php print($title); ?>
-                <?php print($content); ?>
-                <?php print($rating); ?>
-                <?php print($recommend); ?>
+                <?php
+                echo "<table><tr><td><titlec><h3>". $wid ."</h3></titlec></td></tr>";
+                echo "<tr><td><titlec> Rating:    ". $title ."</titlec></td></tr>";
+                echo "<tr><td><titlec> Recommend: ". $content ."</titlec><br></td></tr>";
+                echo "<tr><td><titlec><h6>". $rating ."</h6></titlec></td></tr>";
+                echo "<tr><td><titlec> <p>Posted on   ". $recommend ."</p></titlec></td></tr></table>";
+                ?>
               </p>
             </div>
           </div>
