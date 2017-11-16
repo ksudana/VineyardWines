@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Shop Item - Start Bootstrap Template</title>
+    <title>VineyardWines</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -103,7 +103,7 @@
               <?php
             $conn = mysql_connect("localhost", "root", "password");
             mysql_select_db("VineyardWinesDB", $conn);
-              $sele = "SELECT * FROM Reviews ";
+              $sele = "SELECT * FROM Reviews WHERE wid='$wid'";
               $result = mysql_query($sele);
               if(!$result) {
                 print("Bad Query");
@@ -127,10 +127,11 @@
               <!-- Popup Div Starts Here -->
               <div id="popupContact">
               <!-- Contact Us Form -->
-              <form action="#" id="form" method="post" name="form">
+              <form action="addreview.php" id="form" method="post" name="form">
               <img id="close" src="images/3.png" onclick ="div_hide()">
               <h2>Add Your Review</h2>
               <hr>
+              <?php echo "<input id="wid" type="hidden" name="wid" value="wid">" ?>
               <input id="name" name="name" placeholder="Name" type="text">
               <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
               <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
