@@ -95,7 +95,7 @@
                 echo "<tr><td><titlec> Title:     ". $row['title'] ."</titlec></td></tr>";
                 echo "<tr><td><titlec> Comments:  ". $row['content'] ."</titlec></td></tr>";
                 echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec></td></tr> </br></br>";
+                echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec></td></tr> <tr></tr>";
                 echo "<tr><td><titlec> Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
                 $i = $i + 1;
                 }
