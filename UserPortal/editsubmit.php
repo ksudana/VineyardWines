@@ -32,7 +32,7 @@
     }
     else {
         echo "<h1>Updated Review!</h1>";
-        header("location: editreview.php?rid=$rid");
+        header("location: dashboard.php");
     }
   }
     mysqli_close($db);
