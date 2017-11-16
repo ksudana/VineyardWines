@@ -90,13 +90,13 @@
               if(mysql_num_rows($result) > 0){
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
-                echo "<tr><td>". $row['uid'] ."</td><tr>";
-                echo "<tr><td>". $row['wid'] ."</td><tr>";
-                echo "<tr><td>". $row['title'] ."</td><tr>";
-                echo "<tr><td>". $row['content'] ."</td><tr>";
-                echo "<tr><td>". $row['date'] ."</td><tr>";
-                echo "<tr><td>". $row['rating'] ."</td><tr>";
-                echo "<tr><td>". $row['recommend'] ."</td><tr>";
+                echo "<tr><td>". $row['uid'] ."</td></tr>";
+                echo "<tr><td>". $row['wid'] ."</td></tr>";
+                echo "<tr><td>". $row['title'] ."</td></tr>";
+                echo "<tr><td>". $row['content'] ."</td></tr>";
+                echo "<tr><td>". $row['date'] ."</td></tr>";
+                echo "<tr><td>". $row['rating'] ."</td></tr>";
+                echo "<tr><td>". $row['recommend'] ."</td></tr>";
                 $i = $i + 1;
                 }
               }
