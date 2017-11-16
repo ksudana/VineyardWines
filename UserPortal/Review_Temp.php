@@ -25,7 +25,7 @@
   <body>
 
     <!-- Navigation -->
-    
+
 
     <!-- Page Content -->
     <div class="container">
@@ -66,7 +66,7 @@
               </p>
               <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
               4.0 stars
-            </div> 
+            </div>
           </div>
           <!-- /.card -->
             </div>
@@ -78,17 +78,40 @@
             <div class="card-body">
               <button id="popup" onclick="div_show()">Add a Review</button>
               <hr>
+/*TESTING___________________________________________________below*/
+              <?php
+        		$conn = mysql_connect("localhost", "root", "password");
+        		mysql_select_db("VineyardWinesDB", $conn);
+
+        			$sele = "SELECT * FROM Reviews WHERE wid = Wines.wid";
+        			$result = mysql_query($sele);
+        			if(!$result) {
+        				print("Bad Query");
+        			}
+        			if(mysql_num_rows($result) > 0){
+        				$i = 0;
+        				while($row = mysql_fetch_assoc($result) and $i < 50){
+        				echo "<tr><td>". $row['uid'] ."</td><td>". $row['wid']. "</td><td>" .$row['title'] ."</td><td>". $row['content'] ."</td><td>". $row['date'] ."</td><td>". $row['rating'] ."</td><td>". $row['recommend'] ."</td></tr>";
+        				$i = $i + 1;
+        			  }
+        		  }
+        		mysql_free_result($result);
+        		mysql_close($conn);
+        		?>
+/*TESTING___________________________________________________above*/
+
+
 
               <p>
                 <div class = "Reviewer_Name">
-                Name: Akhil Sarikonda <br/>
-              </div>
-              <div class = "Review_Rating">
-                Rating: 5 <br/>
-              </div>
+                      Name: Akhil Sarikonda <br/>
+                </div>
+                <div class = "Review_Rating">
+                      Rating: 5 <br/>
+                </div>
                 <div class = "Comments">
-                Comments: I liked the wine because I am very fruity. <br/>
-              </div>
+                      Comments: I liked the wine because I am very fruity. <br/>
+                </div>
               <div class = "Recommend">
                 Would you recommend? Yes <br/>
               </div>
