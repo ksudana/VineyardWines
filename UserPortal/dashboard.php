@@ -93,11 +93,11 @@
           echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
           echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
 
-          echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
+          echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table>";
           $i = $i + 1;
           ?>
           <button id="popup" onclick="div_show()">Add a Review</button>
-
+          <hr>
           <?php
 
           }
