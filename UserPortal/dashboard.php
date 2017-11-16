@@ -36,7 +36,7 @@
         <div class="panel panel-default">
           <div class="userprofile social ">
             <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="userpicimg"> </div>
-            <div class="border border-success" style="background-color:#F0F3F5; width:30%; text-align:center">
+            <div class="border border-success" style="background-color:#F0F3F5; width:30%; position:absolute; margin:auto">
                 <h5><?php echo $_SESSION['name']; ?></h5>
                 <h5>@<?php echo $_SESSION['username']; ?></h5>
             </div>
