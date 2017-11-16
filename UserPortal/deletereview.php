@@ -11,7 +11,7 @@
   else {
     $uid = $_SESSION['uid'];
     $wid = $_POST["wid"];
-    $cotent = $_POST["content"];
+    $content = $_POST["content"];
     $query = "DELETE FROM Reviews WHERE uid='$uid' AND wid='$wid' AND content='$content'";
     $result = mysqli_query($con, $query);
     if(!$result) {
