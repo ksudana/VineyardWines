@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>VineyardWines</title>    
+    <title>VineyardWines</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,9 @@
     <!-- Custom styles for this template -->
     <link href="../Bootstrap/css/shop-item.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <link href="css/elements.css" rel="stylesheet">
 
+    <script src="js/my_js.js"></script>
 
   </head>
 
@@ -46,7 +48,7 @@
         </div>
       </div>
       <!-- /.col-md-12 -->
-      <div class="col-md-5 pull-right">
+      <div class="col-md-4 pull-right">
 
 
         <div class="container">
@@ -67,9 +69,60 @@
 </div>
 
       </div>
-      <div class="col-md-5  pull-left posttimeline">
-            INSERT REVIEW BOX HERE
+      <div class="col-md-8  pull-left posttimeline">
+    <div class="card card-outline-secondary my-4">
+      <div class="card-header">
+        Product Reviews
       </div>
+      <div class="card-body">
+        <button id="popup" onclick="div_show()">Add a Review</button>
+        <hr>
+        <?php
+      $conn = mysql_connect("localhost", "root", "password");
+      mysql_select_db("VineyardWinesDB", $conn);
+
+        $sele = "SELECT * FROM Reviews ";
+        $result = mysql_query($sele);
+        if(!$result) {
+          print("Bad Query");
+        }
+        if(mysql_num_rows($result) > 0){
+          $i = 0;
+          while($row = mysql_fetch_assoc($result) and $i < 50){
+          echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
+          echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
+          echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
+          echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
+
+          echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
+          $i = $i + 1;
+          }
+        }
+      mysql_free_result($result);
+      mysql_close($conn);
+      ?>
+
+        <div id="abc">
+        <!-- Popup Div Starts Here -->
+        <div id="popupContact">
+        <!-- Contact Us Form -->
+        <form action="#" id="form" method="post" name="form">
+        <img id="close" src="images/3.png" onclick ="div_hide()">
+        <h2>Add Your Review</h2>
+        <hr>
+        <input id="name" name="name" placeholder="Name" type="text">
+        <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="text">
+        <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
+        <textarea id="msg" name="message" placeholder="Review"></textarea>
+        <a href="javascript:%20check_empty()" id="submit">Send</a>
+        </form>
+        </div>
+        <!-- Popup Div Ends Here -->
+        </div>
+        <!-- Display Popup Button -->
+      </div>
+    </div>
+
     </div>
 </div>
 
