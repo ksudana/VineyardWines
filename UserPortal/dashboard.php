@@ -127,8 +127,8 @@
           $wid = $row['wid'];
           $query2 = "SELECT * FROM Wines WHERE wid='$wid'";
           $result2 = mysql_query($query2);
-          $wine_row = mysql_fetch_assoc($result);
-          $recommend = $row['reommend'] == 1 ? "Yes" : "No";
+          $wine_row = mysql_fetch_assoc($result2);
+          $recommend = $row['recommend'] == 1 ? "Yes" : "No";
           echo "<table><tr><td><titlec><h3><a href= 'Review_Temp.php?wid=" . $wid . "'>". $wine_row['variety'] ."</h3></titlec></td></tr>";
           echo "<table><tr><td><titlec><h5>". $row['title'] ."</h5></titlec></td></tr>";
           echo "<tr><td><titlec> Rating:    ". $row['rating'] / 5 ."</titlec></td></tr>";
