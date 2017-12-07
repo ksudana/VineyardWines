@@ -64,6 +64,7 @@
 
 		if($_REQUEST['submit']){
 		$name = $_POST['name'];
+        $searchby = $_POST['search'];
         $orderby = $_POST['order'];
 		if(empty($name)){
 			$make = '<h4>You must type a word to search!</h4>';
@@ -80,7 +81,7 @@
                 $orderby = "AND $orderby IS NOT NULL ORDER BY $orderby";
             }
             
-			$sele = "SELECT * FROM Wines WHERE variety LIKE '%$name%' $orderby";
+			$sele = "SELECT * FROM Wines WHERE '$searchby' LIKE '%$name%' $orderby";
 			$result = mysql_query($sele);
 			if(!$result) {
 				print("Bad Query");
