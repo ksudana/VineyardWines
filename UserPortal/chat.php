@@ -34,11 +34,9 @@
         </header>
         <main>
             <div class="chat">
-              <table>
-              <tr><td><div id="chatOutput"></div></td></tr>
-              <tr><td><input id="chatInput" type="text" placeholder="Input Text here" maxlength="128"></td>
-                  <td><button id="chatSend">Send</button></td></tr>
-              </table>
+                <div id="chatOutput"></div>
+                <input id="chatInput" type="text" placeholder="Input Text here" maxlength="128">
+                <button id="chatSend">Send</button>
             </div>
         </main>
     </div>
