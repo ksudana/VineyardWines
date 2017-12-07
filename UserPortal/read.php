@@ -22,7 +22,7 @@ if ($db->real_query($query)) {
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"])); 
 
-        echo "<p>$time , $livetime |=> $username: $text</p>\n";
+        echo "<p>$time , $livetime, $prevtime |=> $username: $text</p>\n";
     }
 }else{
 	//If the query was NOT successful
