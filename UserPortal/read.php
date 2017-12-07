@@ -8,7 +8,6 @@ if ($db->connect_errno) {
     echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
 }
 
-<<<<<<< HEAD
 $livetime = date('Y-m-d H:i:s', strtotime('-1 hour'));
 $prevtime=date('Y-m-d H:i:s', strtotime($row["time"])); 
 
