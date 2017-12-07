@@ -135,10 +135,10 @@
               if(mysql_num_rows($result) > 0){
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
-
+                    $recommend = $row['recommend'] == 1 ? "Yes" : "No";
                     echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
                     echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                    echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
+                    echo "<tr><td><titlec> Recommend: ". $recommend ."</titlec><br></td></tr>";
                     echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
                     
                     $poster = $row['uid'];
