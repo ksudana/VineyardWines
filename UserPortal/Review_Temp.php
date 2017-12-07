@@ -58,7 +58,7 @@
       
        $favorited = false;
        if(mysql_num_rows($result) > 0) {
-           $favorite = true;
+           $favorited = true;
        }
       
         mysql_free_result($result);

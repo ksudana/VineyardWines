@@ -22,17 +22,10 @@
     }
     
     $result = mysqli_query($con, $query);
-    if(!$result) {
+    if(!$result)
         print("Bad Query!");
-        print($query);
-        print($favorited);
-    }
-    else {
-        print("Good Query!");
-        print($query);
-        print($favorited);
-       # header("location: Review_Temp.php?wid=$wid");
-    }
+    else
+        header("location: Review_Temp.php?wid=$wid");
   }
     mysqli_close($db);
   ?>
