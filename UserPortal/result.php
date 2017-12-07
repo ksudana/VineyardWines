@@ -68,14 +68,14 @@
 		}else{
 			$make = '<h4>No match found!</h4>';
             
-            $order = "ASC"
+            $order = "ASC";
             
             else if($orderby == "price_asc") {
-                $orderby = "price"
+                $orderby = "price";
             }
             else if($orderby == "price_desc") {
-                $orderby = "PRICE"
-                $order = "DESC"
+                $orderby = "PRICE";
+                $order = "DESC";
             }
             
 			$sele = "SELECT * FROM Wines WHERE variety LIKE '%$name%' ORDER BY '$orderby' '$order'";

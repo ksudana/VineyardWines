@@ -28,8 +28,8 @@
 
 <tr>    
 	<td><input type="text" name="name" placeholder = "Enter Wine Name" size="100"></td>
-    Order By:
     <td><select name="order">
+        Order By:
         <option value="name">Name</option>
         <option value="country">Country</option>
         <option value="winery">Winery</option>
