@@ -36,7 +36,7 @@
        if(!$result) {
            print("Bad Query.");
        }
-      
+
        $row = mysql_fetch_assoc($result);
        $name = $row['variety'];
        $designation = $row['designation'];
@@ -48,9 +48,9 @@
        $description = $row['description'];
        $country = $row['country'];
        $winery = $row['winery'];
-      
+
        mysql_free_result($result);
-       mysql_close($conn); 
+       mysql_close($conn);
     ?>
 
 
@@ -98,7 +98,7 @@
               Product Reviews
             </div>
             <div class="card-body">
-              <button id="popup" onclick="div_show()">Add a Review</button>
+              <button id="popup" >Add a Review</button>
               <hr>
               <?php
             $conn = mysql_connect("localhost", "root", "password");
