@@ -106,10 +106,18 @@
 
     <div class="text-center">
     <titlec><h4> Favorite Wines</h4></titlec>
-    //--------------------------------------------------------------------------------------------------
-  
 
-      //--------------------------------------------------------------------------------------------------
+    <?php
+    $conn = mysql_connect($hn, $un, $pw);
+    mysql_select_db($db, $conn);
+    $sele = "SELECT * FROM Favorites WHERE uid='$uid'";
+    $result = mysql_query($sele);
+    if(!$result) {
+      print("Bad Query");
+    }
+
+      ?>
+
     </div>
 
 </div>
