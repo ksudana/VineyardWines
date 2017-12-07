@@ -19,7 +19,7 @@ if ($db->real_query($query)) {
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"])); //outputs date as # #Hour#:#Minute#
 
-        echo "<p>$username: $text</p><p>$time </p>\n";
+        echo "<p>$time |=> $username: $text</p>\n";
     }
 }else{
 	//If the query was NOT successful
