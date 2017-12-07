@@ -15,6 +15,7 @@
     $result = mysqli_query($con, $query);
     if(!$result) {
         echo "Bad Query!";
+        print($query);
     }
     else {
         if(mysql_num_rows($result) > 0){
