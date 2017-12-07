@@ -87,7 +87,7 @@
                 Description: <?php print($description); ?> <br/> <br/>
                 Country: <?php print($country); ?> <br/> <br/>
               </div>
-                <button type="button" onclick=form.submit()>Delete Your Review</button>
+                <button type="button" onclick=form.submit()>Favorite</button>
 
               </p>
             </div>
