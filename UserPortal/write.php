@@ -1,7 +1,6 @@
 <?php
     session_start();
-    include_once 'nav.php';
-require("./_connect.php");
+	require("./_connect.php");
 
 //connect to db
 $db = new mysqli($db_host,$db_user, $db_password, $db_name);
