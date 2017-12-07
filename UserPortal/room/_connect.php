@@ -1,7 +1,8 @@
-
 <?php
-  $hn = "localhost";
-  $un = "root";
-  $pw = "password";
-  $db = "VineyardWinesDB";
+
+$db_host="localhost";
+$db_user="root";
+$db_password="password";
+$db_name="VineyardWinesDB";
+
 ?>
