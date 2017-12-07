@@ -48,9 +48,21 @@
        $description = $row['description'];
        $country = $row['country'];
        $winery = $row['winery'];
-
        mysql_free_result($result);
-       mysql_close($conn);
+       
+       $query = "SELECT * FROM Favorites WHERE uid='$uid' AND wid='$wid'";
+       $result = mysql_query($query);
+       if(!$result) {
+            print("Bad Query.");
+       }
+      
+       $favorited = false;
+       if(mysql_num_rows($result) > 0) {
+           $favorited = true;
+       }
+      
+        mysql_free_result($result);
+        mysql_close($conn);
     ?>
 
 
@@ -87,9 +99,19 @@
                 Description: <?php print($description); ?> <br/> <br/>
                 Country: <?php print($country); ?> <br/> <br/>
               </div>
-                <button type="button" onclick=form.submit()>Favorite</button>
-
-              </p>
+            <form action="favorite.php" id="favorite" method="post" name="favorite">
+                <button type="button" onclick=form.submit()>
+                    <?php 
+                        if($favorited) 
+                            print("Unfavorite"); 
+                        else
+                            print("Favorite");
+                    ?>
+                </button>
+                <input id="wid" name="wid" type="hidden" value="<?php print($wid); ?>">
+                <input id="in_favorites" name="in_favorites" type="hidden" value="<?php print($favorited); ?>">
+            </form>
+            </p>
             </div>
           </div>
           <!-- /.card -->
@@ -113,13 +135,21 @@
               if(mysql_num_rows($result) > 0){
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
-                echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
-                echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
-                echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
-                echo "<tr><td><titlec><p> Posted by: <a href= 'otherusers.php?otherid=" . $row['uid'] . "'>". $row['uid'] ."</a></p></titlec></td></tr>";
-                echo "<tr><td><titlec>Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
-                $i = $i + 1;
+                    $recommend = $row['recommend'] == 1 ? "Yes" : "No";
+                    echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
+                    echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
+                    echo "<tr><td><titlec> Recommend: ". $recommend ."</titlec><br></td></tr>";
+                    echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
+                    
+                    $poster = $row['uid'];
+                    $sele2 = "SELECT * FROM Users WHERE uid=$poster";
+                    $result2 = mysql_query($sele2);
+                    $user_row = mysql_fetch_assoc($result2);
+                    $uname = $user_row['username'];
+                    echo "<tr><td><titlec><p> Posted by: <a href= 'otherusers.php?otherid=" . $poster . "'>". $uname ."</a></p></titlec></td></tr>";
+                    
+                    echo "<tr><td><titlec>Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
+                    $i = $i + 1;
                 }
               }
             mysql_free_result($result);
