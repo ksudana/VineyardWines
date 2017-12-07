@@ -25,6 +25,7 @@
     if(!$result) {
         print("Bad Query!");
         print($query);
+        print($favorited);
     }
     else {
         print("Good Query!");
