@@ -9,9 +9,8 @@ if ($db->connect_errno) {
 }
 
 $livetime = date('Y-m-d H:i:s', strtotime('-1 hour'));
-$prevtime=date('Y-m-d H:i:s', strtotime($row["time"])); 
 
-$query="SELECT * FROM chat ORDER BY id ASC";
+$query="SELECT * FROM chat WHERE time ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
 	//If the query was successful
@@ -22,7 +21,7 @@ if ($db->real_query($query)) {
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"])); 
 
-        echo "<p>$time , $livetime, $prevtime |=> $username: $text</p>\n";
+        echo "<p>$time , $livetime |=> $username: $text</p>\n";
     }
 }else{
 	//If the query was NOT successful
