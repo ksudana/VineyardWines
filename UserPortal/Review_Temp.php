@@ -121,7 +121,7 @@
                     
                     $poster = $row['uid'];
                     $sele2 = "SELECT * FROM Users WHERE uid=$poster";
-                    $result2 = mysql_query($sele);
+                    $result2 = mysql_query($sele2);
                     $user_row = mysql_fetch_assoc($result2);
                     $uname = $user_row['username'];
                     echo "<tr><td><titlec><p> Posted by: <a href= 'otherusers.php?otherid=" . $poster . "'>". $uname ."</a></p></titlec></td></tr>";
