@@ -115,6 +115,7 @@
                 echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
                 echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
                 echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
+                echo "<tr><td><titlec><h8>". $row['uid'] ."</h8></titlec></td></tr>";
                 echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table><hr>";
                 $i = $i + 1;
                 }
