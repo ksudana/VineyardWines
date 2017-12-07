@@ -9,7 +9,8 @@ if ($db->connect_errno) {
 }
 
 $hour_ago = strtotime('-1 hour')
-$query="SELECT * FROM chat WHERE time > $hour_ago ORDER BY id ASC";
+echo "Time is: $hour_ago";
+$query="SELECT * FROM chat ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
 	//If the query was successful
