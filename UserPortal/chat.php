@@ -30,13 +30,15 @@
 <body>
     <div class="container">
         <header class="header">
-            <titlec>Wine Chat</titlec>
+            <h3><titlec>Wine Chat</titlec></h3>
         </header>
         <main>
             <div class="chat">
-                <div id="chatOutput"></div>
-                <input id="chatInput" type="text" placeholder="Input Text here" maxlength="128">
-                <button id="chatSend">Send</button>
+              <table>
+              <tr><td><div id="chatOutput"></div></td></tr>
+              <tr><td><input id="chatInput" type="text" placeholder="Input Text here" maxlength="128"></td>
+                  <td><button id="chatSend">Send</button></td></tr>
+              </table>
             </div>
         </main>
     </div>
