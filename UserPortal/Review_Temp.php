@@ -115,7 +115,7 @@
                 echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
                 echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
                 echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
-                echo "<tr><td><titlec><p> Posted by: <a href= 'Review_Temp.php?wid=" . $row['uid'] . "'></p></titlec></td></tr>";
+                echo "<tr><td><titlec><p> Posted by: <a href= 'Review_Temp.php?wid=" . $row['uid'] . "'>". $row['uid'] ."</a></p></titlec></td></tr>";
                 echo "<tr><td><titlec>Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
                 $i = $i + 1;
                 }
