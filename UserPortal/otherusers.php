@@ -36,8 +36,8 @@
            echo "Connection failed!";
         }
 
-        $uid = $_SESSION['uid'];
-        $query = "SELECT * FROM Users WHERE uid='$uid'";
+        $otherid = $_SESSION['otherid'];
+        $query = "SELECT * FROM Users WHERE uid='$otherid'";
         $result = $con->query($query);
         $row = $result->fetch_assoc();
         if(!$row) {
