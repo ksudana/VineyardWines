@@ -2,7 +2,7 @@
 require("./_connect.php");
 
 //connect to db
-$con = new mysqli($db_host,$db_user, $db_password, $db_name);
+$db = new mysqli($db_host,$db_user, $db_password, $db_name);
 if ($db->connect_errno) {
     //if the connection to the db failed
     echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
@@ -10,15 +10,11 @@ if ($db->connect_errno) {
 
 
 //get userinput from url
-$uid = $_SESSION['uid'];
-$query = "SELECT * FROM Users WHERE uid='$uid'";
-$result = $con->query($query);
-$row = $result->fetch_assoc();
-if(!$row) {
-  echo "Invalid User!";
-}
 
-$username = $row['username'];
+$uid = $_SESSION['uid'];
+$use="SELECT username FROM Users WHERE uid='$uid'";
+
+$username = mysql_query($sele);
 
 $text=substr($_GET["text"], 0, 128);
 //escaping is extremely important to avoid injections!
