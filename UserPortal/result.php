@@ -84,7 +84,6 @@
 				print("Bad Query");
 			}
 			if(mysql_num_rows($result) > 0){
-
 				$i = 0;
 				while($row = mysql_fetch_assoc($result) and $i < 50){
 				$id = $row['wid'];

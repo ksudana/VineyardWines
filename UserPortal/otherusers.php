@@ -38,6 +38,10 @@
 
         $uid = $_SESSION['uid'];
         $otherid = $_GET['otherid'];
+        if($uid == $otherid) {
+            header("location: dashboard.php")
+        }
+    
         $query = "SELECT * FROM Users WHERE uid='$otherid'";
         $result = $con->query($query);
         $row = $result->fetch_assoc();
@@ -110,7 +114,6 @@
                 <input id="foreign_uid" name="foreign_uid" type="hidden" value="<?php print($otherid); ?>">
                 <input id="following" name="following" type="hidden" value="<?php print($following); ?>">
           </form>
-          <button type="button" onclick=form.submit()>Follow</button>
           <br/>
           <br/>
 
