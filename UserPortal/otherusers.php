@@ -52,7 +52,7 @@
         $country = $row['country'];
 
         mysql_free_result($result);
-        $aggquery = "SELECT COUNT(*) AS num_reviews FROM Reviews WHERE uid='$uid'";
+        $aggquery = "SELECT COUNT(*) AS num_reviews FROM Reviews WHERE uid='$otherid'";
         $result = $con->query($aggquery);
         $row = $result->fetch_assoc();
         if(!$row) {
@@ -117,7 +117,7 @@
         <?php
         $conn = mysql_connect($hn, $un, $pw);
         mysql_select_db($db, $conn);
-        $sele = "SELECT * FROM Reviews WHERE uid='$uid'";
+        $sele = "SELECT * FROM Reviews WHERE uid='$otherid'";
         $result = mysql_query($sele);
         if(!$result) {
           print("Bad Query");
