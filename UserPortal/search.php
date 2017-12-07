@@ -26,8 +26,17 @@
 <titlec><center><h3>Discover New Tastes</h3></center></titlec>
 <center><table>
 
-<tr>
+<tr>    
 	<td><input type="text" name="name" placeholder = "Enter Wine Name" size="100"></td>
+    Order By:
+    <td><select name="order">
+        <option value="name">Name</option>
+        <option value="country">Country</option>
+        <option value="winery">Winery</option>
+        <option value="price_asc">Price (low to high)</option>
+        <option value="price_desc">Price (high to low)</option>
+        </select>
+    </td>
 	<td><titlec><input type="submit" value="Search" name="submit"></titlec></td>
 </tr>
 </table></center>

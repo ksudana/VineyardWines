@@ -62,11 +62,23 @@
 
 		if($_REQUEST['submit']){
 		$name = $_POST['name'];
+        $orderby = $_POST['order'];
 		if(empty($name)){
 			$make = '<h4>You must type a word to search!</h4>';
 		}else{
 			$make = '<h4>No match found!</h4>';
-			$sele = "SELECT * FROM Wines WHERE variety LIKE '%$name%'";
+            
+            $order = "ASC"
+            
+            else if($orderby == "price_asc") {
+                $orderby = "price"
+            }
+            else if($orderby == "price_desc") {
+                $orderby = "PRICE"
+                $order = "DESC"
+            }
+            
+			$sele = "SELECT * FROM Wines WHERE variety LIKE '%$name%' ORDER BY '$orderby' '$order'";
 			$result = mysql_query($sele);
 			if(!$result) {
 				print("Bad Query");
