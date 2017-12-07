@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css" media="screen"
     />
     <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
-
+    <link href="css/elements.css" rel="stylesheet">
 
     <title>VineyardWines</title>
 
@@ -30,7 +30,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>Wine Chat</h1>
+            <titlec>Wine Chat</titlec>
         </header>
         <main>
             <div class="chat">
