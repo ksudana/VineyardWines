@@ -8,8 +8,12 @@ $(document).ready(function () {
     var $chatInput = $("#chatInput");
     var $chatSend = $("#chatSend");
     $('#chatInput').keypress(function(e){
-      if(e.keyCode==13)
+      if(e.keyCode==13){
       $('#chatSend').click();
+      e.preventDefault();
+      $(this).val('');
+      return false;
+      }
     });
 
     function sendMessage() {
