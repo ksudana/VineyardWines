@@ -16,8 +16,6 @@ $text=substr($_GET["text"], 0, 128);
 $nameEscaped = htmlentities(mysqli_real_escape_string($db,$username)); //escape username and limit it to 32 chars
 $textEscaped = htmlentities(mysqli_real_escape_string($db, $text)); //escape text and limit it to 128 chars
 
-
-
 //create query
 $query="INSERT INTO chat (username, text) VALUES ('$nameEscaped', '$textEscaped')";
 //execute query
