@@ -30,6 +30,7 @@
     else {
         print("Good Query!");
         print($query);
+        print($favorited);
        # header("location: Review_Temp.php?wid=$wid");
     }
   }
