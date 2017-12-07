@@ -51,8 +51,12 @@
     </td>
 	<td><titlec><input type="submit" value="Search" name="submit"></titlec></td>
 </tr>
-</table></center>
+</center>
 </form>
+</tr>
+<embed src="./mediaplayer.swf?file=napa.mp4" width="325" height="230" allowfullscreen="true" />
+</tr>
+</table>
 <footer alignclass="py-1 bg-dark">
 
 </footer>
