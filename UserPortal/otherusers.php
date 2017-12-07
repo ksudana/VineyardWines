@@ -88,6 +88,10 @@
 
         <div class="container">
           <div class="text-center">
+          <button type="button" onclick=form.submit()>Follow</button>
+          <br/>
+          <br/>
+
           <titlec><h4>About You</h4></titlec>
         </div>
     <div class="notice notice-success">
