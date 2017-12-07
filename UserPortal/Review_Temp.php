@@ -56,12 +56,11 @@
             print("Bad Query.");
        }
       
-       $favorite = true;
+       $favorited = false;
        if(mysql_num_rows($result) > 0) {
-           $favorite = false;
+           $favorited = true;
        }
       
-        $result = mysql_query($query);
         mysql_free_result($result);
         mysql_close($conn);
     ?>
@@ -103,14 +102,14 @@
             <form action="favorite.php" id="favorite" method="post" name="favorite">
                 <button type="button" onclick=form.submit()>
                     <?php 
-                        if($favorite) 
-                            print("Favorite"); 
+                        if($favorited) 
+                            print("Unfavorite"); 
                         else
-                            print("Unfavorite");
+                            print("Favorite");
                     ?>
                 </button>
-                <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
-                <input id="in_favorites" name="in_favorites" type="hidden" value="<?php print($favorite)?>">
+                <input id="wid" name="wid" type="hidden" value="<?php print($wid); ?>">
+                <input id="in_favorites" name="in_favorites" type="hidden" value="<?php print($favorited); ?>">
             </form>
             </p>
             </div>
@@ -136,10 +135,10 @@
               if(mysql_num_rows($result) > 0){
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
-
+                    $recommend = $row['recommend'] == 1 ? "Yes" : "No";
                     echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
                     echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                    echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
+                    echo "<tr><td><titlec> Recommend: ". $recommend ."</titlec><br></td></tr>";
                     echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
                     
                     $poster = $row['uid'];
