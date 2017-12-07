@@ -81,7 +81,7 @@
                 $orderby = "AND $orderby IS NOT NULL ORDER BY $orderby";
             }
             
-			$sele = "SELECT * FROM Wines WHERE '$searchby' LIKE '%$name%' $orderby";
+			$sele = "SELECT * FROM Wines WHERE $searchby LIKE '%$name%' $orderby";
 			$result = mysql_query($sele);
 			if(!$result) {
 				print("Bad Query");
