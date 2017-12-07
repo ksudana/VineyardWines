@@ -123,7 +123,7 @@
       $query2 = "SELECT * FROM Wines WHERE wid='$wid'";
       $result2 = mysql_query($query2);
       $wine_row = mysql_fetch_assoc($result2);
-      echo "<table><tr><td><titlec><h6><a href= 'Review_Temp.php?wid=" . $wid . "'>". $wine_row['variety'] ."</h6></titlec></td></tr></table>";
+      echo "<table><tr><td><titlec><h5><a href= 'Review_Temp.php?wid=" . $wid . "'>". $wine_row['variety'] ."</h5></titlec></td></tr></table>";
     }
   }
       ?>

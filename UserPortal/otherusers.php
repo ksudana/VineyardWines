@@ -109,6 +109,33 @@
         <strong>Reviews: </strong><?php print($numreviews); ?>
     </div>
 
+    <div class="text-center">
+    <titlec><h4> Favorite Wines</h4></titlec>
+
+    <?php
+    $conn = mysql_connect($hn, $un, $pw);
+    mysql_select_db($db, $conn);
+    $otherid = $_GET['otherid'];
+    $sele = "SELECT * FROM Favorites WHERE uid='$otherid'";
+    $result = mysql_query($sele);
+    if(!$result) {
+      print("Bad Query");
+    }
+
+    if(mysql_num_rows($result) > 0){
+      $i = 0;
+      while($row = mysql_fetch_assoc($result) and $i < 50){
+      $wid = $row['wid'];
+      $query2 = "SELECT * FROM Wines WHERE wid='$wid'";
+      $result2 = mysql_query($query2);
+      $wine_row = mysql_fetch_assoc($result2);
+      echo "<table><tr><td><titlec><h5><a href= 'Review_Temp.php?wid=" . $wid . "'>". $wine_row['variety'] ."</h5></titlec></td></tr></table>";
+    }
+  }
+      ?>
+
+    </div>
+
 </div>
 
       </div>
