@@ -13,7 +13,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./UserPortal/chat.php">Chat</a>
+              <a class="nav-link" href="./chat.php">Chat</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./search.php">Search</a>
