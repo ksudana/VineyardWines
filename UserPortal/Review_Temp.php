@@ -122,7 +122,9 @@
           </div>
           <!-- /.card -->
             </div>
+
             <div class="col-md-7">
+            <div class="chatlevel">
             <div class="card card-outline-secondary my-4">
               <div class="card-header">
                 Chat with Wine Enthusiasts
@@ -137,6 +139,7 @@
                 </main>
               </div>
             </div>
+          </div>
 
           <div class="card card-outline-secondary my-4">
             <div class="card-header">

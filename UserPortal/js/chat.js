@@ -16,6 +16,9 @@ $(document).ready(function () {
       }
     });
 
+    var objDiv = document.getElementById("chatlevel");
+    objDiv.scrollTop = objDiv.scrollHeight;
+
     function sendMessage() {
         var userNameString = $userName.val();
         var chatInputString = $chatInput.val();
