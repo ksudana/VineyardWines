@@ -9,8 +9,9 @@ if ($db->connect_errno) {
 }
 
 $livetime = date('Y-m-d H:i:s', strtotime('-1 hour'));
+$prevtime=date('Y-m-d H:i:s', strtotime($row["time"])); 
 
-$query="SELECT * FROM chat WHERE time ORDER BY id ASC";
+$query="SELECT * FROM chat WHERE $prevtime > $livetime ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
 	//If the query was successful
