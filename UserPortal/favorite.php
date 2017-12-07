@@ -12,18 +12,17 @@
     $uid = $_SESSION['uid'];
     $wid = $_POST["wid"];
     $favorited = $_POST["in_favorites"];
-    else {
-        $query = "";
-        if($favorited){
-            $query = "DELETE FROM Favorites WHERE uid='$uid' AND wid='$wid'";
-        }
-        else {
-            $mysqldate = date( 'Y-m-d H:i:s');
-            $query = "INSERT INTO Favorites (uid, wid, date) VALUES ('$uid','$wid','$mysqldate')";
-        }
-        $result = mysqli_query($con, $query);
-        header("location: Review_Temp.php?wid=$wid");
+    $query = "";
+    if($favorited){
+        $query = "DELETE FROM Favorites WHERE uid='$uid' AND wid='$wid'";
     }
+    else {
+        $mysqldate = date( 'Y-m-d H:i:s');
+        $query = "INSERT INTO Favorites (uid, wid, date) VALUES ('$uid','$wid','$mysqldate')";
+    }
+    
+    $result = mysqli_query($con, $query);
+    header("location: Review_Temp.php?wid=$wid");
   }
     mysqli_close($db);
   ?>
