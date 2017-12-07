@@ -13,6 +13,9 @@ if ($db->connect_errno) {
 $uid = $_SESSION['uid'];
 $query = "SELECT * FROM Users WHERE uid='$uid'";
 $result = $con->query($query);
+if(!$result) {
+	echo "Bad Query";
+}
 $row = $result->fetch_assoc();
 if(!$row) {
   echo "Invalid User!";
