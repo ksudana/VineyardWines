@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    include_once 'nav.php';
 require("./_connect.php");
 
 //connect to db
