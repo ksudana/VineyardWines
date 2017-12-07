@@ -13,6 +13,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css" media="screen"
     />
     <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+
+    <title>VineyardWines</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../Bootstrap/css/shop-item.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <link href="css/elements.css" rel="stylesheet">
+
+    <script src="js/my_js.js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,5 +42,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/rChat.js"></script>
+    <script src="../Bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="../Bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
