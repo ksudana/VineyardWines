@@ -110,6 +110,7 @@
                     ?>
                 </button>
                 <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
+                <input id="in_favorites" name="in_favorites" type="hidden" value="<?php print($favorite)?>">
             </form>
             </p>
             </div>
