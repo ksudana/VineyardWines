@@ -100,16 +100,18 @@
                 Description: <?php print($description); ?> <br/> <br/>
                 Country: <?php print($country); ?> <br/> <br/>
               </div>
-                <form action="favorite.php">
-                    <button type="button" onclick=form.submit()>
-                        <?php if($favorite) 
-                                print("Favorite"); 
-                              else
-                                print("Unfavorite");
-                        ?>
-                    </button>
-                </form>
-              </p>
+            <form action="favorite.php" id="favorite" method="post" name="favorite">
+                <button type="button" onclick=form.submit()>
+                    <?php 
+                        if($favorite) 
+                            print("Favorite"); 
+                        else
+                            print("Unfavorite");
+                    ?>
+                </button>
+                <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
+            </form>
+            </p>
             </div>
           </div>
           <!-- /.card -->
