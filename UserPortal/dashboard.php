@@ -104,6 +104,10 @@
         <strong>Reviews: </strong><?php print($numreviews); ?>
     </div>
 
+    <div class="notice notice-danger">
+        <strong>Your Favorites </strong>
+    </div>
+
 </div>
 
       </div>
