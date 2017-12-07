@@ -11,9 +11,10 @@
   else {
     $uid = $_SESSION['uid'];
     $wid = $_POST["wid"];
-    $in_favorites = $_POST["in_favorites"];
+    $favorited = $_POST["in_favorites"];
     else {
-        if($in_favorites){
+        $query = "";
+        if($favorited){
             $query = "DELETE FROM Favorites WHERE uid='$uid' AND wid='$wid'";
         }
         else {
