@@ -48,9 +48,22 @@
        $description = $row['description'];
        $country = $row['country'];
        $winery = $row['winery'];
-
        mysql_free_result($result);
-       mysql_close($conn);
+       
+       $query = "SELECT * FROM Favorites WHERE uid='$uid' AND wid='$wid'";
+       $result = mysql_query($query);
+       if(!$result) {
+            print("Bad Query.");
+       }
+      
+       $favorite = true;
+       if(mysql_num_rows($result) > 0) {
+           $favorite = false;
+       }
+      
+        $result = mysql_query($query);
+        mysql_free_result($result);
+        mysql_close($conn);
     ?>
 
 
@@ -87,8 +100,15 @@
                 Description: <?php print($description); ?> <br/> <br/>
                 Country: <?php print($country); ?> <br/> <br/>
               </div>
-                <button type="button" onclick=form.submit()>Favorite</button>
-
+                <form action="favorite.php">
+                    <button type="button" onclick=form.submit()>
+                        <?php if($favorite) 
+                                print("Favorite"); 
+                              else
+                                print("Unfavorite");
+                        ?>
+                    </button>
+                </form>
               </p>
             </div>
           </div>
