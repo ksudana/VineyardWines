@@ -53,8 +53,8 @@
 </tr>
 </center>
 </form>
-</tr>
-<embed src="./mediaplayer.swf?file=napa.mp4" width="325" height="230" allowfullscreen="true" />
+<tr>
+<embed src="./mediaplayer.swf?file=napa.mp4" width="750" height="300" allowfullscreen="true" />
 </tr>
 </table>
 <footer alignclass="py-1 bg-dark">
