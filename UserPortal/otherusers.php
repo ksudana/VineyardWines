@@ -39,7 +39,7 @@
         $uid = $_SESSION['uid'];
         $otherid = $_GET['otherid'];
         if($uid == $otherid) {
-            header("location: dashboard.php")
+            header("location: dashboard.php");
         }
     
         $query = "SELECT * FROM Users WHERE uid='$otherid'";
