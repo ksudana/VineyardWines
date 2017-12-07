@@ -36,12 +36,12 @@
            echo "Connection failed!";
         }
 
+        $uid = $_SESSION['uid'];
         $otherid = $_GET['otherid'];
         $query = "SELECT * FROM Users WHERE uid='$otherid'";
         $result = $con->query($query);
         $row = $result->fetch_assoc();
         if(!$row) {
-
           echo "Invalid User!";
         }
 
@@ -55,12 +55,22 @@
         $aggquery = "SELECT COUNT(*) AS num_reviews FROM Reviews WHERE uid='$otherid'";
         $result = $con->query($aggquery);
         $row = $result->fetch_assoc();
-        if(!$row) {
+        if(!$row)
           echo "Invalid User!";
-        }
 
         $numreviews = $row['num_reviews'];
         mysql_free_result($result);
+        
+        $following = false;
+        $query = "SELECT * FROM Follows WHERE uid1='$uid' AND uid2='$otherid'";
+        $result = $con->query($query);
+        if(!$result)
+            echo "Bad Query";
+        else {
+            if(mysql_num_rows($result) > 0)
+                $following = true;
+        }
+    
         mysqli_close($db);
     ?>
     <div class="container">
@@ -88,6 +98,18 @@
 
         <div class="container">
           <div class="text-center">
+          <form action="follow.php" method="post" name="follow" style="border:none; padding:none">
+                <button type="button" onclick=form.submit()>
+                    <?php 
+                        if($following) 
+                            print("Unfollow"); 
+                        else
+                            print("Follow");
+                    ?>
+                </button>
+                <input id="foreign_uid" name="foreign_uid" type="hidden" value="<?php print($otherid); ?>">
+                <input id="following" name="following" type="hidden" value="<?php print($following); ?>">
+          </form>
           <button type="button" onclick=form.submit()>Follow</button>
           <br/>
           <br/>
