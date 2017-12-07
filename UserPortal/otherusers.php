@@ -85,7 +85,9 @@
       <!-- /.col-md-12 -->
       <div class="col-md-4 pull-right">
 
-
+    <div class="notice notice-friend">
+        <strong><button type="button" onclick=form.submit()>Follow</strong></button>
+      </div>
         <div class="container">
           <div class="text-center">
           <titlec><h4>About You</h4></titlec>
@@ -104,9 +106,7 @@
     <div class="notice notice-danger">
         <strong>Reviews: </strong><?php print($numreviews); ?>
     </div>
-    <div class="notice notice-friend">
-        <strong><button type="button" onclick=form.submit()>Add Friend</strong></button>
-      </div>
+
 </div>
 
       </div>
