@@ -124,6 +124,8 @@
       $result2 = mysql_query($query2);
       $wine_row = mysql_fetch_assoc($result2);
       echo "<table><tr><td><titlec><h3><a href= 'Review_Temp.php?wid=" . $wid . "'>". $wine_row['variety'] ."</h3></titlec></td></tr></table>";
+    }
+  }
       ?>
 
     </div>
