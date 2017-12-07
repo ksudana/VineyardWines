@@ -141,7 +141,7 @@
           $i = $i + 1;
           echo "<a href= 'editreview.php?rid=" . $rid . "'><button> EDIT REVIEW </button></a>";
           ?>
-          
+
           <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
             <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
             <input id="content" name="content" type="hidden" value="<?php print($content)?>">
@@ -165,11 +165,7 @@
         <img id="close" src="images/3.png" onclick ="div_hide()">
         <h2>Edit Your Review</h2>
         <hr>
-        <?php
-            $rid_to_edit = $_SESSION['rid_to_edit'];
-            print($rid_to_edit);
-        ?>
-        <input id="rid" name="rid" type="hidden" value="<?php print($rid_to_edit) ?>">
+
         <input id="name" name="name" placeholder="Title" type="text">
         <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
         <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
