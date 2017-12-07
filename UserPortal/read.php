@@ -1,5 +1,7 @@
 <?php
 require("./_connect.php");
+date_default_timezone_set('America/Chicago');
+
 
 //connect to db
 $db = new mysqli($db_host,$db_user, $db_password, $db_name);
