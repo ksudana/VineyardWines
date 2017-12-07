@@ -36,11 +36,12 @@
            echo "Connection failed!";
         }
 
-        $otherid = $_SESSION['otherid'];
+        $otherid = $_GET['otherid'];
         $query = "SELECT * FROM Users WHERE uid='$otherid'";
         $result = $con->query($query);
         $row = $result->fetch_assoc();
         if(!$row) {
+
           echo "Invalid User!";
         }
 
