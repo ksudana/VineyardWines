@@ -12,11 +12,11 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="./chat.php">Chat</a>
-            </li>
+            </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="./search.php">Search</a>
+              <a class="nav-link" href="./search.php">Explore Wines</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./logout.php">Logout</a>
