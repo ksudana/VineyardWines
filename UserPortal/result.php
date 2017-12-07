@@ -87,7 +87,7 @@
 			}
 			if(mysql_num_rows($result) > 0){
 				$i = 0;
-				while($row = mysql_fetch_assoc($result) and $i < 50){
+				while($row = mysql_fetch_assoc($result)){
 				$id = $row['wid'];
 				$wineName = $row['variety'];
 				echo "<tr><td><a href= 'Review_Temp.php?wid=" . $id . "'>" . $wineName ."</a></td><td>". $row['designation']. "</td><td>" .$row['winery'] ."</td><td>". $row['province'] ."</td><td>" .$row['price'] ."</td><td>". $row['country'] ."</td></tr>";
