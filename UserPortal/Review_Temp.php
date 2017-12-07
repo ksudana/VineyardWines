@@ -56,9 +56,9 @@
             print("Bad Query.");
        }
       
-       $favorite = true;
+       $favorited = false;
        if(mysql_num_rows($result) > 0) {
-           $favorite = false;
+           $favorite = true;
        }
       
         mysql_free_result($result);
@@ -102,14 +102,14 @@
             <form action="favorite.php" id="favorite" method="post" name="favorite">
                 <button type="button" onclick=form.submit()>
                     <?php 
-                        if($favorite) 
-                            print("Favorite"); 
+                        if($favorited) 
+                            print("Unfavorite"); 
                         else
-                            print("Unfavorite");
+                            print("Favorite");
                     ?>
                 </button>
                 <input id="wid" name="wid" type="hidden" value="<?php print($wid); ?>">
-                <input id="in_favorites" name="in_favorites" type="hidden" value="<?php print($favorite); ?>">
+                <input id="in_favorites" name="in_favorites" type="hidden" value="<?php print($favorited); ?>">
             </form>
             </p>
             </div>
