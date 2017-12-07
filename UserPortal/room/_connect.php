@@ -2,7 +2,7 @@
 
 $db_host="localhost";
 $db_user="root";
-$db_password="";
-$db_name="chatapp";
+$db_password="password";
+$db_name="VineyardWinesDB";
 
 ?>
