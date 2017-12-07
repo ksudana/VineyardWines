@@ -117,7 +117,7 @@
           <br/>
           <br/>
 
-          <titlec><h4>About You</h4></titlec>
+          <titlec><h4>About</h4></titlec>
         </div>
     <div class="notice notice-success">
         <strong>Age: </strong> <?php print($age); ?>
