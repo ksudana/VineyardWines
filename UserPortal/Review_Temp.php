@@ -99,8 +99,8 @@
                 Description: <?php print($description); ?> <br/> <br/>
                 Country: <?php print($country); ?> <br/> <br/>
               </div>
-            <form action="favorite.php" id="form" method="post" name="favorite">
-                <button type="button" onclick=form.submit() style="border:none">
+            <form action="favorite.php" method="post" name="favorite">
+                <button type="button" onclick=form.submit()>
                     <?php 
                         if($favorited) 
                             print("Unfavorite"); 
