@@ -11,14 +11,9 @@
   else {
     $uid = $_SESSION['uid'];
     $wid = $_POST["wid"];
-    $query = "SELECT * FROM Favorites WHERE uid='$uid' AND wid='$wid'";
-    $result = mysqli_query($con, $query);
-    if(!$result) {
-        echo "Bad Query!";
-        print($query);
-    }
+    $in_favorites = $_POST["in_favorites"];
     else {
-        if(mysql_num_rows($result) > 0){
+        if($in_favorites){
             $query = "DELETE FROM Favorites WHERE uid='$uid' AND wid='$wid'";
         }
         else {
