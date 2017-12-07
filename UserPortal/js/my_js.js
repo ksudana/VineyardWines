@@ -15,6 +15,3 @@ function div_show() {
 function div_hide(){
 document.getElementById('abc').style.display = "none";
 }
-function fuck_vineet() {
-    document.getElementById('abc').style.display = "block";
-}
