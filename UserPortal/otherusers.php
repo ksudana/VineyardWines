@@ -104,7 +104,9 @@
     <div class="notice notice-danger">
         <strong>Reviews: </strong><?php print($numreviews); ?>
     </div>
-
+    <div class="notice notice-friend">
+        <button type="button" onclick=form.submit()>Favorite</button>
+      </div>
 </div>
 
       </div>
