@@ -13,9 +13,8 @@
     $foreign_uid = $_POST["foreign_uid"];
     $following = $_POST["following"];
     $query = "";
-    if($following){
-        $query = "DELETE FROM Follows WHERE uid='$uid' AND wid='$wid'";
-    }
+    if($following)
+        $query = "DELETE FROM Follows WHERE uid1='$my_uid' AND uid2='$foreign_uid'";
     else {
         $mysqldate = date( 'Y-m-d H:i:s');
         $query = "INSERT INTO Follows (uid1, uid2, date) VALUES ('$my_uid','$foreign_uid','$mysqldate')";
