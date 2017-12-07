@@ -29,7 +29,7 @@
     		font-size: 20px;
     		text-align: left;
         overflow: auto;
-        height: 500px;
+        height: 100px;
     	}
     	th{
     		background-color: #588c7e;
