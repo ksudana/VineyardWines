@@ -8,9 +8,7 @@ if ($db->connect_errno) {
     echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
 }
 
-$hour_ago = strtotime('-1 hour')
-
-$query="SELECT * FROM chat ORDER BY id ASC";
+$query="SELECT * FROM chat WHERE time > '2017-12-07 14:30:17' ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
 	//If the query was successful
@@ -20,6 +18,7 @@ if ($db->real_query($query)) {
         $username=$row["username"];
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"])); //outputs date as # #Hour#:#Minute#
+
         echo "<p>$time |=> $username: $text</p>\n";
     }
 }else{
