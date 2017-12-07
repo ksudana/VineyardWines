@@ -2,7 +2,7 @@
 require("./_connect.php");
 
 //connect to db
-$con = new mysqli($db_host,$db_user, $db_password, $db_name);
+$db = new mysqli($db_host,$db_user, $db_password, $db_name);
 if ($db->connect_errno) {
     //if the connection to the db failed
     echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
@@ -12,7 +12,7 @@ if ($db->connect_errno) {
 //get userinput from url
 $uid = $_SESSION['uid'];
 $query = "SELECT * FROM Users WHERE uid='$uid'";
-$result = $con->query($query);
+$result = $db->query($query);
 if(!$result) {
 	echo "Bad Query";
 }
