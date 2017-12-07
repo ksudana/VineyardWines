@@ -12,7 +12,10 @@ if ($db->connect_errno) {
 //get userinput from url
 
 $uid = $_SESSION['uid'];
-$username="SELECT username FROM Users WHERE uid='$uid'";
+$use="SELECT username FROM Users WHERE uid='$uid'";
+
+$username = mysql_query($use);
+
 $text=substr($_GET["text"], 0, 128);
 //escaping is extremely important to avoid injections!
 $nameEscaped = htmlentities(mysqli_real_escape_string($db,$username)); //escape username and limit it to 32 chars
