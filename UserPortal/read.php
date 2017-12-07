@@ -9,7 +9,7 @@ if ($db->connect_errno) {
 }
 
 $now = new DateTime();
-$query="SELECT * FROM chat WHERE time > '$now' ORDER BY id ASC";
+$query="SELECT * FROM chat WHERE time < '$now' ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
 	//If the query was successful
