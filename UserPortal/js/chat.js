@@ -1,11 +1,16 @@
 "use strict";
 
+
 $(document).ready(function () {
     var chatInterval = 250; //refresh interval in ms
     var $userName = $("#userName");
     var $chatOutput = $("#chatOutput");
     var $chatInput = $("#chatInput");
     var $chatSend = $("#chatSend");
+    $('#chatInput').keypress(function(e){
+      if(e.keyCode==13)
+      $('#chatSend').click();
+    });
 
     function sendMessage() {
         var userNameString = $userName.val();
