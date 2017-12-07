@@ -9,7 +9,6 @@ alert("Form Submitted Successfully...");
 }
 //Function To Display Popup
 function div_show(rid) {
-  
     alert(htmlstring);
     document.getElementById('abc').style.display = "block";
 }
