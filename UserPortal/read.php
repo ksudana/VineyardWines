@@ -22,8 +22,9 @@ if ($db->real_query($query)) {
         $username=$row["username"];
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"]));
-
-        echo "<p>$time , $livetime |=> $username: $text</p>\n";
+        if($time >= $livetime){
+                echo "<p>$time , $livetime |=> $username: $text</p>\n";
+        }
     }
 }else{
 	//If the query was NOT successful
