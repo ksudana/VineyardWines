@@ -51,7 +51,7 @@
   	<table>
   		<tr>
   			<th>Variety</th>
-  			<th>Designation</th>
+  			<th>Vineyard</th>
   			<th>Winery</th>
   			<th>Province</th>
   			<th>Price</th>

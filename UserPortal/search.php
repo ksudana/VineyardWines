@@ -28,9 +28,17 @@
 
 <tr>    
 	<td><input type="text" name="name" placeholder = "Enter Wine Name" size="100"></td>
+    <td><select name="search">
+        Search:
+        <option value="variety">Wine Name</option>
+        <option value="country">Country</option>
+        <option value="designation">Vineyard</option>
+        <option value="winery">Winery</option>
+        </select>
+    </td>
     <td><select name="order">
         Order By:
-        <option value="variety">Name</option>
+        <option value="variety">Wine Name</option>
         <option value="country">Country</option>
         <option value="winery">Winery</option>
         <option value="price_asc">Price (low to high)</option>
