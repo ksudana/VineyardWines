@@ -61,7 +61,6 @@
            $favorite = false;
        }
       
-        $result = mysql_query($query);
         mysql_free_result($result);
         mysql_close($conn);
     ?>
@@ -109,8 +108,8 @@
                             print("Unfavorite");
                     ?>
                 </button>
-                <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
-                <input id="in_favorites" name="in_favorites" type="hidden" value="<?php print($favorite)?>">
+                <input id="wid" name="wid" type="hidden" value="<?php print($wid); ?>">
+                <input id="in_favorites" name="in_favorites" type="hidden" value="<?php print($favorite); ?>">
             </form>
             </p>
             </div>
