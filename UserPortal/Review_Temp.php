@@ -49,18 +49,18 @@
        $country = $row['country'];
        $winery = $row['winery'];
        mysql_free_result($result);
-       
+
        $query = "SELECT * FROM Favorites WHERE uid='$uid' AND wid='$wid'";
        $result = mysql_query($query);
        if(!$result) {
             print("Bad Query.");
        }
-      
+
        $favorited = false;
        if(mysql_num_rows($result) > 0) {
            $favorited = true;
        }
-      
+
         mysql_free_result($result);
         mysql_close($conn);
     ?>
@@ -101,9 +101,9 @@
               </div>
             <form action="favorite.php" method="post" name="favorite" style="border:none; padding:none">
                 <button type="button" onclick=form.submit()>
-                    <?php 
-                        if($favorited) 
-                            print("Unfavorite"); 
+                    <?php
+                        if($favorited)
+                            print("Unfavorite");
                         else
                             print("Favorite");
                     ?>
@@ -117,6 +117,16 @@
           <!-- /.card -->
             </div>
             <div class="col-md-7">
+  -------------------------------------------------------------------
+  <div class="card card-outline-secondary my-4">
+    <div class="card-header">
+      Chat With Wine Enthusiasts
+    </div>
+
+  </div>
+
+
+  ---------------------------------------------------------------
           <div class="card card-outline-secondary my-4">
             <div class="card-header">
               Product Reviews
@@ -140,14 +150,14 @@
                     echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
                     echo "<tr><td><titlec> Recommend: ". $recommend ."</titlec><br></td></tr>";
                     echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
-                    
+
                     $poster = $row['uid'];
                     $sele2 = "SELECT * FROM Users WHERE uid=$poster";
                     $result2 = mysql_query($sele2);
                     $user_row = mysql_fetch_assoc($result2);
                     $uname = $user_row['username'];
                     echo "<tr><td><titlec><p> Posted by: <a href= 'otherusers.php?otherid=" . $poster . "'>". $uname ."</a></p></titlec></td></tr>";
-                    
+
                     echo "<tr><td><titlec>Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
                     $i = $i + 1;
                 }

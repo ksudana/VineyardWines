@@ -30,7 +30,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <h3><titlec>Chat with Wine Enthusiasts</titlec></h3>
+            <h5><titlec>Chat with Wine Enthusiasts</titlec></h5>
         </header>
         <main>
             <div class="chat">
