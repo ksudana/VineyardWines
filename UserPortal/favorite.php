@@ -27,7 +27,9 @@
         print($query);
     }
     else {
-        header("location: Review_Temp.php?wid=$wid");
+        print("Good Query!");
+        print($query);
+       # header("location: Review_Temp.php?wid=$wid");
     }
   }
     mysqli_close($db);
