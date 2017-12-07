@@ -105,7 +105,7 @@
         <strong>Reviews: </strong><?php print($numreviews); ?>
     </div>
     <div class="notice notice-friend">
-        <button type="button" onclick=form.submit()>Favorite</button>
+        <strong><button type="button" onclick=form.submit()>Add Friend</strong></button>
       </div>
 </div>
 
