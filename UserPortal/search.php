@@ -25,11 +25,11 @@
 <form action="result.php" method="POST">
 <titlec><center><h1>Discover New Tastes</h1></center></titlec>
 <center><table>
-<tr><titlec>
-<td>Search</td>
-<td>Criteria:</td>
-<td>Order By:</td>
-</titlec></tr>
+<tr>
+<td><titlec>Search</titlec></td>
+<td><titlec>Criteria</titlec></td>
+<td><titlec>Order By</titlec></td>
+</tr>
 <tr>
 	<td><input type="text" name="name" placeholder = "Enter Value" size="100"></td>
     <td><select name="search">
