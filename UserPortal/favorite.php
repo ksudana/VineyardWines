@@ -22,7 +22,13 @@
     }
     
     $result = mysqli_query($con, $query);
-    header("location: Review_Temp.php?wid=$wid");
+    if(!$result) {
+        print("Bad Query!");
+        print($query);
+    }
+    else {
+        header("location: Review_Temp.php?wid=$wid");
+    }
   }
     mysqli_close($db);
   ?>
