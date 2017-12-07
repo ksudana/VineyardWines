@@ -11,7 +11,7 @@
   else {
     $uid = $_SESSION['uid'];
     $wid = $_POST["wid"];
-    $query = "SELECT FROM Favorites WHERE uid='$uid' AND wid='$wid'";
+    $query = "SELECT * FROM Favorites WHERE uid='$uid' AND wid='$wid'";
     $result = mysqli_query($con, $query);
     if(!$result) {
         echo "Bad Query!";
