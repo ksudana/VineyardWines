@@ -9,6 +9,7 @@ if ($db->connect_errno) {
 }
 
 $hour_ago = strtotime('-1 hour')
+
 $query="SELECT * FROM chat ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
@@ -19,7 +20,7 @@ if ($db->real_query($query)) {
         $username=$row["username"];
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"])); //outputs date as # #Hour#:#Minute#
-
+        echo "Time is: $hour_ago";
         echo "<p>$time |=> $username: $text</p>\n";
     }
 }else{
