@@ -68,17 +68,16 @@
 		}else{
 			$make = '<h4>No match found!</h4>';
             
-            $order = "ASC";
-            
+            $orderby = "ORDER BY $orderby";
+                        
             if($orderby == "price_asc") {
-                $orderby = "price";
+                $orderby = "AND price IS NOT NULL ORDER BY price ASC";
             }
             else if($orderby == "price_desc") {
-                $orderby = "price";
-                $order = "DESC";
+                $orderby = "AND price IS NOT NULL ORDER BY price DESC";
             }
             
-			$sele = "SELECT * FROM Wines WHERE variety LIKE '%$name%' ORDER BY $orderby $order";
+			$sele = "SELECT * FROM Wines WHERE variety LIKE '%$name%' $orderby";
 			$result = mysql_query($sele);
 			if(!$result) {
 				print("Bad Query");
