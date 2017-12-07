@@ -98,7 +98,7 @@
               Product Reviews
             </div>
             <div class="card-body">
-              <button id="popup" >Add a Review</button>
+              <button id="popup" onclick="div_show()">Add a Review</button>
               <hr>
               <?php
             $conn = mysql_connect("localhost", "root", "password");
