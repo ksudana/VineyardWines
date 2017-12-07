@@ -11,14 +11,14 @@
   else {
     $uid = $_SESSION['uid'];
     $wid = $_POST["wid"];
-    $query = "SELECT FROM Favorites WHERE uid=$uid AND wid=$wid";
+    $query = "SELECT FROM Favorites WHERE uid='$uid' AND wid='$wid'";
     $result = mysqli_query($con, $query);
     if(!$result) {
         echo "Bad Query!";
     }
     else {
         if(mysql_num_rows($result) > 0){
-            $query = "DELETE FROM Favorites WHERE uid=$uid AND wid=$wid";
+            $query = "DELETE FROM Favorites WHERE uid='$uid' AND wid='$wid'";
         }
         else {
             $mysqldate = date( 'Y-m-d H:i:s');
