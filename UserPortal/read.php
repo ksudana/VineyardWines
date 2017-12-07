@@ -8,9 +8,9 @@ if ($db->connect_errno) {
     echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
 }
 
-$livetime = date('Y-m-d H:i:s', strtotime('-1 hour'));
+$livetime = date('Y-m-d H:i:s', strtotime('-1 day'));
 
-$query="SELECT * FROM chat WHERE time ORDER BY id ASC";
+$query="SELECT * FROM chat ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
 	//If the query was successful
@@ -19,7 +19,7 @@ if ($db->real_query($query)) {
     while ($row = $res->fetch_assoc()) {
         $username=$row["username"];
         $text=$row["text"];
-        $time=date('g:i a', strtotime($row["time"])); 
+        $time=date('g:i a', strtotime($row["time"]));
 
         echo "<p>$time , $livetime |=> $username: $text</p>\n";
     }
