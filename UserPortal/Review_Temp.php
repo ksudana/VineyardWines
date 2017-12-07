@@ -12,6 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css" media="screen"
+    />
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
     <title>VineyardWines</title>
 
     <!-- Bootstrap core CSS -->
@@ -117,16 +123,21 @@
           <!-- /.card -->
             </div>
             <div class="col-md-7">
-  -------------------------------------------------------------------
-  <div class="card card-outline-secondary my-4">
-    <div class="card-header">
-      Chat With Wine Enthusiasts
-    </div>
+            <div class="card card-outline-secondary my-4">
+              <div class="card-header">
+                Chat With Wine Enthusiasts
+              </div>
+              <div class="card-body">
+                <main>
+                    <div class="chat">
+                        <div id="chatOutput"></div>
+                        <input id="chatInput" type="text" placeholder="Input Text here" maxlength="128">
+                        <button id="chatSend">Send</button>
+                    </div>
+                </main>
+              </div>
+            </div>
 
-  </div>
-
-
-  ---------------------------------------------------------------
           <div class="card card-outline-secondary my-4">
             <div class="card-header">
               Product Reviews
@@ -205,6 +216,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/rChat.js"></script>
     <script src="../Bootstrap/vendor/jquery/jquery.min.js"></script>
     <script src="../Bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
