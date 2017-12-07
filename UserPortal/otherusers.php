@@ -187,62 +187,80 @@
     </div>
 </div>
 
-            <div class="col-md-7">
-          <div class="card card-outline-secondary my-4">
-            <div class="card-header">
-              Product Reviews
-            </div>
-            <div class="card-body">
-              <button id="popup" onclick="div_show()">Add a Review</button>
-              <hr>
-              <?php
-            $conn = mysql_connect("localhost", "root", "password");
-            mysql_select_db("VineyardWinesDB", $conn);
-              $sele = "SELECT * FROM Reviews WHERE wid='$wid'";
-              $result = mysql_query($sele);
-              if(!$result) {
-                print("Bad Query");
-              }
-              if(mysql_num_rows($result) > 0){
-                $i = 0;
-                while($row = mysql_fetch_assoc($result) and $i < 50){
-                echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
-                echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
-                echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
-                echo "<tr><td><titlec><p> Posted by: <a href= 'otherusers.php?otherid=" . $row['uid'] . "'>". $row['uid'] ."</a></p></titlec></td></tr>";
-                echo "<tr><td><titlec>Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
-                $i = $i + 1;
-                }
-              }
-            mysql_free_result($result);
-            mysql_close($conn);
-            ?>
+<div class="col-md-8  pull-left posttimeline">
+    <div class="card card-outline-secondary my-4">
+      <div class="card-header">
+        Your Wine Reviews
+      </div>
+      <div class="card-body">
+        <?php
+        $conn = mysql_connect($hn, $un, $pw);
+        mysql_select_db($db, $conn);
+        $sele = "SELECT * FROM Reviews WHERE uid='$uid'";
+        $result = mysql_query($sele);
+        if(!$result) {
+          print("Bad Query");
+        }
+        if(mysql_num_rows($result) > 0){
+          $i = 0;
+          while($row = mysql_fetch_assoc($result) and $i < 50){
+          $wid = $row['wid'];
+          $query2 = "SELECT * FROM Wines WHERE wid='$wid'";
+          $result2 = mysql_query($query2);
+          $wine_row = mysql_fetch_assoc($result2);
+          $recommend = $row['recommend'] == 1 ? "Yes" : "No";
+          echo "<table><tr><td><titlec><h3><a href= 'Review_Temp.php?wid=" . $wid . "'>". $wine_row['variety'] ."</h3></titlec></td></tr>";
+          echo "<table><tr><td><titlec><h5>". $row['title'] ."</h5></titlec></td></tr>";
+          echo "<tr><td><titlec> Rating:    ". $row['rating'] / 5 ."</titlec></td></tr>";
+          echo "<tr><td><titlec> Recommend: ". $recommend ."</titlec><br></td></tr>";
+          echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
 
-              <div id="abc">
-              <!-- Popup Div Starts Here -->
-              <div id="popupContact">
-              <!-- Add Review Form -->
-              <form action="addreview.php" id="form" method="post" name="form">
-                  <img id="close" src="images/3.png" onclick ="div_hide()">
-                  <h2>Add Your Review</h2>
-                  <hr>
-                  <input id="wid" name="wid" type="hidden" value="<?php print($wid)?>">
-                  <input id="name" name="name" placeholder="Title" type="text">
-                  <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
-                  <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
-                  <textarea id="msg" name="message" placeholder="Review"></textarea>
-                  <a id="submit" onclick="form.submit()">Create Review</a>
-              </form>
-              </div>
-              <!-- Popup Div Ends Here -->
-              </div>
-              <!-- Display Popup Button -->
-            </div>
-          </div>
-          <!-- /.card -->
+          echo "<tr><td><titlec> <p>Posted on   ". $row['date'] ."</p></titlec></td></tr></table>";
+          $rid = $row['rid'];
+          $content = $row['content'];
+          $i = $i + 1;
+          echo "<a href= 'editreview.php?rid=" . $rid . "'><button> EDIT REVIEW </button></a>";
+          ?>
 
+          <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
+            <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
+            <input id="content" name="content" type="hidden" value="<?php print($content)?>">
+            <button type="button" onclick=form.submit()>Delete Your Review</button>
+          </form>
+
+          <hr>
+          <?php
+
+          }
+        }
+      mysql_free_result($result);
+      mysql_close($conn);
+      ?>
+
+        <div id="abc">
+        <!-- Popup Div Starts Here -->
+        <div id="popupContact">
+        <!-- Edit Review Form -->
+        <form action="editreview.php" id="edit_form" method="post" name="edit_form">
+        <img id="close" src="images/3.png" onclick ="div_hide()">
+        <h2>Edit Your Review</h2>
+        <hr>
+
+        <input id="name" name="name" placeholder="Title" type="text">
+        <input id="rating" name="rating" placeholder="Rating (Out of 5)" type="number">
+        <input id="Recommend" name="Recommend" placeholder="Would You Recommend? (Yes or No) " type="text">
+        <textarea id="msg" name="message" placeholder="Review"></textarea>
+        <a id="submit" onclick=form.submit()>Save</a>
+        </form>
         </div>
+        <!-- Popup Div Ends Here -->
+        </div>
+        <!-- Display Popup Button -->
+      </div>
+    </div>
+
+    </div>
+</div>
 <div>
     <!-- /.container -->
 
