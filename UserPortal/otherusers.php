@@ -85,10 +85,11 @@
       <!-- /.col-md-12 -->
       <div class="col-md-4 pull-right">
 
-      <button type="button" onclick=form.submit()>Follow</button>
-      
+
         <div class="container">
           <div class="text-center">
+          <button type="button" onclick=form.submit()>Follow</button>
+
           <titlec><h4>About You</h4></titlec>
         </div>
     <div class="notice notice-success">
