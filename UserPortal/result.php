@@ -28,8 +28,8 @@
     		font-family: monospace;
     		font-size: 20px;
     		text-align: left;
-        overflow: auto;
         height: 100px;
+        overflow: auto;
     	}
     	th{
     		background-color: #588c7e;
