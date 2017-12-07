@@ -17,9 +17,9 @@ if ($db->real_query($query)) {
     while ($row = $res->fetch_assoc()) {
         $username=$row["username"];
         $text=$row["text"];
-        $time=date('g:i A', strtotime($row["time"])); //outputs date as # #Hour#:#Minute#
+        $time=date('g:i a', strtotime($row["time"])); //outputs date as # #Hour#:#Minute#
 
-        echo "<p>$time | $username: $text</p>\n";
+        echo "<p>$username: $text</p><p>$time </p>\n";
     }
 }else{
 	//If the query was NOT successful
