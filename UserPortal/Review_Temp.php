@@ -113,13 +113,21 @@
               if(mysql_num_rows($result) > 0){
                 $i = 0;
                 while($row = mysql_fetch_assoc($result) and $i < 50){
-                echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
-                echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
-                echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
-                echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
-                echo "<tr><td><titlec><p> Posted by: <a href= 'otherusers.php?otherid=" . $row['uid'] . "'>". $row['uid'] ."</a></p></titlec></td></tr>";
-                echo "<tr><td><titlec>Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
-                $i = $i + 1;
+
+                    echo "<table><tr<td><titlec><h3>". $row['title'] ."</h3></titlec></td></tr>";
+                    echo "<tr><td><titlec> Rating:    ". $row['rating'] ."</titlec></td></tr>";
+                    echo "<tr><td><titlec> Recommend: ". $row['recommend'] ."</titlec><br></td></tr>";
+                    echo "<tr><td><titlec><h6>". $row['content'] ."</h6></titlec></td></tr>";
+                    
+                    $poster = $row['uid'];
+                    $sele2 = "SELECT * FROM Users WHERE uid=$poster";
+                    $result2 = mysql_query($sele);
+                    $user_row = mysql_fetch_assoc($result2);
+                    $uname = $user_row['username'];
+                    echo "<tr><td><titlec><p> Posted by: <a href= 'otherusers.php?otherid=" . $poster . "'>". $uname ."</a></p></titlec></td></tr>";
+                    
+                    echo "<tr><td><titlec>Posted on   ". $row['date'] ."</titlec></td></tr></table><hr>";
+                    $i = $i + 1;
                 }
               }
             mysql_free_result($result);
