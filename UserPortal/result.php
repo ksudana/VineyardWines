@@ -67,14 +67,15 @@
 			$make = '<h4>You must type a word to search!</h4>';
 		}else{
 			$make = '<h4>No match found!</h4>';
-            
-            $orderby = "ORDER BY $orderby";
                         
             if($orderby == "price_asc") {
                 $orderby = "AND price IS NOT NULL ORDER BY price ASC";
             }
             else if($orderby == "price_desc") {
                 $orderby = "AND price IS NOT NULL ORDER BY price DESC";
+            }
+            else {
+                $orderby = "AND $orderby IS NOT NULL ORDER BY $orderby";
             }
             
 			$sele = "SELECT * FROM Wines WHERE variety LIKE '%$name%' $orderby";
