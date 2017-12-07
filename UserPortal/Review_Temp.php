@@ -131,7 +131,7 @@
                 <main>
                     <div class="chat">
                         <div id="chatOutput"></div>
-                        <input id="chatInput" type="text" placeholder="Input Text here" maxlength="128">
+                        <input id="chatInput" type="text" placeholder="Type a Message Here" maxlength="128">
                         <button id="chatSend">Send</button>
                     </div>
                 </main>
