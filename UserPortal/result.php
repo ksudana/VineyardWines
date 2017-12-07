@@ -79,6 +79,7 @@
             }
             
 			$sele = "SELECT * FROM Wines WHERE variety LIKE '%$name%' ORDER BY '$orderby' '$order'";
+            print($sele);
 			$result = mysql_query($sele);
 			if(!$result) {
 				print("Bad Query");
