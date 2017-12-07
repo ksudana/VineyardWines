@@ -71,7 +71,7 @@
         if(!$result)
             echo "Bad Query";
         else {
-            if(mysql_num_rows($result) > 0)
+            if($result->num_rows > 0)
                 $following = true;
         }
     
