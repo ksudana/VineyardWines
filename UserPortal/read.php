@@ -23,7 +23,7 @@ if ($db->real_query($query)) {
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"]));
         if($time >= $livetime){
-                echo "<p>$time , $livetime |=> $username: $text</p>\n";
+                echo "<p>$time | $username: $text</p>\n";
         }
     }
 }else{
