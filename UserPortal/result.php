@@ -70,11 +70,11 @@
             
             $order = "ASC";
             
-            else if($orderby == "price_asc") {
+            if($orderby == "price_asc") {
                 $orderby = "price";
             }
             else if($orderby == "price_desc") {
-                $orderby = "PRICE";
+                $orderby = "price";
                 $order = "DESC";
             }
             
