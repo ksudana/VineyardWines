@@ -22,7 +22,7 @@ body {
 }
 
 .chat {
-    max-width: 400px;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

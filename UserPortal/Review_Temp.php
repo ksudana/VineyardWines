@@ -125,7 +125,7 @@
             <div class="col-md-7">
             <div class="card card-outline-secondary my-4">
               <div class="card-header">
-                Chat With Wine Enthusiasts
+                Chat with Wine Enthusiasts
               </div>
               <div class="card-body">
                 <main>
