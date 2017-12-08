@@ -129,31 +129,7 @@
       ?>
 
     </div>
-    <div>
-      <?php
-            try {
-                $pdo = new PDO("mysql:host=$hn;dbname=$db", $un, $pw);
-                $lol = $_SESSION['uid'];
-                $sql = "CALL p('$lol')";
-                $q = $pdo->query($sql);
-                $q->setFetchMode(PDO::FETCH_ASSOC);
-            } catch (PDOException $e) {
-                die("Error occurred:" . $e->getMessage());
-            }
-      ?>
-      <table>
-          <tr>
-              <th>UID</th>
-              <th>WID</th>
-          </tr>
-          <?php while ($r = $q->fetch()): ?>
-              <tr>
-                  <td><?php echo $r['wid'] ?></td>
-                  <td><titlec><?php echo $r['variety'] ?></titlec></td>
-              </tr>
-          <?php endwhile; ?>
-    </table>
-    </div>
+
 
 </div>
 

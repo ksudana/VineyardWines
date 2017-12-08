@@ -85,7 +85,7 @@
 			<?php while($r = $q->fetch()){
 			$wid = $r['wid'];
 				$name = $r['variety'];
-			echo "<table><tr><td><titlec><h5><a href= 'Review_Temp.php?wid=" . $wid . "'>". $name ."</h5></titlec></td></tr></table>";
+			echo "<table><tr><td><titlec><h3><a href= 'Review_Temp.php?wid=" . $wid . "'>". $name ."</h3></titlec></td></tr></table>";
 		} ?>
 
 </titlec>
