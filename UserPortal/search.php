@@ -58,7 +58,13 @@
 
 </tr>
 <tr>
-<embed autoPlay=true src="./mediaplayer.swf?file=napa.mp4" width="750" height="450" allowfullscreen="true" />
+<th><titlec>
+	RECOMMENDATIONS GO HERE SUDANA YOU FUCKING QUEER
+</titlec>
+</th>
+<th>
+<embed autoPlay=true src="./mediaplayer.swf?file=napa.mp4" width="50" height="350" allowfullscreen="true" />
+</th>
 </tr>
 <footer alignclass="py-1 bg-dark">
 
