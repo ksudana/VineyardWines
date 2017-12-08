@@ -24,17 +24,18 @@ if ($db->real_query($query)) {
 
     while ($row = $res->fetch_assoc()) {
         $username=$row["username"];
-        $user_uid = "-1";
+        $user_uid = "";
         $query2 = "SELECT * FROM Users WHERE username='$username'";
         if($db->real_query($query2)) {
             $res2 = $db->use_result();
             $row2 = $res2->fetch_assoc();
-            $uid = $row2['uid'];
+            $user_id = $row2['uid'];
         }
+        
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"]));
         if($time >= $livetime){
-                echo "<p>$time | <a href= 'otherusers.php?otherid=" . $other_uid . "'>". $username ."</a> : $text</p>\n";
+                echo "<p>$time | <a href= 'otherusers.php?otherid=" . $user_uid . "'>". $username ."</a> : $text</p>\n";
         }
     }
 }else{
