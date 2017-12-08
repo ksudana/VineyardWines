@@ -235,9 +235,10 @@
     </div>
     <div>
       <?php
-      if (!$mysqli->query("CALL p(1)")) {
-          echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
-      }
+      $mysqli->query("CALL p(2)")
+      $mysqli->query("CALL p(3)")
+      $mysqli->query("CALL p(4)")
+      $mysqli->query("CALL p(5)")
        ?>
     </div>
 </div>
