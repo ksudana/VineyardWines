@@ -27,7 +27,7 @@ if ($db->real_query($query)) {
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"]));
         if($time > $livetime){
-                echo "<p>$time | $livetime | <a href= 'otherusers.php?otherid=" . $uid . "'>". $username ."</a> : $text</p>\n";
+            echo "I'm not working";
         }
     }
 }else{
