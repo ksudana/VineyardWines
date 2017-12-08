@@ -145,11 +145,7 @@
               echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
-            if (!($res = $mysqli->query("SELECT id FROM test"))) {
-              echo "SELECT failed: (" . $mysqli->errno . ") " . $mysqli->error;
-            }
 
-            var_dump($res->fetch_assoc());
             ?>
 
 
