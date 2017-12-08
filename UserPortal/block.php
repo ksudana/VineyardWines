@@ -11,14 +11,22 @@
   else {
     $my_uid = $_SESSION['uid'];
     $foreign_uid = $_POST["foreign_uid"];
-    mysql_query("START TRANSACTION");
+    try {
+    // First of all, let's begin a transaction
+    $db->beginTransaction();
 
-    $a1 = mysqli_query("DELETE FROM Follows WHERE uid1='$my_uid' AND uid2='$foreign_uid'");
-    $a2 = mysqli_query("DELETE FROM Follows WHERE uid2='$my_uid' AND uid1='$foreign_uid'");
+    // A set of queries; if one fails, an exception should be thrown
+    $db->query("DELETE FROM Follows WHERE uid1='$my_uid' AND uid2='$foreign_uid'");
+    $db->query("DELETE FROM Follows WHERE uid2='$my_uid' AND uid1='$foreign_uid'");
+    // If we arrive here, it means that no exception was thrown
+    // i.e. no query has failed, and we can commit the transaction
+    $db->commit();
+} catch (Exception $e) {
+    // An exception has been thrown
+    // We must rollback the transaction
+    $db->rollback();
+}
 
-  if ($a1 and $a2) {
-      mysqli_query("COMMIT");
-  }
   header("location: otherusers.php?otherid=$foreign_uid");
 }
     mysqli_close($db);
