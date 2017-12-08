@@ -25,11 +25,14 @@ if ($db->real_query($query)) {
     while ($row = $res->fetch_assoc()) {
         $username=$row["username"];
         $user_uid = "";
-        $query2 = "SELECT * FROM Users WHERE username='$username'";
+        $query2 = "SELECT uid FROM Users WHERE username='$username'";
         if($db->real_query($query2)) {
             $res2 = $db->use_result();
             $row2 = $res2->fetch_assoc();
-            $user_uid = $row2['uid'];
+            $user_uid = $row2["uid"];
+        }
+        else {
+            echo "Bad Query";
         }
         
         $text=$row["text"];
