@@ -102,7 +102,7 @@
 
         <div class="container">
           <div class="text-center">
-          <form style = "background-color: #f0f3f5" action="follow.php" method="post" name="follow" style="border:none; padding:none">
+          <form style = "background-color: #f0f3f5, border: none" action="follow.php" method="post" name="follow" style="border:none; padding:none">
                 <button type="button" onclick=form.submit()>
                     <?php
                         if($following)
