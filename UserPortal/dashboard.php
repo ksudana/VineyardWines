@@ -129,7 +129,7 @@
       ?>
 
     </div>
-    <button type="button" onclick=form.submit()>Delete Your Account</button>
+    <button style = "background-color: #d42121" type="button" onclick=form.submit()>Delete Your Account</button>
 
 
 </div>
