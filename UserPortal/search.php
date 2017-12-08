@@ -74,7 +74,7 @@
         $uid = $_SESSION['uid'];
 	    $conn = mysql_connect($hn, $un, $pw);
 	    mysql_select_db($db, $conn);
-        $sele = "SELECT wid,variety FROM Wines WHERE wid IN (SELECT A.wid FROM (SELECT Favorites.wid AS wid, Favorites.date AS wineDate FROM Follows,Favorites WHERE (Favorites.uid = Follows.uid2) AND (Follows.uid1 = '$uid') UNION SELECT Reviews.wid AS wid, Reviews.date AS wineDate FROM Follows,Reviews WHERE (Reviews.uid = Follows.uid2) AND (Follows.uid1 = '$uid') AND (Reviews.recommend = 1) ORDER BY wineDate) AS A) AND wid NOT IN (SELECT wid FROM Favorites WHERE uid='$uid')";
+        $sele = "SELECT DISTINCT wid,variety FROM Wines WHERE wid IN (SELECT A.wid FROM (SELECT Favorites.wid AS wid, Favorites.date AS wineDate FROM Follows,Favorites WHERE (Favorites.uid = Follows.uid2) AND (Follows.uid1 = '$uid') UNION SELECT Reviews.wid AS wid, Reviews.date AS wineDate FROM Follows,Reviews WHERE (Reviews.uid = Follows.uid2) AND (Follows.uid1 = '$uid') AND (Reviews.recommend = 1) ORDER BY wineDate) AS A) AND wid NOT IN (SELECT wid FROM Favorites WHERE uid='$uid')";
 	    $result = mysql_query($sele);
 	    if(!$result) {
 	      print("Bad Query");
