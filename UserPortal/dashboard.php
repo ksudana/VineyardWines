@@ -130,35 +130,7 @@
 
     </div>
     <div>
-      <div>
-          <?php
-              $mysqli = new mysqli($hn, $un, $pw, $db);
-              if ($mysqli->connect_errno) {
-                echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-              }
-
-              if (!$mysqli->query("DROP PROCEDURE IF EXISTS p") ||
-                !$mysqli->query('CREATE PROCEDURE p() READS SQL DATA BEGIN SELECT id FROM test; SELECT id + 1 FROM test; END;')) {
-                echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
-              }
-
-              if (!$mysqli->multi_query("CALL p()")) {
-                echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
-              }
-
-              do {
-                if ($res = $mysqli->store_result()) {
-                    printf("---\n");
-                    var_dump($res->fetch_all());
-                    $res->free();
-                } else {
-                    if ($mysqli->errno) {
-                        echo "Store failed: (" . $mysqli->errno . ") " . $mysqli->error;
-                    }
-                }
-              } while ($mysqli->more_results() && $mysqli->next_result());
-          ?>
-      </div>
+        fuck this
 
 
 
