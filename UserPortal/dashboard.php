@@ -147,8 +147,8 @@
           </tr>
           <?php while ($r = $q->fetch()): ?>
               <tr>
-                  <td><?php echo $r['uid'] ?></td>
                   <td><?php echo $r['wid'] ?></td>
+                  <td><?php echo $r['variety'] ?></td>
               </tr>
           <?php endwhile; ?>
     </table>
