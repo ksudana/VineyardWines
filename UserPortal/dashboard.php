@@ -135,15 +135,21 @@
             if ($mysqli->connect_errno) {
               echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
             }
+            if (!$mysqli->query("DROP TABLE IF EXISTS test") ||
+                !$mysqli->query("CREATE TABLE test(id INT)") ||
+                !$mysqli->query("INSERT INTO test(id) VALUES (1), (2), (3)")) {
+                echo "Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
+            }
 
             if (!$mysqli->query("DROP PROCEDURE IF EXISTS p") ||
-              !$mysqli->query("CREATE PROCEDURE p() READS SQL DATA BEGIN SELECT * FROM Favorites WHERE uid='$uid'; END;")) {
-              echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
+                !$mysqli->query('CREATE PROCEDURE p() READS SQL DATA BEGIN SELECT id FROM test; SELECT id + 1 FROM test; END;')) {
+                echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
-            if (!$mysqli->query("CALL p()")) {
-              echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+            if (!$mysqli->multi_query("CALL p()")) {
+                echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
+
             do {
                 if ($res = $mysqli->store_result()) {
                     printf("---\n");
