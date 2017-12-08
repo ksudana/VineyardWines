@@ -137,13 +137,15 @@
             }
 
             if (!$mysqli->query("DROP PROCEDURE IF EXISTS p") ||
-              !$mysqli->query("CREATE PROCEDURE p() READS SQL DATA BEGIN SELECT * FROM Favorites WHERE uid='$uid'; END;")) {
+              !$mysqli->query("CREATE PROCEDURE p() READS SQL DATA BEGIN SELECT uid, wid FROM Favorites ; END;")) {
               echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
             if (!$mysqli->query("CALL p()")) {
               echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
+
+            printf("fuck this bullshit ass shit\n");
             do {
                 if ($res = $mysqli->store_result()) {
                     printf("---\n");
@@ -155,6 +157,7 @@
                     }
                 }
             } while ($mysqli->more_results() && $mysqli->next_result());
+            printf("i did nothing lmao\n");
             ?>
 
 
