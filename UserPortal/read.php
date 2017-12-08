@@ -25,10 +25,10 @@ if ($db->real_query($query)) {
     while ($row = $res->fetch_assoc()) {
         $username=$row["username"];
         $user_uid = "-1";
-        $query2 = "SELECT * FROM Users WHERE username='$username'"
+        $query2 = "SELECT * FROM Users WHERE username='$username'";
         if($db->real_query($query2)) {
             $res2 = $db->use_result();
-            $row2 = $res2->fetch_assoc()
+            $row2 = $res2->fetch_assoc();
             $uid = $row2['uid'];
         }
         $text=$row["text"];
