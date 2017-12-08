@@ -136,10 +136,6 @@
               echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
             }
 
-            if (!$mysqli->query("DROP TABLE IF EXISTS test") || !$mysqli->query("CREATE TABLE test(id INT)")) {
-              echo "Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
-            }
-
             if (!$mysqli->query("DROP PROCEDURE IF EXISTS p") ||
               !$mysqli->query("CREATE PROCEDURE p(IN id_val INT) BEGIN INSERT INTO test(id) VALUES(id_val); END;")) {
               echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
