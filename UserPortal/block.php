@@ -4,7 +4,7 @@
 ?>
 <html>
   <?php
-  $mysqli = new mysqli(($hn, $un, $pw, $db);
+  $mysqli = new mysqli($hn, $un, $pw, $db);
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
