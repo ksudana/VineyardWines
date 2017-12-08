@@ -233,13 +233,7 @@
       var_dump($res->fetch_assoc());
       ?>
     </div>
-    <div>
-      <?php
-      if (!$mysqli->query("CALL p(1)")) {
-          echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
-      }
-       ?>
-    </div>
+
 </div>
 
 <div>
