@@ -144,6 +144,7 @@
             if (!$mysqli->query("CALL p()")) {
               echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
+            printf("fuck this bullshit as shit");
             do {
                 if ($res = $mysqli->store_result()) {
                     printf("---\n");
@@ -155,6 +156,7 @@
                     }
                 }
             } while ($mysqli->more_results() && $mysqli->next_result());
+            printf("i did nothing lmao");
             ?>
 
 
