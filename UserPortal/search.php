@@ -20,7 +20,6 @@
 	    <!-- Custom styles for this template -->
 	    <link href="../Bootstrap/css/shop-item.css" rel="stylesheet">
 	    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
-			<link href="css/elements.css" rel="stylesheet">
 
 	    <script src="js/my_js.js"></script>
 </head>
