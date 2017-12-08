@@ -1,5 +1,7 @@
 <?php
-	include_once 'nav.php';
+		session_start();
+		include_once 'nav.php';
+		include_once '../db_info.php';
 ?>
 <html>
 <title> Discover</title>
