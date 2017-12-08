@@ -71,7 +71,7 @@
 <tr>
 <titlec>
 	<?php
-			$uid = $_SESSION['uid'];
+        $uid = $_SESSION['uid'];
 	    $conn = mysql_connect($hn, $un, $pw);
 	    mysql_select_db($db, $conn);
 	    $sele = "SELECT * FROM Favorites WHERE uid='$uid'";
