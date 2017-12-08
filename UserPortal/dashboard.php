@@ -144,7 +144,17 @@
             if (!$mysqli->query("CALL p()")) {
               echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
-
+            do {
+                if ($res = $mysqli->store_result()) {
+                    printf("---\n");
+                    var_dump($res->fetch_all());
+                    $res->free();
+                } else {
+                    if ($mysqli->errno) {
+                        echo "Store failed: (" . $mysqli->errno . ") " . $mysqli->error;
+                    }
+                }
+            } while ($mysqli->more_results() && $mysqli->next_result());
             ?>
 
 
