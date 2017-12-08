@@ -59,7 +59,6 @@
 </center>
 </form>
 </table>
-<table>
 <tr>
 <br>
 <br>
@@ -69,7 +68,6 @@
 </tr>
 <tr>
 <titlec>
-	<titlec><h2> Recommended Wines</h2></titlec>
 	<?php
 			$uid = $_SESSION['uid'];
 	    $conn = mysql_connect($hn, $un, $pw);
@@ -93,7 +91,6 @@
 	      ?>
 </titlec>
 </tr>
-</table>
 <footer alignclass="py-1 bg-dark">
 
 </footer>
