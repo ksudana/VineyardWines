@@ -82,10 +82,6 @@
 				}
 	?>
 	<table>
-			<tr>
-					<th>UID</th>
-					<th>WID</th>
-			</tr>
 			<?php while ($r = $q->fetch()): ?>
 					<tr>
 							<td><?php echo $r['wid'] ?></td>
