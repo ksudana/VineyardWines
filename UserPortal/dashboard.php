@@ -105,6 +105,7 @@
     </div>
 
     <div class="text-center">
+    <br>
     <titlec><h4> Favorite Wines</h4></titlec>
 
     <?php
