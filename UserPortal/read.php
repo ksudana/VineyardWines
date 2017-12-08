@@ -16,7 +16,7 @@ if ($db->connect_errno) {
 
 $livetime = date('g:i a', strtotime('-1 hour'));
 
-$query="SELECT * FROM chat ORDER BY id ASC";
+$query="SELECT Users.uid AS uid, chat.username AS username, chat.text AS text, chat.id AS id FROM Users, chat WHERE Users.username = chat.username ORDER BY chat.id ASC";
 //execute query
 if ($db->real_query($query)) {
 	//If the query was successful
@@ -24,19 +24,8 @@ if ($db->real_query($query)) {
 
     while ($row = $res->fetch_assoc()) {
         $username=$row["username"];
-        $user_uid = "";
-        $query2 = "SELECT uid FROM Users WHERE username='$username'";
-        if($res2 = mysqli_query($db, $query2)) {
-            $res2 = $db->use_result();
-            $row2 = $res2->fetch_assoc();
-            $user_uid = $row2["uid"];
-        }
-        else {
-            echo "Bad Query";
-            echo $query2;
-        }
-        
         $text=$row["text"];
+        $user_uid = $row["uid"];
         $time=date('g:i a', strtotime($row["time"]));
         if($time >= $livetime){
                 echo "<p>$time | <a href= 'otherusers.php?otherid=" . $user_uid . "'>". $username ."</a> : $text</p>\n";
