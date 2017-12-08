@@ -24,10 +24,10 @@ if ($db->real_query($query)) {
 	$res = $db->use_result();
 
     while ($row = $res->fetch_assoc()) {
-       // $username=$row["username"];
-        $username=$row["uid"];
-        //$text=$row["text"];
-        $text=$row["username"];
+        $username=$row["username"];
+       // $username=$row["uid"];
+        $text=$row["text"];
+       // $text=$row["username"];
         $time=date('g:i a', strtotime($row["time"]));
         if($time >= $livetime){
                 echo "<p>$time | <a href= 'otherusers.php?otherid=" . $uid . "'>". $username ."</a> : $text</p>\n";
