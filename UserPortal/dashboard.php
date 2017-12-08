@@ -233,14 +233,7 @@
       var_dump($res->fetch_assoc());
       ?>
     </div>
-    <div>
-      <?php
-      $mysqli->query("CALL p(2)")
-      $mysqli->query("CALL p(3)")
-      $mysqli->query("CALL p(4)")
-      $mysqli->query("CALL p(5)")
-       ?>
-    </div>
+
 </div>
 
 <div>
