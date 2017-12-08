@@ -15,8 +15,8 @@ if ($db->connect_errno) {
 }
 
 $livetime = date('g:i a', strtotime('-1 hour'));
-$query = "SELECT * FROM Users";
-//$query="SELECT * FROM chat ORDER BY id ASC";
+//$query = "SELECT * FROM Users";
+$query="SELECT * FROM chat ORDER BY id ASC";
 //$query = "SELECT Users.uid AS uid, chat.username AS username, chat.text AS text, chat.id AS id FROM Users, chat WHERE Users.username = chat.username ORDER BY id ASC";
 //execute query
 if ($db->real_query($query)) {
