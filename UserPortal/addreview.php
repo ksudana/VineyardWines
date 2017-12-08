@@ -20,8 +20,8 @@
     $recommend = ($recommend == "Yes") ? 1 : 0;
     $review = $_POST["message"];
     $stmt->execute();
-
     $stmt->close();
+    header("location: Review_Temp.php?wid=$wid");
   }
     mysqli_close($db);
   ?>
