@@ -41,7 +41,7 @@
         if($uid == $otherid) {
             header("location: dashboard.php");
         }
-    
+
         $query = "SELECT * FROM Users WHERE uid='$otherid'";
         $result = $con->query($query);
         $row = $result->fetch_assoc();
@@ -64,7 +64,7 @@
 
         $numreviews = $row['num_reviews'];
         mysql_free_result($result);
-        
+
         $following = false;
         $query = "SELECT * FROM Follows WHERE uid1='$uid' AND uid2='$otherid'";
         $result = $con->query($query);
@@ -74,7 +74,7 @@
             if($result->num_rows > 0)
                 $following = true;
         }
-    
+
         mysqli_close($db);
     ?>
     <div class="container">
@@ -104,9 +104,9 @@
           <div class="text-center">
           <form action="follow.php" method="post" name="follow" style="border:none; padding:none">
                 <button type="button" onclick=form.submit()>
-                    <?php 
-                        if($following) 
-                            print("Unfollow"); 
+                    <?php
+                        if($following)
+                            print("Unfollow");
                         else
                             print("Follow");
                     ?>
@@ -196,14 +196,8 @@
           $rid = $row['rid'];
           $content = $row['content'];
           $i = $i + 1;
-          echo "<a href= 'editreview.php?rid=" . $rid . "'><button> EDIT REVIEW </button></a>";
           ?>
 
-          <form style="padding:0px; border:none" action="deletereview.php" id="delete_form" method="post" name="delete_form">
-            <input id="rid" name="rid" type="hidden" value="<?php print($rid)?>">
-            <input id="content" name="content" type="hidden" value="<?php print($content)?>">
-            <button type="button" onclick=form.submit()>Delete Your Review</button>
-          </form>
 
           <hr>
           <?php
