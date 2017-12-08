@@ -33,6 +33,7 @@ if ($db->real_query($query)) {
         }
         else {
             echo "Bad Query";
+            echo $query2;
         }
         
         $text=$row["text"];
