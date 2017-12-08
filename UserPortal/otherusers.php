@@ -115,9 +115,8 @@
                 <input id="following" name="following" type="hidden" value="<?php print($following); ?>">
           </form>
           <br/>
-          <br/>
             <button type="button" onclick=form.submit()>Block User</button>
-
+            <br/>
           <titlec><h4>About</h4></titlec>
         </div>
     <div class="notice notice-success">
