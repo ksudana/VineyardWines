@@ -9,6 +9,7 @@
     echo "Connection failed!";
   }
   else {
+    #Prepared Statement
     $stmt = $con->prepare("INSERT INTO Reviews (uid, wid, title, content, date, rating, recommend) VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssssss", $uid, $wid, $title, $review, $mysqldate, $rating, $recommend);
     $uid = $_SESSION['uid'];
