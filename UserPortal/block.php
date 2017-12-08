@@ -21,6 +21,8 @@
   } else {        
       mysqli_query("ROLLBACK");
   }
+  header("location: otherusers.php?otherid=$foreign_uid");
+
     mysqli_close($db);
   ?>
 </html>
