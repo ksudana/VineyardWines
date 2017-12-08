@@ -16,8 +16,8 @@
     $db->beginTransaction();
 
     // A set of queries; if one fails, an exception should be thrown
-    $db->query("DELETE FROM Follows WHERE uid1='$my_uid' AND uid2='$foreign_uid'");
-    $db->query("DELETE FROM Follows WHERE uid2='$my_uid' AND uid1='$foreign_uid'");
+    $db->query('DELETE FROM Follows WHERE uid1='$my_uid' AND uid2='$foreign_uid'');
+    $db->query('DELETE FROM Follows WHERE uid2='$my_uid' AND uid1='$foreign_uid'');
     // If we arrive here, it means that no exception was thrown
     // i.e. no query has failed, and we can commit the transaction
     $db->commit();
