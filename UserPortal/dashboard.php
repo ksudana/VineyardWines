@@ -131,34 +131,27 @@
     </div>
     <div>
       <?php
-            $mysqli = new mysqli($hn, $un, $pw, $db);
-            if ($mysqli->connect_errno) {
-              echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+            try {
+                $pdo = new PDO("mysql:host=$hn;dbname=$db", $un, $pw);
+                $sql = 'CALL p()';
+                $q = $pdo->query($sql);
+                $q->setFetchMode(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                die("Error occurred:" . $e->getMessage());
             }
-
-            if (!$mysqli->query("DROP PROCEDURE IF EXISTS p") ||
-              !$mysqli->query("CREATE PROCEDURE p() READS SQL DATA BEGIN SELECT uid, wid FROM Favorites ; END;")) {
-              echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
-            }
-
-            if (!$mysqli->query("CALL p()")) {
-              echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
-            }
-
-            printf("fuck this bullshit ass shit\n");
-            do {
-                if ($res = $mysqli->store_result()) {
-                    printf("---\n");
-                    var_dump($res->fetch_all());
-                    $res->free();
-                } else {
-                    if ($mysqli->errno) {
-                        echo "Store failed: (" . $mysqli->errno . ") " . $mysqli->error;
-                    }
-                }
-            } while ($mysqli->more_results() && $mysqli->next_result());
-            printf("i did nothing lmao\n");
-            ?>
+      ?>
+      <table>
+          <tr>
+              <th>UID</th>
+              <th>WID</th>
+          </tr>
+          <?php while ($r = $q->fetch()): ?>
+              <tr>
+                  <td><?php echo $r['uid'] ?></td>
+                  <td><?php echo $r['wid'] ?></td>
+              </tr>
+          <?php endwhile; ?>
+    </table>
 
 
 
