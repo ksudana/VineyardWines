@@ -80,12 +80,37 @@
 				} catch (PDOException $e) {
 						die("Error occurred:" . $e->getMessage());
 				}
- 			while ($r = $q->fetch()):
-					$wid = $row['wid'];
-					$name = $row['variety'];
-				echo "<table><tr><td><titlec><h5><a href= 'Review_Temp.php?wid=" . $wid . "'>". $name ."</h5></titlec></td></tr></table>";
-			endwhile; ?>
+	?>
+	<table>
+			<tr>
+					<th>UID</th>
+					<th>WID</th>
+			</tr>
+			<?php while ($r = $q->fetch()): ?>
+					<tr>
+							<td><?php echo $r['wid'] ?></td>
+							<td><titlec><?php echo $r['variety'] ?></titlec></td>
+					</tr>
+			<?php endwhile; ?>
+	<?php
+        $uid = $_SESSION['uid'];
+	    $conn = mysql_connect($hn, $un, $pw);
+	    mysql_select_db($db, $conn);
+        $sele = "SELECT DISTINCT wid,variety FROM Wines WHERE wid IN (SELECT A.wid FROM (SELECT Favorites.wid AS wid, Favorites.date AS wineDate FROM Follows,Favorites WHERE (Favorites.uid = Follows.uid2) AND (Follows.uid1 = '$uid') UNION SELECT Reviews.wid AS wid, Reviews.date AS wineDate FROM Follows,Reviews WHERE (Reviews.uid = Follows.uid2) AND (Follows.uid1 = '$uid') AND (Reviews.recommend = 1) ORDER BY wineDate) AS A) AND wid NOT IN (SELECT wid FROM Favorites WHERE uid='$uid')";
+	    $result = mysql_query($sele);
+	    if(!$result) {
+	      print("Bad Query");
+	    }
 
+	    if(mysql_num_rows($result) > 0){
+	      $i = 0;
+	      while($row = mysql_fetch_assoc($result) and $i < 10){
+	      $wid = $row['wid'];
+          $name = $row['variety'];
+	      echo "<table><tr><td><titlec><h5><a href= 'Review_Temp.php?wid=" . $wid . "'>". $name ."</h5></titlec></td></tr></table>";
+	    }
+	  }
+   ?>
 </titlec>
 </tr>
 <footer alignclass="py-1 bg-dark">
