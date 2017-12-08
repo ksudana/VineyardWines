@@ -130,7 +130,7 @@
 
     </div>
             
-    <form action="deleteaccount.php" id="edit_form" method="post" name="edit_form">
+    <form action="deleteaccount.php" id="edit_form" method="post" name="edit_form" style="border:none; padding:none">
         <button style = "background-color: #d42121" type="button" onclick=form.submit()>Delete Your Account</button>
     </form>
 
