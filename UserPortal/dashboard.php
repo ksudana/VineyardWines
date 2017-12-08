@@ -145,7 +145,7 @@
               echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
-
+            var_dump($res->fetch_assoc());
             ?>
 
 
