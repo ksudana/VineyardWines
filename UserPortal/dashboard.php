@@ -133,7 +133,7 @@
       <?php
             try {
                 $pdo = new PDO("mysql:host=$hn;dbname=$db", $un, $pw);
-                $sql = 'CALL p()';
+                $sql = 'CALL p(5)';
                 $q = $pdo->query($sql);
                 $q->setFetchMode(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
