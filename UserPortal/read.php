@@ -29,7 +29,7 @@ if ($db->real_query($query)) {
         if($db->real_query($query2)) {
             $res2 = $db->use_result();
             $row2 = $res2->fetch_assoc();
-            $user_id = $row2['uid'];
+            $user_uid = $row2['uid'];
         }
         
         $text=$row["text"];
