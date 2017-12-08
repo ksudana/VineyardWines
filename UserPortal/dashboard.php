@@ -129,8 +129,10 @@
       ?>
 
     </div>
-    <button style = "background-color: #d42121" type="button" onclick=form.submit()>Delete Your Account</button>
-
+            
+    <form action="deleteaccount.php" id="edit_form" method="post" name="edit_form">
+        <button style = "background-color: #d42121" type="button" onclick=form.submit()>Delete Your Account</button>
+    </form>
 
 </div>
 
