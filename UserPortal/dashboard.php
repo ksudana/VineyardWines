@@ -130,7 +130,39 @@
 
     </div>
     <div>
-        fuck this
+      <?php
+$mysqli = new mysqli("example.com", "user", "password", "database");
+if ($mysqli->connect_errno) {
+  echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+
+if (!$mysqli->query("DROP TABLE IF EXISTS test") ||
+  !$mysqli->query("CREATE TABLE test(id INT)") ||
+  !$mysqli->query("INSERT INTO test(id) VALUES (1), (2), (3)")) {
+  echo "Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
+}
+
+if (!$mysqli->query("DROP PROCEDURE IF EXISTS p") ||
+  !$mysqli->query('CREATE PROCEDURE p() READS SQL DATA BEGIN SELECT id FROM test; SELECT id + 1 FROM test; END;')) {
+  echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
+}
+
+if (!$mysqli->multi_query("CALL p()")) {
+  echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+}
+
+do {
+  if ($res = $mysqli->store_result()) {
+      printf("---\n");
+      var_dump($res->fetch_all());
+      $res->free();
+  } else {
+      if ($mysqli->errno) {
+          echo "Store failed: (" . $mysqli->errno . ") " . $mysqli->error;
+      }
+  }
+} while ($mysqli->more_results() && $mysqli->next_result());
+?>
 
 
 
