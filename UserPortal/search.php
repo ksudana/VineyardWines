@@ -74,7 +74,8 @@
         $uid = $_SESSION['uid'];
 	    $conn = mysql_connect($hn, $un, $pw);
 	    mysql_select_db($db, $conn);
-	    $sele = "SELECT * FROM Favorites WHERE uid='$uid'";
+	    //$sele = "SELECT * FROM Favorites WHERE uid='$uid'";
+        $sele = "SELECT wid,variety FROM Wines WHERE wid IN (SELECT A.wid FROM (SELECT Favorites.wid AS wid, Favorites.date AS wineDate FROM Follows,Favorites WHERE (Favorites.uid = Follows.uid2) AND (Follows.uid1 = 5) UNION SELECT Reviews.wid AS wid, Reviews.date AS wineDate FROM Follows,Reviews WHERE (Reviews.uid = Folloźws.uid2) AND (Follows.uid1 = 5) AND (Reviews.recommend = 1) ORDER BY wineDate) AS A) AND wid NOT IN (SELECT wid FROM Favorites WHERE uid=5)";
 	    $result = mysql_query($sele);
 	    if(!$result) {
 	      print("Bad Query");
@@ -84,10 +85,8 @@
 	      $i = 0;
 	      while($row = mysql_fetch_assoc($result) and $i < 50){
 	      $wid = $row['wid'];
-	      $query2 = "SELECT * FROM Wines WHERE wid='$wid'";
-	      $result2 = mysql_query($query2);
-	      $wine_row = mysql_fetch_assoc($result2);
-	      echo "<table><tr><td><titlec><h5><a href= 'Review_Temp.php?wid=" . $wid . "'>". $wine_row['variety'] ."</h5></titlec></td></tr></table>";
+          $name = $row['variety'];
+	      echo "<table><tr><td><titlec><h5><a href= 'Review_Temp.php?wid=" . $wid . "'>". $name ."</h5></titlec></td></tr></table>";
 	    }
 	  }
 	      ?>
