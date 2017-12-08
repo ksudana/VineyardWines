@@ -66,6 +66,9 @@
 <br>
 </tr>
 <tr>
+<h2><titlec>Recommended Wines</titlec></h2>
+</tr>
+<tr>
 <titlec>
 	<?php
 			$uid = $_SESSION['uid'];
