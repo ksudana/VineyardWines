@@ -141,7 +141,7 @@
               echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
-            if (!$mysqli->query("CALL p()")) {
+            if (!$mysqli->query("CALL p(1)")) {
               echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
