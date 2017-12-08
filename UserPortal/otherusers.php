@@ -114,8 +114,8 @@
                 <input id="foreign_uid" name="foreign_uid" type="hidden" value="<?php print($otherid); ?>">
                 <input id="following" name="following" type="hidden" value="<?php print($following); ?>">
           </form>
-          <br/>
             <button type="button" onclick=form.submit()>Block User</button>
+            <br/>
             <br/>
           <titlec><h4>About</h4></titlec>
         </div>
