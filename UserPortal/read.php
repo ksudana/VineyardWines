@@ -26,7 +26,7 @@ if ($db->real_query($query)) {
         $username=$row["username"];
         $user_uid = "";
         $query2 = "SELECT uid FROM Users WHERE username='$username'";
-        if($db->real_query($query2)) {
+        if($res2 = mysqli_query($db, $query2)) {
             $res2 = $db->use_result();
             $row2 = $res2->fetch_assoc();
             $user_uid = $row2["uid"];
