@@ -84,8 +84,7 @@
 	<table>
 			<?php while ($r = $q->fetch()): ?>
 					<tr>
-							<td><?php echo $r['wid'] ?></td>
-							<td><titlec><?php echo $r['variety'] ?></titlec></td>
+							<td><h3><titlec><?php echo $r['variety'] ?></titlec></h3></td>
 					</tr>
 			<?php endwhile; ?>
 	<?php
