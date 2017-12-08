@@ -70,7 +70,7 @@
 			$make = '<h4>You must type a word to search!</h4>';
 		}else{
 			$make = '<h4>No match found!</h4>';
-                        
+
             if($orderby == "price_asc") {
                 $orderby = "AND price IS NOT NULL ORDER BY price ASC";
             }
