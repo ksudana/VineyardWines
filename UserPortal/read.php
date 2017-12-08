@@ -13,7 +13,8 @@ if ($db->connect_errno) {
 
 $livetime = strtotime('-1 hour');
 
-$query="SELECT Users.uid AS uid, Users.username AS username, chat.text, chat.time FROM Users,chat WHERE Users.username=chat.username ORDER BY id ASC";
+//$query="SELECT Users.uid AS uid, Users.username AS username, chat.text, chat.time FROM Users,chat WHERE Users.username=chat.username ORDER BY id ASC";
+$query = "SELECT * FROM Chat_View";
 if ($db->real_query($query)) {
 	$res = $db->use_result();
 
