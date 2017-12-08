@@ -102,14 +102,4 @@ button {
     font-size: 18px;
     cursor: pointer;
 }
-#redbutton{
-    width: 200px;
-    height: 55px;
-    border-radius: 3px;
-    background-color: #dc3535;
-    color: #fff;
-    font-family: 'Raleway',sans-serif;
-    font-size: 18px;
-    cursor: pointer;
 
-}
