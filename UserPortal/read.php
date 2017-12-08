@@ -12,7 +12,6 @@ if ($db->connect_errno) {
 }
 
 $livetime = date('g:i a', strtotime('-1 hour'));
-$checktime = date('g:i a', strtotime('-1 hour'));
 
 $query="SELECT * FROM chat ORDER BY id ASC";
 if ($db->real_query($query)) {
@@ -22,7 +21,7 @@ if ($db->real_query($query)) {
         $username=$row["username"];
         $text=$row["text"];
         $time=date('g:i a', strtotime($row["time"]));
-        if($time >= $checktime){
+        if($time >= $livetime){
                   echo "<p>$time | $livetime | <a href= 'otherusers.php?otherid=" . $uid . "'>". $username ."</a> : $text</p>\n";
         }
     }
