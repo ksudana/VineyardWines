@@ -137,7 +137,7 @@
             }
 
             if (!$mysqli->query("DROP PROCEDURE IF EXISTS p") ||
-              !$mysqli->query("CREATE PROCEDURE p(IN id_val INT) BEGIN INSERT INTO test(id) VALUES(id_val); END;")) {
+              !$mysqli->query("CREATE PROCEDURE p() READS SQL DATA SELECT * FROM Favorites WHERE uid='$uid'; END;")) {
               echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
 
