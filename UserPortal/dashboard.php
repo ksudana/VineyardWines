@@ -156,6 +156,7 @@
                     }
                 }
             } while ($mysqli->more_results() && $mysqli->next_result());
+            printf("i did nothing lmao");
             ?>
 
 
