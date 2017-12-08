@@ -149,13 +149,10 @@
           <?php while ($r = $q->fetch()): ?>
               <tr>
                   <td><?php echo $r['wid'] ?></td>
-                  <td><?php echo $r['variety'] ?></td>
+                  <td><titlec><?php echo $r['variety'] ?></titlec></td>
               </tr>
           <?php endwhile; ?>
     </table>
-
-
-
     </div>
 
 </div>
