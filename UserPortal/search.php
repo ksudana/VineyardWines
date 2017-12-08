@@ -54,9 +54,11 @@
 </center>
 </form>
 </table>
-
 <tr>
-<embed autoPlay=true src="./mediaplayer.swf?file=napa.mp4" width="750" height="300" allowfullscreen="true" />
+
+</tr>
+<tr>
+<embed autoPlay=true src="./mediaplayer.swf?file=napa.mp4" width="750" height="450" allowfullscreen="true" />
 </tr>
 <footer alignclass="py-1 bg-dark">
 
