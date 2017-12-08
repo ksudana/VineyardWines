@@ -129,6 +129,7 @@
       ?>
 
     </div>
+    <button type="button" onclick=form.submit()>Delete Your Account</button>
 
 
 </div>
