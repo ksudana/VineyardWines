@@ -59,6 +59,7 @@
 </center>
 </form>
 </table>
+<table>
 <tr>
 <br>
 <br>
@@ -68,7 +69,6 @@
 </tr>
 <tr>
 <titlec>
-	<div class="text-center">
 	<titlec><h2> Recommended Wines</h2></titlec>
 	<?php
 			$uid = $_SESSION['uid'];
@@ -91,9 +91,9 @@
 	    }
 	  }
 	      ?>
-			</div>
 </titlec>
 </tr>
+</table>
 <footer alignclass="py-1 bg-dark">
 
 </footer>
