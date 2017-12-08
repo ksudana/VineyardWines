@@ -116,6 +116,7 @@
           </form>
           <br/>
           <br/>
+            <button type="button" onclick=form.submit()>Block User</button>
 
           <titlec><h4>About</h4></titlec>
         </div>
