@@ -102,7 +102,7 @@
 
         <div class="container">
           <div class="text-center">
-          <form style = "background-color: #f0f3f5; border: none;" action="follow.php" method="post" name="follow" style="border:none; padding:none">
+          <form style = "background-color: #f0f3f5; border: none" action="follow.php" method="post" name="follow" style="border:none; padding:none">
                 <button type="button" onclick=form.submit()>
                     <?php
                         if($following)
@@ -114,7 +114,14 @@
                 <input id="foreign_uid" name="foreign_uid" type="hidden" value="<?php print($otherid); ?>">
                 <input id="following" name="following" type="hidden" value="<?php print($following); ?>">
           </form>
-            <button style = "background-color: #d42121" type="button" onclick=form.submit()>Block User</button>
+          <form style = "background-color: #f0f3f5; border: none" action="block.php" method="post" name="block" style="border:none; padding:none">
+              <button style = "background-color: #d42121" type="button" onclick=form.submit()>
+                    <?php
+                      print("Block User");
+                    ?>
+                </button>
+                <input id="foreign_uid" name="foreign_uid" type="hidden" value="<?php print($otherid); ?>">
+          </form>
             <br/>
             <br/>
           <titlec><h4>About</h4></titlec>
