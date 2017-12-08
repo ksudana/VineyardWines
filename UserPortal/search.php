@@ -55,13 +55,16 @@
 </form>
 </table>
 <tr>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 </tr>
 <tr>
-<th><titlec>
+<titlec>
 	RECOMMENDATIONS GO HERE SUDANA YOU FUCKING QUEER
 </titlec>
-</th>
 </tr>
 <footer alignclass="py-1 bg-dark">
 
